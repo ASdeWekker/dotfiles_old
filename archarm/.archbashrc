@@ -1,0 +1,12 @@
+#
+# A bashrc completion for Arch Linux
+#
+
+# alias for using pacman and no confirm
+alias i='sudo pacman -S'
+# vcgencmd stuff
+alias vctemp='/opt/vc/bin/vcgencmd measure_temp'
+alias vccore='/opt/vc/bin/vcgencmd measure_clock'
+# alias for project folders
+alias hmm='cd /srv/http/backup/projects/urlname/'
+alias hmma='cd /srv/http/backup/alex/alexdewekker/2'
