@@ -1,0 +1,13 @@
+#
+# Extra .bashrc stuff for ubunduuuu
+#
+
+# install shortcut
+alias i='sudo apt install -y'
+
+# shortcut for the projects folder
+alias hmm='cd /var/www/html/backup/projects/urlname/'
+alias hmma='cd /var/www/html/backup/alex/alexdewekker/2/'
+
+# alias for ssh connection to the pi
+alias taart='ssh -C alex@taartje'

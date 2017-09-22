@@ -1,0 +1,17 @@
+#
+# Standard added .bashrc file
+#
+
+# Starting services: pug, npm & compass
+alias startn='clear && npm start'
+alias starts='clear && compass watch'
+alias startp='clear && pug -wP index.pug index.html'
+
+# reload .bashrc
+alias reload-bash='source ~/.bashrc'
+
+# connecting quickly to the server
+alias sshserv='ssh -C alex@servertje'
+
+# shortcut for checking systemctl status
+alias syss='sudo systemctl'
