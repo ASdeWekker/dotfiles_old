@@ -2,7 +2,7 @@
 Description=fix network stuff
 
 [Service]
-ExecStart=/home/alex/sh/net-start.sh
+ExecStart=/home/alex/shn/net-start.sh
 Type=idle
 User=root
 
