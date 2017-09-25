@@ -15,3 +15,6 @@ alias sshserv='ssh -C alex@servertje'
 
 # shortcut for checking systemctl status
 alias syss='sudo systemctl'
+
+# how to git gud
+alias gud='push'
