@@ -17,4 +17,4 @@ alias sshserv='ssh -C alex@servertje'
 alias syss='sudo systemctl'
 
 # how to git gud
-alias gud='push'
+alias git-gud='git push'
