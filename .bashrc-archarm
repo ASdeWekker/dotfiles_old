@@ -16,3 +16,6 @@ alias hmma='cd /srv/http/backup/alex/alexdewekker/2'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# fixed the ruby path for installing gems
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
