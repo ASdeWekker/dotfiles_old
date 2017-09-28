@@ -12,3 +12,8 @@ cd /srv/http/backup/oefenen/node/nsession;
 npm i;
 cd /srv/http/backup/oefenen/node/session;
 npm i;
+cd /srv/http/backup/projects/urlname;
+npm i;
+cd /srv/http/backup/projects/darten;
+npm i;
+
