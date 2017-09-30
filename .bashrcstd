@@ -18,7 +18,7 @@ alias syss='sudo systemctl'
 
 # how to git gud and other helpful git things
 alias git-gud='git push'
-alias ggss='git status'
-alias ggaa='git add -A'
-alias ggcc='git commit -m'
-alias ggpp='git pull'
+alias gs='git status'
+alias ga='git add -A'
+alias gc='git commit -m'
+alias gp='git pull'
