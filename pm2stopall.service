@@ -1,0 +1,11 @@
+[Unit]
+Description=stop all pm2 apps at boot
+After=pm2-alex.service
+
+[Service]
+ExecStart=/home/alex/shn/pm2stopall.sh
+Type=idle
+User=alex
+
+[Install]
+WantedBy=multi-user.target
