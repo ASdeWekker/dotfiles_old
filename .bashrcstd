@@ -22,3 +22,7 @@ alias gs='git status'
 alias ga='git add -A'
 alias gc='git commit -m'
 alias gp='git pull'
+
+
+# nmap shortcut for this network
+alias nmapp='nmap 192.168.1.0/24'
