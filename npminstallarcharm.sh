@@ -1,6 +1,6 @@
 #!/bin/bash
 
-| # The current path for the backup folder
+
 wpath="/usr/share/nginx/html/backup"
 
 cd $wpath/oefenen/node/addpage;

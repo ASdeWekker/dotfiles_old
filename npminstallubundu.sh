@@ -1,18 +1,21 @@
 #!/bin/bash
 
-cd /var/www/html/backup/oefenen/node/addpage;
+
+$uwpath="/var/www/html/backup"
+
+cd $uwpath/oefenen/node/addpage;
 npm i;
-cd /var/www/html/backup/oefenen/node/expresstut;
+cd $uwpath/oefenen/node/expresstut;
 npm i;
-cd /var/www/html/backup/oefenen/node/meantut;
+cd $uwpath/oefenen/node/meantut;
 npm i;
-cd /var/www/html/backup/oefenen/node/nodemongo;
+cd $uwpath/oefenen/node/nodemongo;
 npm i;
-cd /var/www/html/backup/oefenen/node/nsession;
+cd $uwpath/oefenen/node/nsession;
 npm i;
-cd /var/www/html/backup/oefenen/node/session;
+cd $uwpath/oefenen/node/session;
 npm i;
-cd /var/www/html/backup/projects/urlname;
+cd $uwpath/projects/urlname;
 npm i;
-cd /var/www/html/backup/projects/darten;
+cd $uwpath/projects/darten;
 npm i;
