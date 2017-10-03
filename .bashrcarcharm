@@ -10,8 +10,8 @@ alias vctemp='/opt/vc/bin/vcgencmd measure_temp'
 alias vccore='/opt/vc/bin/vcgencmd measure_clock'
 
 # alias for project folders
-alias hmm='cd /srv/http/backup/projects/urlname/'
-alias hmma='cd /srv/http/backup/alex/alexdewekker/2'
+alias hmm='cd /usr/share/nginx/html/backup/projects/urlname/'
+alias hmma='cd /usr/share/nginx/html/backup/alex/alexdewekker/2'
 # some ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
