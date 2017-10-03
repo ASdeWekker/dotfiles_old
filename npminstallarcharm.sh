@@ -1,19 +1,22 @@
 #!/bin/bash
 
-cd /srv/http/backup/oefenen/node/addpage;
+| # The current path for the backup folder
+wpath="/usr/share/nginx/html/backup"
+
+cd $wpath/oefenen/node/addpage;
 npm i;
-cd /srv/http/backup/oefenen/node/expresstut;
+cd $wpath/oefenen/node/expresstut;
 npm i;
-cd /srv/http/backup/oefenen/node/meantut;
+cd $wpath/oefenen/node/meantut;
 npm i;
-cd /srv/http/backup/oefenen/node/nodemongo;
+cd $wpath/oefenen/node/nodemongo;
 npm i;
-cd /srv/http/backup/oefenen/node/nsession;
+cd $wpath/oefenen/node/nsession;
 npm i;
-cd /srv/http/backup/oefenen/node/session;
+cd $wpath/oefenen/node/session;
 npm i;
-cd /srv/http/backup/projects/urlname;
+cd $wpath/projects/urlname;
 npm i;
-cd /srv/http/backup/projects/darten;
+cd $wpath/projects/darten;
 npm i;
 
