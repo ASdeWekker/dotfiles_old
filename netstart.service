@@ -1,5 +1,6 @@
 [Unit]
 Description=fix network stuff
+After=pm2-alex.service
 
 [Service]
 ExecStart=/home/alex/shn/netstart.sh
