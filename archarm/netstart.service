@@ -1,11 +1,11 @@
 [Unit]
-Description=stop all pm2 apps at boot
+Description=fix network stuff
 After=pm2-alex.service
 
 [Service]
-ExecStart=/home/alex/shn/pm2stopall.sh
+ExecStart=/home/alex/shn/archarm/netstart.sh
 Type=idle
-User=alex
+User=root
 
 [Install]
 WantedBy=multi-user.target

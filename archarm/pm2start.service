@@ -1,0 +1,11 @@
+[Unit]
+Description=Pm2 starter for ip control
+After=netstart.service
+
+[Service]
+Type=idle
+User=root
+ExecStart=/home/alex/shn/archarm/pm2start.sh
+
+[Install]
+WantedBy=multi-user.target
