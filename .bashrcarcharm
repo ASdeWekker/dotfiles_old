@@ -4,6 +4,7 @@
 
 # alias for using pacman and no confirm
 alias i='sudo pacman -S --noconfirm'
+alias iy='yaourt -S'
 
 # vcgencmd stuff
 alias vctemp='/opt/vc/bin/vcgencmd measure_temp'
