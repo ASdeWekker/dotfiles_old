@@ -10,4 +10,4 @@ alias hmm='cd /var/www/html/backup/projects/urlname/'
 alias hmma='cd /var/www/html/backup/alex/alexdewekker/2/'
 
 # alias for ssh connection to the pi
-alias taart='ssh -C alex@taartje'
+alias taart='ssh -C alex@taaart'
