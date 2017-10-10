@@ -2,6 +2,10 @@
 # Standard added .bashrc file
 #
 
+# going into the project folders
+alias hmm='cd /var/www/html/backup/projects/urlname'
+alias hmma='cd /var/www/html/backup/alex/alexdewekker/2'
+
 # Starting services: pug, npm & compass
 alias startn='clear && npm start'
 alias starts='clear && compass watch'
