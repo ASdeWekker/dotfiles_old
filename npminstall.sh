@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-wpath="/usr/share/nginx/html/backup"
+wpath="/var/www/html/backup"
 
 cd $wpath/oefenen/node/addpage;
 npm i;
@@ -19,4 +19,3 @@ cd $wpath/projects/urlname;
 npm i;
 cd $wpath/projects/darten;
 npm i;
-
