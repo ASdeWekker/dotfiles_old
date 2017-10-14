@@ -5,7 +5,7 @@ After=netstart.service
 [Service]
 Type=idle
 User=root
-ExecStart=/home/alex/shn/archarm/pm2start.sh
+ExecStart=/home/alex/shn/pm2start.sh
 
 [Install]
 WantedBy=multi-user.target

@@ -22,4 +22,4 @@ alias l='ls -CF'
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # ssh into ubunduuuu with .85 ip
-alias sshuu='ssh -C alex@192.168.1.85'
+alias sshuu='ssh -C alex@192.168.1.99'
