@@ -1,0 +1,11 @@
+[Unit]
+Description=Start all the services
+After=netstart.service
+
+[Service]
+ExecStart=/home/alex/shn/archarm/bootding.sh
+Type=idle
+User=root
+
+[Install]
+WantedBy=multi-user.target
