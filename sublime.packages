@@ -1,16 +1,1 @@
-		"auto-save",
-		"AutoFileName",
-		"Color Highlighter",
-		"ColorPicker",
-		"ConvertToUTF8",
-		"CSS3",
-		"Git",
-		"HTMLAttributes",
-		"jQuery",
-		"Nodejs",
-		"Package Control",
-		"Pretty JSON",
-		"Pug",
-		"Sass",
-		"SideBarEnhancements",
-		"SublimeLinter"
+auto-save,AutoFileName,Color Highlighter,ColorPicker,ConvertToUTF8,CSS",Git,HTMLAttributes,jQuery,Nodejs,Package Control,Pretty JSON,Pug,Sass,SideBarEnhancements,SublimeLinter

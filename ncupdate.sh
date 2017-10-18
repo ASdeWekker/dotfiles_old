@@ -26,3 +26,6 @@ npm update;
 cd $wpath/projects/urlname;
 ncu -a;
 npm update;
+cd $wpath/nodelpage;
+ncu -a;
+npm update;

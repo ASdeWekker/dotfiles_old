@@ -19,3 +19,5 @@ cd $wpath/projects/urlname;
 npm i;
 cd $wpath/projects/darten;
 npm i;
+cd $wpath/nodelpage;
+npm i;
