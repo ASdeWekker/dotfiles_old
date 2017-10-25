@@ -33,3 +33,5 @@ alias nmapp='nmap -sP 192.168.1.*'
 
 # history shortcut
 alias hh='history'
+
+alias sens='sensors | grep Core*'
