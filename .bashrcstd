@@ -34,4 +34,8 @@ alias nmapp='nmap -sP 192.168.1.*'
 # history shortcut
 alias hh='history'
 
+# sensors and stuff
 alias sens='sensors | grep Core*'
+
+# use mongodb as admin
+alias mongaats='mongo -u alex -p naanab --authenticationDatabase admin'
