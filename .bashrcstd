@@ -27,7 +27,6 @@ alias ga='git add -A'
 alias gc='git commit -m'
 alias gp='git pull'
 
-
 # nmap shortcut for this network
 alias nmapp='nmap -sP 192.168.1.*'
 
@@ -39,3 +38,8 @@ alias sens='sensors | grep Core*'
 
 # use mongodb as admin
 alias mongaats='mongo -u alex -p naanab --authenticationDatabase admin'
+
+# ssh into the thinkpad
+# ssh into ubunduuuu
+alias sshuu='ssh -C alex@ubunduuuu'
+alias sshtp='ssh -C alex@atpaats'
