@@ -43,3 +43,9 @@ alias mongaats='mongo -u alex -p naanab --authenticationDatabase admin'
 # ssh into ubunduuuu
 alias sshuu='ssh -C alex@ubunduuuu'
 alias sshtp='ssh -C alex@atpaats'
+
+# set a fancy prompt color
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
