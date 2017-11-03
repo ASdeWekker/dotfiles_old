@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Updating Arch ARM..."
+echo "Updating Arch..."
 sudo pacman -Syu --noconfirm;
 echo "...";
 yaourt -Syu --noconfirm;
