@@ -49,3 +49,6 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
+# tmux aliases
+# attach shortcut
+alias tat='tmux attach -t'
