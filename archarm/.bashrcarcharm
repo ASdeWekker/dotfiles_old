@@ -15,7 +15,7 @@ alias vccore='/opt/vc/bin/vcgencmd measure_clock'
 
 # some ls aliases
 alias ll='ls -alF'
-alias la='ls -A'
+alias la='ls -AF'
 alias l='ls -CF'
 
 # fixed the ruby path for installing gems
