@@ -52,3 +52,5 @@ esac
 # tmux aliases
 # attach shortcut
 alias tat='tmux attach -t'
+# session check shortcut
+alias tls='tmux list-sessions'
