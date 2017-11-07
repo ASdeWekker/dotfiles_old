@@ -56,3 +56,5 @@ alias tat='tmux attach -t'
 alias tls='tmux list-sessions'
 # make tmuxinator work
 source ~/.bin/tmuxinator.bash
+# tmuxinator shortcut
+alias tmx='tmuxinator'
