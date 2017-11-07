@@ -54,3 +54,5 @@ esac
 alias tat='tmux attach -t'
 # session check shortcut
 alias tls='tmux list-sessions'
+# make tmuxinator work
+source ~/.bin/tmuxinator.bash
