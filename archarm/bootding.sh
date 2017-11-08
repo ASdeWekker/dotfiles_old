@@ -12,5 +12,8 @@ sudo systemctl start nginx;
 #sudo systemctl start
 #sudo systemctl start
 
-# STOP ALMOST ALL THE PM2 STUFF
-pm2 stop 1 2 3 4 5 6 7
+# CHANGE THIS TO FOREACH FUNCTION
+mux s alles;
+mux s hmm;
+mux s hmma;
+mux s grassbot;

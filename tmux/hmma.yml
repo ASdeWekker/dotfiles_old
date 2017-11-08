@@ -5,3 +5,4 @@ windows:
       panes:
         - hmma
         - hmma
+attach: false
