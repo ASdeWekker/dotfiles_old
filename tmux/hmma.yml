@@ -1,0 +1,7 @@
+name: hmma
+root: /var/www/html/backup/alex/alexdewekker/2/
+windows:
+  - watchers:
+      panes:
+        - hmma
+        - hmma

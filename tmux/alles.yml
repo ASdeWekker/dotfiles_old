@@ -1,0 +1,15 @@
+name: alles
+root: /var/www/html/backup
+windows:
+  - hmm:
+      panes:
+        - hmm
+        - hmm
+  - hmma:
+      panes:
+        - hmma
+        - hmma
+  - grassbot:
+      panes:
+        - cd /var/www/html/backup/alex/grassbot3000/1
+        - cd /var/www/html/backup/alex/grassbot3000/1
