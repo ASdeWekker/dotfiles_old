@@ -8,6 +8,7 @@ systemctl start smbd;
 systemctl start httpd;
 systemctl start mongodb;
 systemctl start nginx;
-#sudo systemctl start
-#sudo systemctl start
-#sudo systemctl start
+#systemctl start
+#systemctl start
+#systemctl start
+#systemctl start
