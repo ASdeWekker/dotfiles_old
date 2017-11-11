@@ -1,5 +1,5 @@
 [Unit]
-Description=Start all the services
+Description=Start all the services as root
 After=netstart.service
 
 [Service]
