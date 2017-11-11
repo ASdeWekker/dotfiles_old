@@ -1,6 +1,8 @@
 #!/bin/bash
 
-sudo ln -s dag.sh /usr/local/bin/doei
-sudo ln -s gedag.sh /usr/local/bin/doeii
-sudo ln -s batchconv1080p.sh /usr/local/bin/conv1080
-sudo ln -s batchconv24fps.sh /usr/local/bin/conv24
+ulb="/usr/local/bin"
+shn="/home/alex/shn"
+sudo ln -s $shn/dag.sh $ulb/doei
+sudo ln -s $shn/gedag.sh $ulb/doeii
+sudo ln -s $shn/batchconv1080p.sh $ulb/conv1080
+sudo ln -s $shn/batchconv24fps.sh $ulb/conv24
