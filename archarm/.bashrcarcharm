@@ -20,3 +20,6 @@ alias l='ls -CF'
 
 # fixed the ruby path for installing gems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+# echo the command for looking up service files
+alias qql='echo "sudo pacman -Qql package | grep -Fe .service -e .socket"'
