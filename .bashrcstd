@@ -56,3 +56,6 @@ alias tat='tmux attach -t'
 alias tls='tmux list-sessions'
 # make tmuxinator work
 source ~/.bin/tmuxinator.bash
+
+# echo the command for looking up service files
+alias qql='echo "sudo pacman -Qql package | grep -Fe .service -e .socket"'
