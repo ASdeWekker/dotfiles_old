@@ -7,7 +7,7 @@ systemctl start smbd;
 systemctl start httpd;
 systemctl start mongodb;
 systemctl start nginx;
-systemctl start mariadb;
+#systemctl start mariadb;
 #systemctl start
 #systemctl start
 systemctl start pm2-alex;
