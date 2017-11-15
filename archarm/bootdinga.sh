@@ -2,6 +2,6 @@
 
 # CHANGE THIS TO FOREACH FUNCTION
 tmuxinator s alles;
-mux s hmm;
-mux s hmma;
-mux s grassbot;
+tmuxinator s hmm;
+tmuxinator s hmma;
+tmuxinator s grassbot;
