@@ -41,6 +41,8 @@ alias mongaats='mongo -u alex -p naanab --authenticationDatabase admin'
 
 # ssh into the thinkpad
 # ssh into ubunduuuu
+# alias for ssh connection to the pi
+alias taart='ssh -C alex@taaart'
 alias sshuu='ssh -C alex@ubunduuuu'
 alias sshtp='ssh -C alex@atpaats'
 
