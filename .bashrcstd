@@ -14,7 +14,14 @@ alias startp='clear && pug -wP index.pug index.html'
 # reload .bashrc
 alias reload-bash='source ~/.bashrc'
 
+
+# ssh into the thinkpad
+# ssh into ubunduuuu
+# alias for ssh connection to the pi
 # connecting quickly to the server
+alias taart='ssh -C alex@taaart'
+alias sshuu='ssh -C alex@ubunduuuu'
+alias sshtp='ssh -C alex@atpaats'
 alias sshserv='ssh -C alex@servertje'
 
 # shortcut for checking systemctl status
@@ -38,13 +45,6 @@ alias sens='sensors | grep Core*'
 
 # use mongodb as admin
 alias mongaats='mongo -u alex -p naanab --authenticationDatabase admin'
-
-# ssh into the thinkpad
-# ssh into ubunduuuu
-# alias for ssh connection to the pi
-alias taart='ssh -C alex@taaart'
-alias sshuu='ssh -C alex@ubunduuuu'
-alias sshtp='ssh -C alex@atpaats'
 
 # set a fancy prompt color
 case "$TERM" in
