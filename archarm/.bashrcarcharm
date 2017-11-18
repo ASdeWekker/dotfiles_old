@@ -4,7 +4,7 @@
 
 # alias for using pacman and no confirm
 alias i='sudo pacman -S --noconfirm'
-alias iy='yaourt -S'
+alias iy='pacaur -S --noedit --noconfirm'
 alias ui='sudo pacman -Rns --noconfirm'
 #alias uiy='yaourt -Rns'
 
