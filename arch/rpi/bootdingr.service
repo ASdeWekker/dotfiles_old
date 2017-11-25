@@ -2,7 +2,7 @@
 Description=Start all the services as root
 
 [Service]
-ExecStart=/home/alex/shn/archarm/bootdingr.sh
+ExecStart=/home/alex/shn/arch/rpi/bootdingr.sh
 Type=idle
 User=root
 

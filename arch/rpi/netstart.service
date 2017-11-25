@@ -3,7 +3,7 @@ Description=fix network stuff
 After=pm2-alex.service
 
 [Service]
-ExecStart=/home/alex/shn/archarm/netstart.sh
+ExecStart=/home/alex/shn/arch/rpi/netstart.sh
 Type=idle
 User=root
 
