@@ -5,14 +5,8 @@
 # alias for using pacman and no confirm
 alias i='sudo pacman -S --noconfirm'
 alias iy='yaourt -S'
-alias iyp='pacaur -S --noedit --noconfirm'
 alias ui='sudo pacman -Rns --noconfirm'
 #alias uiy='yaourt -Rns'
-
-# vcgencmd stuff
-alias vctemp='/opt/vc/bin/vcgencmd measure_temp'
-alias wtemp='watch /opt/vc/bin/vcgencmd measure_temp'
-alias vccore='/opt/vc/bin/vcgencmd measure_clock'
 
 # some ls aliases
 alias ll='ls -alF'
@@ -24,8 +18,3 @@ PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # echo the command for looking up service files
 alias qql='echo "sudo pacman -Qql package | grep -Fe .service -e .socket"'
-
-# powerline config
-if [ -f /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh ]; then
-	source /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
-fi

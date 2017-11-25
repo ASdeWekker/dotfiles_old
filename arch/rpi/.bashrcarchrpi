@@ -1,0 +1,9 @@
+
+#
+# Bashrc file for Arch Linux on the Raspberry Pi
+#
+
+# vcgencmd stuff
+alias vctemp='/opt/vc/bin/vcgencmd measure_temp'
+alias wtemp='watch /opt/vc/bin/vcgencmd measure_temp'
+alias vccore='/opt/vc/bin/vcgencmd measure_clock'
