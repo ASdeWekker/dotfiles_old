@@ -6,7 +6,7 @@
 alias i='sudo pacman -S --noconfirm'
 alias iy='yaourt -S'
 alias ui='sudo pacman -Rns --noconfirm'
-#alias uiy='yaourt -Rns'
+alias uiy='yaourt -Rc'
 
 # some ls aliases
 alias ll='ls -alF'
