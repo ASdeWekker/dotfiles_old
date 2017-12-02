@@ -1,0 +1,10 @@
+name: darten
+root: /var/www/html/backup
+windows:
+  - darten:
+      panes:
+        - cd /var/www/html/backup/projects/darten
+        - cd /var/www/html/backup/projects/darten
+  - mongo:
+      - mongo
+attach: false
