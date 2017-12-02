@@ -3,7 +3,7 @@
 #
 
 # alias for installing with pacaur
-alias iyp='pacaur -S --noedit --noconfirm'
+alias i='pacaur -S --noedit --noconfirm'
 
 # powerline config
 if [ -f /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh ]; then
