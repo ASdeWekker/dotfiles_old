@@ -7,9 +7,9 @@ alias hmm='cd /var/www/html/backup/projects/urlname'
 alias hmma='cd /var/www/html/backup/alex/alexdewekker/2'
 
 # Starting services: pug, npm & compass
-alias startn='clear && npm start'
-alias starts='clear && compass watch'
-alias startp='clear && pug -wP index.pug index.html'
+alias ssn='npm start'
+alias sss='compass watch'
+alias ssp='pug -wP index.pug index.html'
 
 # reload .bashrc
 alias reload-bash='source ~/.bashrc'
