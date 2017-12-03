@@ -1,0 +1,8 @@
+name: cv
+root: /var/www/html/backup
+windows:
+  - cv:
+      panes:
+        - cv
+        - cv
+attach: false
