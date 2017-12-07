@@ -21,3 +21,5 @@ cd $wpath/projects/darten;
 npm i;
 cd $wpath/nodelpage;
 npm i;
+cd $wpath/projects/speedtest;
+npm i;

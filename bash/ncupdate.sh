@@ -29,3 +29,6 @@ npm update;
 cd $wpath/nodelpage;
 ncu -a;
 npm update;
+cd $wpath/projects/speedtest;
+ncu -a;
+npm update;
