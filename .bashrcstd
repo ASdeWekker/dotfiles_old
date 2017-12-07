@@ -7,6 +7,7 @@ alias hmm='cd /var/www/html/backup/projects/urlname'
 alias hmma='cd /var/www/html/backup/alex/alexdewekker/2'
 alias hmmm='cd /var/www/html/backup/projects/darten'
 alias cv='cd /var/www/html/backup/alex/cv/2'
+alias sp='cd /var/www/html/backup/projects/speedtest'
 
 # Starting services: pug, npm & compass
 alias ssn='npm start'
