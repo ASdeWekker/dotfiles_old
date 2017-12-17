@@ -10,7 +10,7 @@ systemctl start nginx;
 systemctl start mariadb;
 systemctl start cronie;
 systemctl start dnsmasq;
-#systemctl start openvpn-server@server.service;
+systemctl start openvpn-server@server.service;
 #systemctl start
 #systemctl start
 systemctl start pm2-alex;
