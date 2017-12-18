@@ -39,6 +39,7 @@ alias gp='git pull'
 
 # nmap shortcut for this network
 alias nmapp='nmap -sP 192.168.1.*'
+alias nmapp10='nmap -sP 10.8.0.*'
 
 # history shortcut
 alias hh='history'
