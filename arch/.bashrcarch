@@ -17,3 +17,8 @@ PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # echo the command for looking up service files
 alias qql='echo "sudo pacman -Qql package | grep -Fe .service -e .socket"'
+
+# adding colors and such
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+
