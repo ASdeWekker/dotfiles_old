@@ -3,9 +3,8 @@
 #
 
 # alias for using pacman and no confirm
-alias iy='yaourt -S'
+alias i='yay -S --noconfirm'
 alias ui='sudo pacman -Rns --noconfirm'
-alias uiy='yaourt -Rc'
 
 # some ls aliases
 alias ll='ls -alF'

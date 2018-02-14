@@ -2,9 +2,6 @@
 # Bashrc for Arch Linux on the Desktop x86/64
 #
 
-# alias for installing with pacaur
-alias i='pacaur -S --noedit --noconfirm'
-
 # powerline config
 #if [ -f /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh ]; then
 #	source /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
