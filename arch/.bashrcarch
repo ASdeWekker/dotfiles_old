@@ -3,7 +3,6 @@
 #
 
 # alias for using pacman and no confirm
-alias i='yay -S --noconfirm'
 alias ui='sudo pacman -Rns --noconfirm'
 
 # some ls aliases
