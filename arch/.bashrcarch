@@ -3,7 +3,7 @@
 #
 
 # alias for using pacman and no confirm
-alias ui='sudo pacman -Rns --noconfirm'
+alias ui='sudo pacman -Rns'
 
 # some ls aliases
 alias ll='ls -alF'

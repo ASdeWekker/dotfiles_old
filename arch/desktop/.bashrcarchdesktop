@@ -2,7 +2,7 @@
 # Bashrc for Arch Linux on the Desktop x86/64
 #
 
-alias i='pacaur -S --noconfirm --noedit'
+alias i='pacaur -S'
 
 # powerline config
 #if [ -f /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh ]; then
