@@ -24,6 +24,7 @@ alias reload-bash='source ~/.bashrc'
 # connecting quickly to the server
 alias taart='ssh -C alex@taaart'
 alias taart10='ssh -C alex@10.8.0.1'
+alias sspc='ssh -C alex@pcaats'
 alias sshuu='ssh -C alex@ubunduuuu'
 alias sshtp='ssh -C alex@atpaats'
 alias sshserv='ssh -C alex@servertje'
