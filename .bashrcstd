@@ -64,3 +64,6 @@ alias tat='tmux attach -t'
 alias tls='tmux list-sessions'
 # make tmuxinator work
 source ~/.bin/tmuxinator.bash
+
+# suspend the system and then exit the ssh connection
+alias slpd='slp;exit'
