@@ -11,7 +11,8 @@ alias la='ls -AF'
 alias l='ls -CF'
 
 # fixed the ruby path for installing gems
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+#PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+PATH="$PATH:/home/alex/.gem/ruby/2.5.0/bin"
 
 # echo the command for looking up service files
 alias qql='echo "sudo pacman -Qql package | grep -Fe .service -e .socket"'
@@ -29,3 +30,4 @@ man() {
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
 }
+
