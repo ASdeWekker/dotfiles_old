@@ -58,6 +58,3 @@ set autoindent
 set smartindent
 set shiftwidth=4
 set softtabstop=4
-
-" -- set text lines no longer than 80 cols
-set textwidth=80
