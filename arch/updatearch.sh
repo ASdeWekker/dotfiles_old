@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo "Updating Arch..."
-sudo pacman -Syu --noconfirm;
+sudo pacman -Syu;
 echo "...";
-yaourt -Syu --noconfirm;
+yaourt -Syu;

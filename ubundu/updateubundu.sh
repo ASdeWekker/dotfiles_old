@@ -2,8 +2,8 @@
 
 echo "Updating Ubuntu..."
 sudo apt update;
-sudo apt upgrade -y;
-sudo apt full-upgrade -y;
+sudo apt upgrade;
+sudo apt full-upgrade;
 echo "...";
-sudo apt autoclean -y;
-sudo apt autoremove -y;
+sudo apt autoclean;
+sudo apt autoremove;
