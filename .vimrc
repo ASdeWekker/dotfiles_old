@@ -58,3 +58,7 @@ set autoindent
 set smartindent
 set shiftwidth=4
 set softtabstop=4
+
+call plug#begin('~/.vim/plugged')
+Plug 'powerline/powerline'
+call plug#end()
