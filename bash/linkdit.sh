@@ -7,3 +7,4 @@ sudo ln -s $shn/gedag.sh $ulb/doeii
 sudo ln -s $shn/batchconv1080p.sh $ulb/conv1080
 sudo ln -s $shn/batchconv24fps.sh $ulb/conv24
 sudo ln -s $shn/suspends.sh $ulb/slp
+sudo ln -s $shn/runaswine.sh $ulb/wijn
