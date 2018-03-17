@@ -4,6 +4,7 @@
 
 # alias for using pacman
 alias ui='sudo pacman -Rns'
+alias clean='sudo pacman -Sc'
 
 # some ls aliases
 alias ll='ls -alF'
