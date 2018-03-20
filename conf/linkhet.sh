@@ -7,3 +7,4 @@ sudo ln -s $homed/tmux.conf /etc/
 sudo ln -s $homed/php.ini /etc/php/
 sudo ln -s $homed/httpd/conf/extra/php7_module.conf /etc/httpd/conf/extra/
 sudo ln -s $homed/httpd/conf/extra/php-fpm.conf /etc/httpd/conf/extra/
+sudo ln -s $homed/httpd/conf/extra/phpmyadmin.conf /etc/httpd/conf/extra/
