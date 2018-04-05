@@ -67,3 +67,6 @@ source ~/.bin/tmuxinator.bash
 
 # suspend the system and then exit the ssh connection
 alias slpd='slp;exit'
+
+# translating all tabs to spaces in every file
+alias tabstospaces="find . -type f -exec sed -i.orig 's/\t/    /g' {} +"
