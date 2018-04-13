@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ssh root@taaart dd if=/dev/mmcblk0 bs=1M | pv | gzip -c > /mnt/data/Backup/taaart/$(date -I)-taaart.gz
+ssh root@taaart dd if=/dev/mmcblk0 bs=1M | pv | gzip -c > /mnt/data/Backup/taaart/$(date -I)-taaart.gz && sleep 1 && systemctl poweroff
 #touch /mnt/data/Backup/taaart/$(date -I)-taaart.gz
-sleep 1
-systemctl poweroff
+#sleep 1
+#systemctl poweroff
