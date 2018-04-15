@@ -1,8 +1,8 @@
 [Unit]
-Description=Start all the services as root
+Description=Start backup when finished booting
 
 [Service]
-ExecStart=/home/alex/shn/arch/rpi/bootdingr.sh
+ExecStart=/home/alex/shn/backup/backuppi.sh
 Type=idle
 User=root
 
