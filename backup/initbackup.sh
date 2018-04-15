@@ -1,3 +1,4 @@
 #!/bin/bash
 
-systemctl start backuppi
+systemctl start backuppi;
+systemctl poweroff;

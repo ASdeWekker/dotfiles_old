@@ -4,7 +4,7 @@ Description=Start backup when finished booting
 [Service]
 ExecStart=/home/alex/shn/backup/backuppi.sh
 Type=idle
-User=root
+User=alex
 
 [Install]
 WantedBy=multi-user.target
