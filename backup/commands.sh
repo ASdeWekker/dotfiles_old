@@ -15,21 +15,30 @@
 # - pc root
 
 
-# root pi command:
+# root pi commands:
 # backup
-sudo rsync -aAXvq -e ssh --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} taartr:/ /mnt/data/Backup/temp/pi-root/
+sudo rsync -aAXvq -e ssh --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} taartr:/ /mnt/data/Backup/temp/pi-root/;
 # tar and gzip
+
 # sleep for a bit
-# home pi command:
-sudo rsync -aAXvq -e ssh --exclude={"/home/"} taartr:/home/alex/ /mnt/data/Backup/temp/pi-home/
+
+# home pi commands:
+sudo rsync -aAXvq -e ssh --exclude={"/home/"} taartr:/home/alex/ /mnt/data/Backup/temp/pi-home/;
 # tar and gzip
+
 # sleep for a bit
-# root pc command:
-sudo rsync -aAXvq --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} / /mnt/data/Backup/temp/pc-root/
+
+# home pc commands:
+sudo rsync -aAXvq --exclude={"/home/.cache/*???"} /home/alex /mnt/data/Backup/temp/pc-home/;
 # tar and gzip
+
 # sleep for a bit
-# home pc command:
-sudo rsync -aAXvq --exclude={"/home/.cache/*???"} /home/alex /mnt/data/Backup/temp/pc-home/
+
+# root pc commands:
+sudo rsync -aAXvq --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} / /mnt/data/Backup/temp/pc-root/;
 # tar and gzip
+
 # sleep for a bit
+
 # shutdown system
+
