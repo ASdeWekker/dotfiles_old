@@ -7,12 +7,18 @@
 # make a structure where it will eventually hold a backup
 # of every month.
 # figure out how to connect with ssh to the pi - figured it out!
+
+# The backup will go as follows:
+# - pi root
+# - pi home
+# - pc home
+# - pc root
+
+
 # root pi command:
 sudo rsync -aAXvq -e ssh --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} taartr:/ /mnt/data/Backup/temp/pi-root/
 # home pi command:
 sudo rsync -aAXvq -e ssh --exclude={"/home/"} taartr:/home/alex/ /mnt/data/Backup/temp/pi-home/
-# still need to figure out where exactly to store it
-# commands for backing up the pc
 # root pc command:
 sudo rsync -aAXvq --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} / /mnt/data/Backup/temp/pc-root/
 # home pc command:
