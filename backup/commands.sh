@@ -19,25 +19,25 @@
 # backup
 sudo rsync -aAXvq -e ssh --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} taartr:/ /mnt/data/Backup/temp/pi-root/;
 # tar and gzip
-env GZIP=-9 tar cvzf pc/$(date -I)-pc.tar.gz temp/*;
+env GZIP=-9 tar cvzf /mnt/data/Backup/pi/$(date -I)-pi-root.tar.gz /mnt/data/Backup/temp/pi-root/*;
 # sleep for a bit
 sleep 2;
 # home pi commands:
-sudo rsync -aAXvq -e ssh --exclude={"/home/"} taartr:/home/alex/ /mnt/data/Backup/temp/pi-home/;
+sudo rsync -aAXvq -e ssh --exclude={"/home/*/.thumbnails/*","/home/*/.cache/mozilla/*","/home/*/.cache/chromium/*","/home/*/.local/share/Trash/*","/home/*/.gvfs"} taartr:/home/alex/ /mnt/data/Backup/temp/pi-home/;
 # tar and gzip
-env GZIP=-9 tar cvzf pc/$(date -I)-pc.tar.gz temp/*;
+env GZIP=-9 tar cvzf /mnt/data/Backup/pi/$(date -I)-pi-home.tar.gz /mnt/data/Backup/temp/pi-home/*;
 # sleep for a bit
 sleep 2;
 # home pc commands:
-sudo rsync -aAXvq --exclude={"/home/.cache/*???"} /home/alex /mnt/data/Backup/temp/pc-home/;
+sudo rsync -aAXvq --exclude={"/home/*/.thumbnails/*","/home/*/.cache/mozilla/*","/home/*/.cache/chromium/*","/home/*/.local/share/Trash/*","/home/*/.gvfs"} /home/alex/ /mnt/data/Backup/temp/pc-home/;
 # tar and gzip
-env GZIP=-9 tar cvzf pc/$(date -I)-pc.tar.gz temp/*;
+env GZIP=-9 tar cvzf /mnt/data/Backup/pc/$(date -I)-pc-home.tar.gz /mnt/data/Backup/temp/pc-home/*;
 # sleep for a bit
 sleep 2;
 # root pc commands:
 sudo rsync -aAXvq --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} / /mnt/data/Backup/temp/pc-root/;
 # tar and gzip
-env GZIP=-9 tar cvzf pc/$(date -I)-pc.tar.gz temp/*;
+env GZIP=-9 tar cvzf /mnt/data/Backup/pc/$(date -I)-pc-root.tar.gz /mnt/data/Backup/temp/pc-root/*;
 # sleep for a bit
 sleep 2;
 # shutdown system
