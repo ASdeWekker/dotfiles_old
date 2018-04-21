@@ -56,5 +56,5 @@ env GZIP=-9 tar cvzf $bloc/pc/$(date -I)-pc-root.tar.gz $bloc/temp/pc-root/*
 sleep 2
 
 # shutdown system
-systemctl suspend
+systemctl poweroff
 
