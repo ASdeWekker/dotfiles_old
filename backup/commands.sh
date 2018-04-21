@@ -20,41 +20,41 @@ bloc="/mnt/backup"
 
 # root pi commands:
 # backup
-sudo rsync -aAXvq -e ssh --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} taartr:/ $bloc/temp/pi-root/;
+sudo rsync -aAXvq -e ssh --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} taartr:/ $bloc/temp/pi-root/
 
 # tar and gzip
-env GZIP=-9 tar cvzf $bloc/pi/$(date -I)-pi-root.tar.gz $bloc/temp/pi-root/*;
+env GZIP=-9 tar cvzf $bloc/pi/$(date -I)-pi-root.tar.gz $bloc/temp/pi-root/*
 
 # sleep for a bit
-sleep 2;
+sleep 2
 
 # home pi commands:
-sudo rsync -aAXvq -e ssh --exclude={"/home/*/.thumbnails/*","/home/*/.cache/mozilla/*","/home/*/.cache/chromium/*","/home/*/.local/share/Trash/*","/home/*/.gvfs"} taartr:/home/alex/ $bloc/temp/pi-home/;
+sudo rsync -aAXvq -e ssh --exclude={"/home/*/.thumbnails/*","/home/*/.cache/mozilla/*","/home/*/.cache/chromium/*","/home/*/.local/share/Trash/*","/home/*/.gvfs"} taartr:/home/alex/ $bloc/temp/pi-home/
 
 # tar and gzip
-env GZIP=-9 tar cvzf $bloc/pi/$(date -I)-pi-home.tar.gz $bloc/temp/pi-home/*;
+env GZIP=-9 tar cvzf $bloc/pi/$(date -I)-pi-home.tar.gz $bloc/temp/pi-home/*
 
 # sleep for a bit
-sleep 2;
+sleep 2
 
 # home pc commands:
-sudo rsync -aAXvq --exclude={"/home/*/.thumbnails/*","/home/*/.cache/mozilla/*","/home/*/.cache/chromium/*","/home/*/.local/share/Trash/*","/home/*/.gvfs"} /home/alex/ $bloc/temp/pc-home/;
+sudo rsync -aAXvq --exclude={"/home/*/.thumbnails/*","/home/*/.cache/mozilla/*","/home/*/.cache/chromium/*","/home/*/.local/share/Trash/*","/home/*/.gvfs"} /home/alex/ $bloc/temp/pc-home/
 
 # tar and gzip
-env GZIP=-9 tar cvzf $bloc/pc/$(date -I)-pc-home.tar.gz $bloc/temp/pc-home/*;
+env GZIP=-9 tar cvzf $bloc/pc/$(date -I)-pc-home.tar.gz $bloc/temp/pc-home/*
 
 # sleep for a bit
-sleep 2;
+sleep 2
 
 # root pc commands:
-sudo rsync -aAXvq --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} / $bloc/temp/pc-root/;
+sudo rsync -aAXvq --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*"} / $bloc/temp/pc-root/
 
 # tar and gzip
-env GZIP=-9 tar cvzf $bloc/pc/$(date -I)-pc-root.tar.gz $bloc/temp/pc-root/*;
+env GZIP=-9 tar cvzf $bloc/pc/$(date -I)-pc-root.tar.gz $bloc/temp/pc-root/*
 
 # sleep for a bit
-sleep 2;
+sleep 2
 
 # shutdown system
-systemctl poweroff;
+systemctl poweroff
 
