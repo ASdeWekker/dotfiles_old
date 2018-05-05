@@ -1,8 +1,8 @@
 name: cv
-root: /var/www/html/backup
+root: /var/www/html/backup/alex/cv/2/
 windows:
   - cv:
       panes:
-        - cv
-        - cv
+        - compass watch
+        - pug -wP index.html index.pug
 attach: false
