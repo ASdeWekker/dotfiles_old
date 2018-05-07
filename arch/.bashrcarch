@@ -2,9 +2,10 @@
 # Extra .bashrc for Arch Linux ARM
 #
 
-# alias for using pacman
+# alias for using pacman and yay
+alias i='yay -S'
 alias ui='sudo pacman -Rns'
-alias clean='sudo pacman -Sc'
+alias clean='sudo pacman -Sc;yay -Yc'
 
 # some ls aliases
 alias ll='ls -alF'
