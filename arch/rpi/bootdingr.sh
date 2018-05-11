@@ -13,4 +13,4 @@ systemctl start dnsmasq;
 systemctl start openvpn-server@server.service;
 systemctl start php-fpm
 #systemctl start
-#systemctl start pm2-alex;
+systemctl start pm2-alex;
