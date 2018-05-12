@@ -18,11 +18,7 @@ alias ssp='pug -wP index.pug index.html'
 # reload .bashrc
 alias reload-bash='source ~/.bashrc'
 
-
-# ssh into the thinkpad
-# ssh into ubunduuuu
-# alias for ssh connection to the pi
-# connecting quickly to the server
+# ssh aliases
 alias taart='ssh -C taart'
 alias sspc='ssh -C pcaats'
 #alias taart10='ssh -C alex@10.8.0.1'
@@ -50,9 +46,6 @@ alias hh='history'
 # sensors and stuff
 alias sens='sensors | grep Core*'
 
-# use mongodb as admin
-alias mongaats='mongo -u alex -p naanab --authenticationDatabase admin'
-
 # set a fancy prompt color
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
@@ -71,4 +64,4 @@ alias slpd='slp;exit'
 
 # translating all tabs to spaces in every file
 alias tabstospaces="find . -type f -exec sed -i.orig 's/\t/    /g' {} +"
-#
+
