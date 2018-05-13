@@ -37,4 +37,4 @@ man() {
 }
 
 # connect to mongo on the pi
-alias mongot='mongo 192.168.1.90 --port 27017'
+alias mongota='mongo 192.168.1.90 --port 27017 -u "alex" --authenticationDatabase "admin"'
