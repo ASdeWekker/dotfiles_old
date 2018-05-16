@@ -38,6 +38,3 @@ man() {
 
 # connect to mongo on the pi
 alias mongot='mongo 192.168.1.90 --port 27017 -u "alex" --authenticationDatabase "admin"'
-
-# restart all pm2 apps and update environment vars
-alias pm2raue='pm2 restart all --update-env'
