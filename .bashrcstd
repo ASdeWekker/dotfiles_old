@@ -65,3 +65,5 @@ alias slpd='slp;exit'
 # translating all tabs to spaces in every file
 alias tabstospaces="find . -type f -exec sed -i.orig 's/\t/    /g' {} +"
 
+# check the git repos
+alias check='cd;cd shn;gs;gp;bac;gs;gp'
