@@ -9,3 +9,4 @@ sudo ln -s $shn/batchconv24fps.sh $ulb/conv24
 sudo ln -s $shn/suspends.sh $ulb/slp
 sudo ln -s $shn/runaswine.sh $ulb/wijn
 sudo ln -s $shn/mongot.sh $ulb/
+sudo ln -s $shn/gitcommit.sh $ulb/gitt
