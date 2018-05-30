@@ -6,7 +6,7 @@
 systemctl start smbd;
 systemctl start httpd;
 systemctl start mongodb;
-#systemctl start nginx;
+systemctl start nginx;
 systemctl start mariadb;
 systemctl start cronie;
 systemctl start dnsmasq;
