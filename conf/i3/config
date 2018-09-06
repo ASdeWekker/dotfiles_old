@@ -135,8 +135,8 @@ assign [class="Thunderbird"] $ws3
 assign [class="discord"] $ws9
 
 # Auto start programs on login
-exec thunderbird
-exec discord
+#exec thunderbird
+#exec discord
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

@@ -3,6 +3,7 @@
 *foreground: #c5c8c6
 *cursorColor: #c5c8c6
 
+! Color, still need to change to Spacegray Eighties
 *color0: #282a2e
 *color1: #a54242
 *color2: #8c9440
@@ -20,6 +21,7 @@
 *color14: #8abeb7
 *color15: #E8E8E8
 
+! Stuff from a dotfile
 URxvt.depth: 32
 URxvt*scrollBar: false
 URxvt*mouseWheelScrollPage: false
@@ -35,3 +37,7 @@ URxvt.print-pipe: "cat > /dev/null"
 ! Font
 URxvt.font: xft:hack:size=10
 URxvt.letterspace: -2
+
+! Fullscreen toggle
+URxvt.perl-ext-common: fullscreen
+URxvt.keysym.F11: perl:fullscreen:switch
