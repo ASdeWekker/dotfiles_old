@@ -198,7 +198,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Add a background
-exec_always feh --bg-scale /home/alex/Pictures/backgrounds1/doornbos_16x9.jpg #/home/alex/Pictures/backgrounds1 --randomize --slideshow-delay 1.0
+exec_always feh --bg-scale /home/alex/shn/conf/bg.jpg #/home/alex/Pictures/backgrounds1 --randomize --slideshow-delay 1.0
 
 # Add gaps
 smart_gaps on
