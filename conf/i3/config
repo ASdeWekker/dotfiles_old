@@ -133,10 +133,14 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Spotify"] $ws10
 assign [class="Thunderbird"] $ws3
 assign [class="discord"] $ws9
+assign [class="steam"] $ws8
 
 # Auto start programs on login
 #exec thunderbird
 #exec discord
+
+
+bindsym $mod+Shift+Alt+z exec thunderbird discord google-chrome-stable steam
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
