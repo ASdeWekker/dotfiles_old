@@ -5,8 +5,6 @@ dropbox
 fritzing
 google-chrome
 j4-dmenu-desktop
-libc++
-libc++abi
 ncurses5-compat-libs
 package-query
 paper-icon-theme
