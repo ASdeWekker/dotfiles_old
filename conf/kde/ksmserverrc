@@ -1,0 +1,27 @@
+[General]
+screenCount=1
+
+[LegacySession: saved at previous logout]
+count=0
+
+[Session: saved at previous logout]
+clientId1=10e4d66161000153279090700000012170014
+clientId2=10e4d66161000153612478100000285350005
+clientId3=10e4d66161000153612478500000285350007
+count=3
+discardCommand1[$e]=rm,$HOME/.config/session/kwin_10e4d66161000153279090700000012170014_1536124975_456792
+program1=/usr/bin/kwin_x11
+program2=/usr/lib/kdeconnectd
+program3=pulseaudio
+restartCommand1=/usr/bin/kwin_x11,-session,10e4d66161000153279090700000012170014_1536124975_456792
+restartCommand2=/usr/lib/kdeconnectd,-session,10e4d66161000153612478100000285350005_1536124975_454533
+restartCommand3=
+restartStyleHint1=0
+restartStyleHint2=0
+restartStyleHint3=0
+userId1=alex
+userId2=alex
+userId3=alex
+wasWm1=true
+wasWm2=false
+wasWm3=false

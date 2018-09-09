@@ -1,0 +1,74 @@
+[Devices][/org/freedesktop/UDisks2/block_devices/loop0]
+EverMounted=true
+Icon=application-x-cd-image
+LastNameSeen=ubuntu-16.04.2-server-amd64.iso
+LastSeenMounted=false
+
+[Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p1]
+Icon=drive-harddisk
+LastNameSeen=Basic data partition
+LastSeenMounted=false
+
+[Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p2]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=EFI system partition
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p4]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=Basic data partition
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p5]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=108.8 GiB Hard Drive
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p6]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=SFData
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sda1]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=FData
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sdb1]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=Data
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sdb2]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=130.7 GiB Hard Drive
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sdb3]
+Icon=drive-removable-media-usb
+LastNameSeen=3.0 GiB Removable Media
+LastSeenMounted=false
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sdc1]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=Data
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sdc2]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=130.7 GiB Hard Drive
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sdc3]
+Icon=drive-removable-media-usb
+LastNameSeen=3.0 GiB Removable Media
+LastSeenMounted=false

@@ -1,0 +1,5 @@
+[General]
+history=kons,subl,chrome,file,fil,writ,delug,del,play,
+
+[PlasmaRunnerManager]
+LaunchCounts=1 services_org.kde.konsole.desktop
