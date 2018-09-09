@@ -13,3 +13,6 @@ ln -sf $homed/i3/config /home/alex/.config/i3/
 ln -sf $homed/.Xresources /home/alex/
 mkdir $home/.bin/
 ln -sf $homed/dot-bin/tmuxinator.bash $home/.bin/
+ln -sf $homed/GIMP/2.10/gtkrc $home/.config/GIMP/2.10/
+ln -sf $homed/GIMP/2.10/themerc $home/.config/GIMP/2.10/
+ln -sf $homed/htoprc $home/.config/htop/
