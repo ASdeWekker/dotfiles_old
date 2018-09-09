@@ -13,9 +13,7 @@ qdirstat
 qmplay2
 spotify
 sublime-text-dev
-tor-browser-en
 ufetch-git
 urxvt-fullscreen
 vim-plug
-virtualbox-ext-oracle
 vte

@@ -29,7 +29,6 @@ deluge
 device-mapper
 dhcpcd
 diffutils
-dkms
 dmenu
 dolphin
 e2fsprogs
@@ -56,7 +55,6 @@ gcc-libs
 gedit
 gettext
 gimp
-git
 glibc
 gnome-settings-daemon
 go
@@ -129,7 +127,6 @@ noto-fonts-cjk
 noto-fonts-emoji
 npm
 ntfs-3g
-nvidia-dkms
 nvidia-settings
 open-vm-tools
 opencl-nvidia
@@ -192,14 +189,12 @@ tracker-miners
 ttf-dejavu
 ttf-font-awesome
 ttf-liberation
-ttf-symbola
 unrar
 unzip
 usbutils
 util-linux
 vim
 vino
-virtualbox
 vlc
 vte3
 which
@@ -213,7 +208,5 @@ xfsprogs
 xorg-server
 xorg-xhost
 xterm
-yaourt
-yay
 yelp
 zip
