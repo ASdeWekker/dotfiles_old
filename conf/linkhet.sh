@@ -16,5 +16,5 @@ ln -sf $homed/dot-bin/tmuxinator.bash $home/.bin/
 ln -sf $homed/GIMP/2.10/gtkrc $home/.config/GIMP/2.10/
 ln -sf $homed/GIMP/2.10/themerc $home/.config/GIMP/2.10/
 ln -sf $homed/htoprc $home/.config/htop/
-ln -sf $homed/etc/fonts/local.conf /etc/fonts/
-ln -sf $homed/etc/fonts/fonts.conf /etc/fonts/
+sudo ln -sf $homed/etc/fonts/local.conf /etc/fonts/
+sudo ln -sf $homed/etc/fonts/fonts.conf /etc/fonts/

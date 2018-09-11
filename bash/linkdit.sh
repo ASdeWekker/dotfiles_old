@@ -2,11 +2,11 @@
 
 ulb="/usr/local/bin"
 shn="/home/alex/shn/bash"
-sudo ln -s $shn/dag.sh $ulb/doei
-sudo ln -s $shn/gedag.sh $ulb/doeii
-sudo ln -s $shn/batchconv1080p.sh $ulb/conv1080
-sudo ln -s $shn/batchconv24fps.sh $ulb/conv24
-sudo ln -s $shn/suspends.sh $ulb/slp
-sudo ln -s $shn/runaswine.sh $ulb/wijn
-sudo ln -s $shn/mongot.sh $ulb/
-sudo ln -s $shn/gitcommit.sh $ulb/gitt
+sudo ln -sf $shn/dag.sh $ulb/doei
+sudo ln -sf $shn/gedag.sh $ulb/doeii
+sudo ln -sf $shn/batchconv1080p.sh $ulb/conv1080
+sudo ln -sf $shn/batchconv24fps.sh $ulb/conv24
+sudo ln -sf $shn/suspends.sh $ulb/slp
+sudo ln -sf $shn/runaswine.sh $ulb/wijn
+sudo ln -sf $shn/mongot.sh $ulb/
+sudo ln -sf $shn/gitcommit.sh $ulb/gitt
