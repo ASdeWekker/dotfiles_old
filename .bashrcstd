@@ -19,7 +19,7 @@ alias ssp='pug -wP index.pug index.html'
 alias reload-bash='source ~/.bashrc'
 
 # ssh aliases
-alias taart='ssh -C taart'
+alias taart='ssh -C taaart'
 alias sspc='ssh -C pcaats'
 #alias taart10='ssh -C alex@10.8.0.1'
 #alias sshuu='ssh -C alex@ubunduuuu'
