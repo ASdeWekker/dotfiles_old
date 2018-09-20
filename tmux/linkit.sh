@@ -5,8 +5,10 @@ filesloc="/home/alex/shn/tmux"
 # Location where the files are needed
 linkloc="/home/alex/.config/tmuxinator/"
 
+mkdir -p /home/alex/.config/tmuxinator
+
 # For loop to grab all the .yml files and link them
 for i in *.yml;
     do echo $i;
-    ln -s $filesloc/$i $linkloc;
+    ln -sf $filesloc/$i $linkloc;
 done
