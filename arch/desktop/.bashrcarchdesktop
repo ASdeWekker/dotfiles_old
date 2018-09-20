@@ -7,6 +7,10 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1 
 . /usr/share/powerline/bindings/bash/powerline.sh
 
-# set vim as editor?
-export EDITOR=vim
-export VISUAL=vim
+# set neovim as editor?
+export EDITOR=nvim
+export VISUAL=nvim
+
+# alias for vim and nvim
+alias vim='nvim'
+alias vimm='/usr/bin/vim'
