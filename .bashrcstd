@@ -2,68 +2,8 @@
 # Standard added .bashrc file
 #
 
-# going into the project folders
-alias hmm='cd /var/www/html/backup/projects/urlname'
-alias hmma='cd /var/www/html/backup/alex/alexdewekker/2'
-alias hmmm='cd /var/www/html/backup/projects/darten'
-alias cv='cd /var/www/html/backup/alex/cv/2'
-alias sp='cd /var/www/html/backup/projects/speedtest'
-alias bac='cd /var/www/html/backup'
-
-# Starting services: pug, npm & compass
-alias ssn='npm start'
-alias sss='compass watch'
-alias ssp='pug -wP index.pug index.html'
-
-# reload .bashrc
-alias reload-bash='source ~/.bashrc'
-
-# ssh aliases
-alias taart='ssh -C taaart'
-alias sspc='ssh -C pcaats'
-#alias taart10='ssh -C alex@10.8.0.1'
-#alias sshuu='ssh -C alex@ubunduuuu'
-#alias sshtp='ssh -C alex@atpaats'
-#alias sshserv='ssh -C alex@servertje'
-
-# shortcut for checking systemctl status
-alias syss='sudo systemctl'
-
-# how to git gud and other helpful git things
-alias git-gud='git push'
-alias gs='git status'
-alias ga='git add -A'
-alias gc='git commit -m'
-alias gp='git pull'
-
-# nmap shortcut for this network
-alias nmapp='nmap -sP 192.168.1.*'
-alias nmapp10='nmap -sP 10.8.0.*'
-
-# history shortcut
-alias hh='history'
-
-# sensors and stuff
-alias sens='sensors | grep Core*'
-
-# set a fancy prompt color
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
-
-# tmux aliases
-# attach shortcut
-alias tat='tmux attach -t'
-# session check shortcut
-alias tls='tmux list-sessions'
 # make tmuxinator work
 source ~/.bin/tmuxinator.bash
 
-# suspend the system and then exit the ssh connection
-alias slpd='slp;exit'
-
-# translating all tabs to spaces in every file
-alias tabstospaces="find . -type f -exec sed -i.orig 's/\t/    /g' {} +"
-
-# check the git repos
-alias check='cd;cd shn;gs;gp;bac;gs;gp'
+# source the .alias file
+source ~/shn/.alias
