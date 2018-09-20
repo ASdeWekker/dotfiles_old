@@ -2,18 +2,11 @@
 # Bashrc for Arch Linux on the Desktop x86/64
 #
 
-# not necessary, using yay now
-#alias i='pacaur -S --noedit'
-
-# powerline config
-#if [ -f /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh ]; then
-#	source /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
-#fi
 powerline-daemon -q 
 POWERLINE_BASH_CONTINUATION=1 
 POWERLINE_BASH_SELECT=1 
-#. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
 . /usr/share/powerline/bindings/bash/powerline.sh
 
 # set vim as editor?
 export EDITOR=vim
+export VISUAL=vim

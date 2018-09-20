@@ -3,10 +3,9 @@
 # Bashrc file for Arch Linux on the Raspberry Pi
 #
 
-# not necessary, using yay now
-#alias i='yaourt -S'
+# NOT REALLY ANYTHING IN HERE
 
 # vcgencmd stuff
-alias vctemp='/opt/vc/bin/vcgencmd measure_temp'
-alias wtemp='watch /opt/vc/bin/vcgencmd measure_temp'
-alias vccore='/opt/vc/bin/vcgencmd measure_clock'
+#alias vctemp='/opt/vc/bin/vcgencmd measure_temp'
+#alias wtemp='watch /opt/vc/bin/vcgencmd measure_temp'
+#alias vccore='/opt/vc/bin/vcgencmd measure_clock'
