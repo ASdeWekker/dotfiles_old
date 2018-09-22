@@ -13,3 +13,11 @@ set expandtab
 set noswapfile
 set undofile
 set undodir=~/.config/nvim/temp/undodir 
+set encoding=utf-8
+set fileencoding=utf-8
+set lazyredraw
+set scrolloff=3
+set backspace=indent,eol,start
+set fileformats=unix
+set fileformats=unix,dos
+
