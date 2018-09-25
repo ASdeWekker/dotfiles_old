@@ -4,6 +4,8 @@ let base16colorspace=256
 syntax enable
 " colorscheme base16-gooey
 
+map <C-n> :NERDTreeToggle<CR>
+
 set number
 set clipboard=unnamed
 set tabstop=4
