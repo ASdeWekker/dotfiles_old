@@ -15,3 +15,5 @@ export VISUAL=nvim
 alias vim='nvim'
 alias vimm='/usr/bin/vim'
 alias subl='subl3'
+alias iiaa='inputattach'
+alias iidd='inputdetach'
