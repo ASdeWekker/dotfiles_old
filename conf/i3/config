@@ -245,3 +245,14 @@ for_window [class="^.*"] border pixel 0
 
 # Use Compton
 exec_always compton -f
+
+# Correctly handle floating dialogs from programs
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task-dialog"] floating enable
+
+# Use MPD
+#exec_always mpd
+
+# Key bindings for inputattach and detach
+bindsym $mod+alt+a exec ~/.VFIOinput/inputattach.sh
+bindsym $mod+alt+d exec ~/.VFIOinput/inputdetach.sh
