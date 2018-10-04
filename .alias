@@ -66,3 +66,10 @@ alias mongot='mongo 192.168.1.90 --port 27017 -u "alex" --authenticationDatabase
 
 # use prettyping
 alias ping='prettyping'
+
+# libvirt and what not
+alias suvi='sudo virsh'
+alias suviw1='sudo virsh start win10'
+alias suvil='sudo virsh list'
+alias suvid='sudo virsh destroy'
+alias suvip='sudo virsh poweroff'
