@@ -254,5 +254,5 @@ for_window [window_role="task-dialog"] floating enable
 #exec_always mpd
 
 # Key bindings for inputattach and detach
-bindsym $mod+alt+a exec ~/.VFIOinput/inputattach.sh
-bindsym $mod+alt+d exec ~/.VFIOinput/inputdetach.sh
+#bindsym $mod+alt+a exec ~/.VFIOinput/inputattach.sh
+#bindsym $mod+alt+d exec ~/.VFIOinput/inputdetach.sh
