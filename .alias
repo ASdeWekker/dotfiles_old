@@ -81,3 +81,5 @@ alias drivepush='cd;cd drive;drive push'
 # doei and doeii
 alias doei='systemctl poweroff'
 alias sdoei='sudo systemctl poweroff'
+alias doeii='systemctl reboot'
+alias sdoeii='sudo systemctl reboot'
