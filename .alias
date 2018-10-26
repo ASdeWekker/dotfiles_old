@@ -77,3 +77,7 @@ alias suvip='sudo virsh poweroff'
 # google drive push and pull
 alias drivepull='cd;cd drive;drive pull'
 alias drivepush='cd;cd drive;drive push'
+
+# doei and doeii
+alias doei='systemctl poweroff'
+alias sdoei='sudo systemctl poweroff'
