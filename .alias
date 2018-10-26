@@ -73,3 +73,7 @@ alias suviw1='sudo virsh start win10'
 alias suvil='sudo virsh list'
 alias suvid='sudo virsh destroy'
 alias suvip='sudo virsh poweroff'
+
+# google drive push and pull
+alias drivepull='cd;cd drive;drive pull'
+alias drivepush='cd;cd drive;drive push'
