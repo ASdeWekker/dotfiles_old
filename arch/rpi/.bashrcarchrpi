@@ -9,3 +9,6 @@
 #alias vctemp='/opt/vc/bin/vcgencmd measure_temp'
 #alias wtemp='watch /opt/vc/bin/vcgencmd measure_temp'
 #alias vccore='/opt/vc/bin/vcgencmd measure_clock'
+
+# export TERM to use the rpi in urxvt
+export TERM=xterm-256color
