@@ -83,3 +83,6 @@ alias doei='systemctl poweroff'
 alias sdoei='sudo systemctl poweroff'
 alias doeii='systemctl reboot'
 alias sdoeii='sudo systemctl reboot'
+
+# sqlite3
+alias sq='sqlite3'
