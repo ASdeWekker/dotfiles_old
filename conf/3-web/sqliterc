@@ -3,5 +3,5 @@
 .separator "\t"
 .nullvalue "Null"
 .prompt "SQL> " ":::> "
-.mode list
+.mode tabs
 
