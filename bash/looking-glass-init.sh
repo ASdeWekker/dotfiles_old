@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 touch /dev/shm/looking-glass
 chown alex:kvm /dev/shm/looking-glass
