@@ -6,6 +6,7 @@
 alias i='yay -S'
 alias ui='sudo pacman -Rns'
 alias clean='sudo pacman -Sc;yay -Yc'
+alias updaats='yay'
 
 # some ls aliases
 alias ll='ls -alF'
