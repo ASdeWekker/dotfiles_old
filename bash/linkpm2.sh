@@ -3,7 +3,6 @@
 # declare folder var.
 bac=/var/www/html/backup
 
-pm2
 # make a service out of pm2 change the username if necessary.
 sudo env PATH=$PATH:/usr/lib/node_modules/pm2/bin/pm2 startup systemd -u alex --hp /home/alex
 
@@ -31,6 +30,7 @@ cd $bac/projects/urlname
 pm2 start urlname.js
 cd $bac/projects/speedtest
 pm2 start speedtest.js
+pm2 save
 
 # done.
 echo "done"
