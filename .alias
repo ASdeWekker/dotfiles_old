@@ -86,3 +86,6 @@ alias sdoeii='sudo systemctl reboot'
 
 # sqlite3
 alias sq='sqlite3'
+
+# to use sudo with an alias
+alias sudo='sudo '
