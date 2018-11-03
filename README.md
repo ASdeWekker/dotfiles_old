@@ -1,4 +1,4 @@
 # shn
 
 # This is for all the shell scripts big and small,
-# and other misc files on my machines
+# and other miscellaneous files on my machines
