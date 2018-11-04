@@ -19,5 +19,8 @@ sudo ln -sf $homed/2-misc/rpi-smb.conf /etc/samba/smb.conf
 # php-fpm for pihole
 sudo mkdir -p /etc/php/php-fpm.d
 sudo ln -sf $homed/3-web/php-fpm-www.conf /etc/php/php-fpm.d/www.conf
+# nginx for pihole
+sudo mkdir -p /etc/nginx/conf.d
+sudo ln -sf $homed/3-web/pihole.conf /etc/nginx/conf.d/
 
 # EOF #
