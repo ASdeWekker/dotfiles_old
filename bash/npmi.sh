@@ -4,22 +4,22 @@
 wpath="/var/www/html/backup"
 
 cd $wpath/oefenen/node/addpage;
-npm i;
+yarn install;
 cd $wpath/oefenen/node/expresstut;
-npm i;
+yarn install;
 cd $wpath/oefenen/node/meantut;
-npm i;
+yarn install;
 cd $wpath/oefenen/node/nodemongo;
-npm i;
+yarn install;
 cd $wpath/oefenen/node/nsession;
-npm i;
+yarn install;
 cd $wpath/oefenen/node/session;
-npm i;
+yarn install;
 cd $wpath/projects/urlname;
-npm i;
+yarn install;
 cd $wpath/projects/darten;
-npm i;
+yarn install;
 cd $wpath/nodelpage;
-npm i;
+yarn install;
 cd $wpath/projects/speedtest;
-npm i;
+yarn install;
