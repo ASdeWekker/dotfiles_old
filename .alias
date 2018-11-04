@@ -53,6 +53,7 @@ alias tat='tmux attach -t'
 alias tls='tmux list-sessions'
 
 # suspend the system and then exit the ssh connection
+alias slp='sudo systemctl suspend'
 alias slpd='slp;exit'
 
 # translating all tabs to spaces in every file
@@ -89,3 +90,6 @@ alias sq='sqlite3'
 
 # to use sudo with an alias
 alias sudo='sudo '
+
+# start pc
+alias wolpc='wol 30:9c:23:04:60:2f'
