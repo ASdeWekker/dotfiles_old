@@ -15,4 +15,4 @@ elif answer == "1":
     subprocess.call(["/home/alex/shn/conf/rpi.sh"])
 else:
     print("beter typen pik")
-subprocess.call(["/home/alex/shn/conf/makelinks.sh"])
+subprocess.call(["/home/alex/shn/conf/main.sh"])
