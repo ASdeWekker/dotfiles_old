@@ -14,6 +14,12 @@ set -x
 # Ask if the file is being used on the desktop or
 # a Raspberry Pi and act accordingly.
 
+### 1 - System ###
+# ssh
+sudo mkdir -p /etc/ssh
+mkdir -p $home/.ssh
+sudo ln -sf $homed/1-system/sshd_config /etc/ssh/
+ln -sf $homed/1-system/ssh_config $home/.ssh/config
 
 ### 2 - Misc ###
 # htop
