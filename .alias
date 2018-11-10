@@ -53,7 +53,7 @@ alias tat='tmux attach -t'
 alias tls='tmux list-sessions'
 
 # suspend the system and then exit the ssh connection
-alias slp='sudo systemctl suspend'
+alias slp='systemctl suspend'
 alias slpd='slp;exit'
 
 # translating all tabs to spaces in every file
