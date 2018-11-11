@@ -18,10 +18,10 @@ sudo ln -sf $homed/1-system/local.conf /etc/fonts/
 sudo ln -sf $homed/1-system/fonts.conf /etc/fonts/
 
 # Mouse
-ln -sf $homed/1-system/.imwheelrc $home/
+ln -sf $homed/1-system/imwheelrc $home/.imwheelrc
 
 # urxvt
-ln -sf $homed/1-system/.Xresources $home/
+ln -sf $homed/1-system/xresources $home/.Xresources
 
 # i3
 mkdir -p $home/.config/i3
