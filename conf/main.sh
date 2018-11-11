@@ -21,6 +21,12 @@ mkdir -p $home/.ssh
 sudo ln -sf $homed/1-system/sshd_config /etc/ssh/
 ln -sf $homed/1-system/ssh_config $home/.ssh/config
 
+# ufw
+sudo mkdir -p /etc/default
+sudo mkdir -p /etc/ufw
+sudo ln -sf $homed/1-system/ufw /etc/default/
+sudo ln -sf $homed/1-system/before.rules /etc/ufw/
+
 ### 2 - Misc ###
 # htop
 mkdir -p $home/.config/htop
