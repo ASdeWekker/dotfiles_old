@@ -11,6 +11,10 @@ homed="/home/alex/shn/conf"
 # Display all the commands used
 set -x
 
+### 1 - System ###
+# network
+sudo cp $homed/1-system/eth0.network /etc/systemd/network/
+
 ### 2 - Misc ###
 # Samba
 sudo ln -sf $homed/2-misc/rpi-smb.conf /etc/samba/smb.conf
