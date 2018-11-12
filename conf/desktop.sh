@@ -25,7 +25,7 @@ ln -sf $homed/1-system/xresources $home/.Xresources
 
 # i3
 mkdir -p $home/.config/i3
-ln -sf $homed/1-system/i3-config $home/.config/i3/config
+ln -sf $homed/1-system/i3config $home/.config/i3/config
 ln -sf $homed/1-system/i3blocks.conf $home/.config/i3/
 
 ### 2 - Misc ###
