@@ -13,10 +13,7 @@
 :POSTROUTING ACCEPT [0:0]
 
 # Allow traffic from clients to the interface
--A POSTROUTING -s 10.8.0.0/24 -o interface -j MASQUERADE
-
-# Optionally duplicate this line for each subnet if your setup requires it
--A POSTROUTING -s 10.8.1.0/24 -o interface -j MASQUERADE
+-A POSTROUTING -s 10.8.0.0/24 -o tun0 -j MASQUERADE
 
 # do not delete the "COMMIT" line or the NAT table rules above will not be processed
 COMMIT
