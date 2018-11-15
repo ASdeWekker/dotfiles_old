@@ -9,6 +9,8 @@ alias hmmm='cd /var/www/html/backup/projects/darten'
 alias cv='cd /var/www/html/backup/alex/cv/2'
 alias sp='cd /var/www/html/backup/projects/speedtest'
 alias bac='cd /var/www/html/backup'
+alias dek='cd /var/www/html/de_kelder'
+alias ard='cd /home/alex/Arduino'
 
 # Starting services: pug, npm & compass
 alias ssn='npm start'
@@ -60,7 +62,7 @@ alias slpd='slp;exit'
 alias tabstospaces="find . -type f -exec sed -i.orig 's/\t/    /g' {} +"
 
 # check the git repos
-alias check='cd;cd shn;gs;gp;bac;gs;gp'
+alias check='cd;cd shn;gs;gp;bac;gs;gp;ard;gs;gp;dek;gs;gp'
 
 # connect to mongo on the pi
 alias mongot='mongo 192.168.1.90 --port 27017 -u "alex" --authenticationDatabase "admin"'
