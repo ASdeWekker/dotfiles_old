@@ -1,9 +1,0 @@
-[Unit]
-Description=Creat shared memory for looking glass
-
-[Service]
-Type=oneshot
-ExecStart=/home/alex/shn/bash/looking-glass-init.sh
-
-[Install]
-WantedBy=multi-user.target
