@@ -17,6 +17,10 @@ sudo mkdir -p /etc/fonts/
 sudo ln -sf $homed/1-system/local.conf /etc/fonts/
 sudo ln -sf $homed/1-system/fonts.conf /etc/fonts/
 
+# i3lock service file
+sudo cp -f $homed/1-system/i3lock.service /etc/systemd/system/
+sudo systemctl reenable i3lock.service
+
 # Mouse
 ln -sf $homed/1-system/imwheelrc $home/.imwheelrc
 
