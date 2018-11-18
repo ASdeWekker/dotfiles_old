@@ -12,6 +12,7 @@ alias updaats='yay'
 alias ll='ls -alF'
 alias la='ls -AF'
 alias l='ls -CF'
+alias ls='ls --color=auto'
 
 # fixed the ruby path for installing gems
 #PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
@@ -37,7 +38,7 @@ blue="\[$(tput setaf 4)\]"
 reset="\[$(tput sgr0)\]"
 bgwhite="\[$(tput setab 0)\]"
 boldon="\[$(tput bold)\]"
-if [[ id | cut -d '(' -f2 | cut -d ')' -f1 == "root" ]]; then
+if [ $(id | cut -d '(' -f2 | cut -d ')' -f1) == "root" ]; then
     userc="\[$(tput setaf 1)\]"
 else
     userc="\[$(tput setaf 4)\]"
