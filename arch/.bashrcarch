@@ -30,3 +30,11 @@ fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
     eval "$(<~/.ssh-agent-thing)"
 fi
+
+# customize the prompt
+green="\[$(tput setaf 2)\]"
+blue="\[$(tput setaf 4)\]"
+reset="\[$(tput sgr0)\]"
+bgwhite="\[$(tput setab 0)\]"
+boldon="\[$(tput bold)\]"
+export PS1="${boldon}${bgwhite}${blue}(_)_)::::::::::D${green}~~\w ${reset}$ "
