@@ -50,6 +50,9 @@ sudo ln -sf $homed/3-web/php.ini /etc/php/
 sudo ln -sf $homed/3-web/php7_module.conf /etc/httpd/conf/extra/
 sudo ln -sf $homed/3-web/php-fpm.conf /etc/httpd/conf/extra/
 
+# PostgreSQL admin
+sudo ln -sf $homed/3-web/phppgadmin.conf /etc/httpd/conf/extra/
+
 ### 5 - Tmux ###
 # tmux configuration file
 sudo ln -sf $homed/5-tmux/tmux.conf /etc/
