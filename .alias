@@ -95,3 +95,6 @@ alias sudo='sudo '
 
 # start pc
 alias wolpc='wol 30:9c:23:04:60:2f'
+
+# switch to the postgres user
+alias psql='sudo -u postgres -i'
