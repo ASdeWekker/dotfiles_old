@@ -31,3 +31,13 @@ fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
     eval "$(<~/.ssh-agent-thing)"
 fi
+
+# set neovim as editor?
+export EDITOR=nvim
+export VISUAL=nvim
+
+# alias for vim and nvim
+alias vim='nvim'
+alias vimm='/usr/bin/vim'
+alias subl='subl3'
+alias iiaa='inputattach'
