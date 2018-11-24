@@ -98,3 +98,14 @@ alias wolpc='wol 30:9c:23:04:60:2f'
 
 # switch to the postgres user
 alias psql='sudo -u postgres -i'
+
+# vim and nvim
+alias vim='nvim'
+alias vimm='/usr/bin/vim'
+
+# sublime text
+alias subl='subl3'
+
+# input attach and detach for mouse and keyboard to vm
+alias iiaa='inputattach'
+alias iidd='inputdetach'

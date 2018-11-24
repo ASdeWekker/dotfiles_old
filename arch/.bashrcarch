@@ -35,9 +35,3 @@ fi
 # set neovim as editor?
 export EDITOR=nvim
 export VISUAL=nvim
-
-# alias for vim and nvim
-alias vim='nvim'
-alias vimm='/usr/bin/vim'
-alias subl='subl3'
-alias iiaa='inputattach'
