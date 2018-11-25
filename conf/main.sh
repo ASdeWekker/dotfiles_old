@@ -32,6 +32,10 @@ sudo ln -f $homed/1-system/before.rules /etc/ufw/
 mkdir -p $home/.config/htop
 ln -sf $homed/2-misc/htoprc $home/.config/htop/
 
+# nvim
+mkdir -p $home/.config/nvim/temp/undodir
+ln -sf $homed/2-misc/init.vim $home/.config/nvim
+
 ### 3 - Web ###
 # Apache
 sudo mkdir -p /etc/httpd/conf/extra

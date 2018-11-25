@@ -45,10 +45,6 @@ mkdir -p $home/.config/GIMP/2.10
 ln -sf $homed/2-misc/gimp/gtkrc $home/.config/GIMP/2.10/
 ln -sf $homed/2-misc/gimp/themerc $home/.config/GIMP/2.10/
 
-# nvim
-mkdir -p $home/.config/nvim/temp/undodir
-ln -sf $homed/2-misc/init.vim $home/.config/nvim
-
 ### 4 - VFIO ###
 
 # EOF #
