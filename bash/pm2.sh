@@ -11,25 +11,25 @@ bac=/var/www/html/backup
 
 # go to all the folders and start the project.
 cd $bac/../de_kelder/
-pm2 start de_kelder.js
+pm2 start de_kelder.js --update-env
 cd $bac/oefenen/node/expresstut
-pm2 start expresstut.js
+pm2 start expresstut.js --update-env
 cd $bac/oefenen/node/nodemongo/bin
-pm2 start nodemongo
+pm2 start nodemongo --update-env
 cd $bac/oefenen/node/meantut/bin
-pm2 start meantut
+pm2 start meantut --update-env
 cd $bac/oefenen/node/session/bin
-pm2 start session
+pm2 start session --update-env
 cd $bac/oefenen/node/addpage
-pm2 start addpage.js
+pm2 start addpage.js --update-env
 cd $bac/oefenen/node/nsession
-pm2 start nsession.js
+pm2 start nsession.js --update-env
 cd $bac/projects/darten
-pm2 start darten.js
+pm2 start darten.js --update-env
 cd $bac/projects/urlname
-pm2 start urlname.js
+pm2 start urlname.js --update-env
 cd $bac/projects/speedtest
-pm2 start speedtest.js
+pm2 start speedtest.js --update-env
 pm2 save
 
 # done.
