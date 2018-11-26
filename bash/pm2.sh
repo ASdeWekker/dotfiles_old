@@ -10,8 +10,8 @@ bac=/var/www/html/backup
 #sudo systemctl enable pm2-alex
 
 # go to all the folders and start the project.
-cd $bac/../de_kelder/
-pm2 start de_kelder.js --update-env
+cd $bac/../de_kelder/2-bin
+pm2 start de_kelder --update-env
 cd $bac/oefenen/node/expresstut
 pm2 start expresstut.js --update-env
 cd $bac/oefenen/node/nodemongo/bin
