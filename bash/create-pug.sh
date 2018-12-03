@@ -28,17 +28,17 @@ EOF
 cat > index.pug <<EOF
 doctype html
 html
-head
-    title $1
-    meta(charset="utf-8")
-    meta(name="viewport", content="widht=device-width, initial-scale=1")
-    meta(name="theme-color", content="#000000")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    link(rel="stylesheet", href="2-stylesheets/styles.css", type="text/css")
-body
-    div.container
-        section.main
-            h1 $1
+    head
+        title $1
+        meta(charset="utf-8")
+        meta(name="viewport", content="widht=device-width, initial-scale=1")
+        meta(name="theme-color", content="tomato")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        link(rel="stylesheet", href="2-stylesheets/styles.css", type="text/css")
+    body
+        div.container
+            section.main
+                h1 $1
 EOF
 
 cat > 2-stylesheets/styles.sass <<EOF
@@ -46,7 +46,7 @@ cat > 2-stylesheets/styles.sass <<EOF
     box-sizing: border-box
     
 html, body
-    background: #000
+    background: tomato
     color: #fff
     font-family: Verdana, "sans-serif"
     font-size: 100%
