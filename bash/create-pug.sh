@@ -43,6 +43,9 @@ EOF
 
 cat > 2-stylesheets/styles.sass <<EOF
 *
+    box-sizing: border-box
+    
+html, body
     background: #000
     color: #fff
     font-family: Verdana, "sans-serif"
