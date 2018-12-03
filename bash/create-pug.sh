@@ -48,7 +48,7 @@ cat > 2-stylesheets/styles.sass <<EOF
 html, body
     background: tomato
     color: #fff
-    font-family: Verdana, "sans-serif"
+    font-family: Arial, "sans-serif"
     font-size: 100%
     margin: 0
     padding: 0
