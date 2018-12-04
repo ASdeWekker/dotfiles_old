@@ -1,0 +1,12 @@
+name: kelder
+root: /var/www/html/de_kelder
+windows:
+    - dev:
+        panes:
+            - dek;pm2 stop 0;ssn
+            - dek;cd pr*;sss
+            - dek;cd pr*;pug -wP recipe.pug
+            - dek;cd pr*;pug -wP add-recipe.pug
+    - git:
+        panes:
+            - dek;gs
