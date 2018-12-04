@@ -109,3 +109,6 @@ alias subl='subl3'
 # input attach and detach for mouse and keyboard to vm
 alias iiaa='inputattach'
 alias iidd='inputdetach'
+
+# go to de kelder project folder, start sublime and exit.
+alias deksubit='dek;subl .;exit'

@@ -2,6 +2,7 @@ name: kelder
 root: /var/www/html/de_kelder
 windows:
     - dev:
+        layout: even-vertical
         panes:
             - dek;pm2 stop 0;ssn
             - dek;cd pr*;sss
