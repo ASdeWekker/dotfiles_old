@@ -6,7 +6,7 @@ Before=sleep.target
 User=alex
 Type=forking
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/i3lock -c 2f343f
+ExecStart=/home/alex/shn/bash/i3lock.sh
 ExecStartPost=/bin/sleep 1
 
 [Install]
