@@ -255,3 +255,5 @@ for_window [title="Thunar"] floating enable
 # crazy keyboard shortcut for the dev workspace
 bindsym $mod+shift+F3 exec /home/alex/shn/bash/ws3-dev.sh
 
+# start chromium
+bindsym $mod+c exec --no-startup-id chromium
