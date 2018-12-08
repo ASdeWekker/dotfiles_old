@@ -97,7 +97,8 @@ alias sudo='sudo '
 alias wolpc='wol 30:9c:23:04:60:2f'
 
 # switch to the postgres user
-alias psql='sudo -u postgres -i'
+alias psqlu='sudo -u postgres -i'
+alias psqldek='psql -h 192.168.1.90 dekelder alex'
 
 # vim and nvim
 alias vim='nvim'
