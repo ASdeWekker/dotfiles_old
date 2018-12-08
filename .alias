@@ -110,5 +110,3 @@ alias subl='subl3'
 alias iiaa='inputattach'
 alias iidd='inputdetach'
 
-# go to de kelder project folder, start sublime and exit.
-alias deksubit='dek;subl .;exit'
