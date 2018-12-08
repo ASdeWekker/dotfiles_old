@@ -30,6 +30,8 @@ cd $bac/projects/urlname
 pm2 start urlname.js --update-env
 cd $bac/projects/speedtest
 pm2 start speedtest.js --update-env
+cd $bac/oefenen/node/postgres/2-bin
+pm2 start postgres --update-env
 pm2 save
 
 # done.
