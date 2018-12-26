@@ -1,5 +1,6 @@
 #!/bin/bash
 
-cp -f /var/lib/lightdm/.Xauthority /home/alex/
-su - root -c "export XAUTHORITY=/home/alex/.Xauthority"
-su - root -c "export DISPLAY=:0"
+sudo cp -f /var/lib/lightdm/.Xauthority /home/alex/
+sudo chown alex:wheel /home/alex/.Xauthority
+export AUTHORITY=/home/alex/.Xauthority
+export DISPLAY=:0
