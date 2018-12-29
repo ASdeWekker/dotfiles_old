@@ -257,3 +257,6 @@ bindsym $mod+shift+F3 exec /home/alex/shn/bash/ws3-dev.sh
 
 # start chromium
 bindsym $mod+c exec --no-startup-id chromium
+
+# load the layout for workspace 3
+bindsym $mod+ctrl+3 exec /home/alex/shn/conf/1-system/load_layout_i3.sh
