@@ -135,7 +135,7 @@ assign [class="discord"] $ws9
 for_window [class="Spotify"] move to workspace $ws10
 
 # Auto start programs on login
-#exec thunderbird
+exec --no-startup-id thunderbird
 exec --no-startup-id discord
 exec --no-startup-id urxvt
 exec --no-startup-id spotify
