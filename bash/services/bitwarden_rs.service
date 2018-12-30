@@ -2,7 +2,8 @@
 Description=Bitwarden run via cargo
 
 [Service]
-ExecStart=cd /home/alex/bitwarden_rs && cargo run --release
+ExecStart=cargo run --release
+WorkingDirectory=/home/alex/bitwarden_rs
 Type=idle
 User=alex
 
