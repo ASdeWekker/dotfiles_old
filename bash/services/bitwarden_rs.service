@@ -1,0 +1,11 @@
+[Unit]
+Description=Bitwarden run via cargo
+
+[Service]
+ExecStart=cd /home/alex/bitwarden_rs && cargo run --release
+Type=idle
+User=alex
+
+[Install]
+WantedBy=multi-user.target
+
