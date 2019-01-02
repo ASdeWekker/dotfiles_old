@@ -29,7 +29,7 @@ pm2 start darten.js --update-env
 cd $bac/projects/urlname
 pm2 start urlname.js --update-env
 cd $bac/projects/speedtest
-pm2 start speedtest.js --update-env
+pm2 start 2-bin/speedtest --update-env
 cd $bac/oefenen/node/postgres/
 pm2 start 2-bin/postgres --update-env
 pm2 save
