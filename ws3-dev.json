@@ -19,7 +19,7 @@
     ],
     "type": "con"
 }
-
+,
 {
     "border": "pixel",
     "current_border_width": 0,
@@ -42,7 +42,7 @@
     ],
     "type": "con"
 }
-
+,
 {
     "border": "pixel",
     "current_border_width": 0,
@@ -64,6 +64,4 @@
     ],
     "type": "con"
 }
-
- 
  
