@@ -9,10 +9,10 @@ alias clean='sudo pacman -Sc;yay -Yc'
 alias updaats='yay'
 
 # some ls aliases
-alias ll='ls -alF'
-alias la='ls -AF'
-alias l='ls -CF'
-alias ls='ls --color=auto'
+alias ll='ls -al'
+alias la='ls -A'
+alias l='ls -C'
+alias ls='ls -hF --color=auto'
 
 # fixed the ruby path for installing gems
 #PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
