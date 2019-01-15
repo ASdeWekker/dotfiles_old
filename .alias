@@ -14,7 +14,8 @@ alias ard='cd /home/alex/Arduino'
 
 # Starting services: pug, npm & compass
 alias ssn='npm start'
-alias sss='compass watch'
+#alias sss='compass watch'
+alias sss='sass --watch styles.sass:styles.css'
 alias ssp='pug -wP index.pug index.html'
 
 # reload .bashrc
