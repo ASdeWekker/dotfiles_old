@@ -112,3 +112,7 @@ alias subl='subl3'
 alias iiaa='inputattach'
 alias iidd='inputdetach'
 
+# new pm2 environments.
+alias pm2o='PM2_HOME=$HOME/.pm2o pm2'
+alias pm2p='PM2_HOME=$HOME/.pm2p pm2'
+
