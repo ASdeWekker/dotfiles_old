@@ -4,6 +4,7 @@ import subprocess
 
 print("0 - Desktop")
 print("1 - Raspberry Pi")
+print("2 - Server")
 print("Are you going to link some files?")
 answer = input("On which system? ")
 
@@ -13,6 +14,9 @@ if answer == "0":
 elif answer == "1":
     print("Raspberry Pi")
     subprocess.call(["/home/alex/shn/conf/rpi.sh"])
+elif answer == "2":
+    print("Server")
+    subprocess.call(["/home/alex/shn/conf/server.sh"])
 else:
     print("beter typen pik")
 subprocess.call(["/home/alex/shn/conf/main.sh"])
