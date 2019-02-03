@@ -16,9 +16,15 @@ set -x
 # network
 sudo cp $homed/1-system/server.network /etc/systemd/network/eno1.network
 
+# NFS
+sudo ln -sf $homed/1-system/server-nfs-exports /etc/exports
+
+# snapRAID
+sudo ln -sf $homed/1-system/snapraid.conf /etc/
+
 ### 2 - Misc ###
 # Samba
-#sudo ln -sf $homed/2-misc/server-smb.conf /etc/samba/smb.conf
+sudo ln -sf $homed/2-misc/server-smb.conf /etc/samba/smb.conf
 
 # EOF 
 
