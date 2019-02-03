@@ -27,7 +27,7 @@ alias sspc='ssh -C pcaats'
 alias taart10='ssh -C 10.8.0.1'
 #alias sshuu='ssh -C ubunduuuu'
 #alias sshtp='ssh -C atpaats'
-alias sshserv='ssh -CXY servertjih'
+alias sserv='ssh -CXY servertjih'
 alias sspc10='ssh -C 10.8.0.4'
 
 # shortcut for checking systemctl status
