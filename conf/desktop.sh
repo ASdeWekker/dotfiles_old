@@ -12,6 +12,9 @@ homed="/home/alex/shn/conf"
 set -x
 
 ### 1 - System folder ###
+# network
+sudo cp $homed/1-system/desktop.network /etc/systemd/network/eno1.network
+
 # Fonts
 sudo mkdir -p /etc/fonts/
 sudo ln -sf $homed/1-system/local.conf /etc/fonts/

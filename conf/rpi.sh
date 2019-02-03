@@ -13,7 +13,7 @@ set -x
 
 ### 1 - System ###
 # network
-sudo cp $homed/1-system/eth0.network /etc/systemd/network/
+sudo cp $homed/1-system/rpi.network /etc/systemd/network/eth0.network
 
 ### 2 - Misc ###
 # Samba
