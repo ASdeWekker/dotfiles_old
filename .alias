@@ -11,6 +11,7 @@ alias sp='cd /var/www/html/backup/projects/speedtest'
 alias bac='cd /var/www/html/backup'
 alias dek='cd /var/www/html/de_kelder'
 alias ard='cd /home/alex/Arduino'
+alias cdd='cd /mnt/vd0/data'
 
 # Starting services: pug, npm & compass
 alias ssn='npm start'
@@ -61,7 +62,7 @@ alias slp='systemctl suspend'
 alias slpd='slp;exit'
 
 # translating all tabs to spaces in every file
-alias tabstospaces="find . -type f -exec sed -i.orig 's/\t/    /g' {} +"
+#alias tabstospaces="find . -type f -exec sed -i.orig 's/\t/    /g' {} +"
 
 # check the git repos
 alias check='cd;cd shn;gs;gp;bac;gs;gp;ard;gs;gp;dek;gs;gp'
