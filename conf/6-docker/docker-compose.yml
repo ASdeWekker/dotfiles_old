@@ -1,3 +1,19 @@
-# Plex
+# This is my docker compose file.
+version: '3.4'
 
+# Plex
+services:
+    plex:
+        container_name: plex
+        environment:
+            PGID: '1000'
+            PUID: '1000'
+            TZ: 'Europe/Amsterdam'
+            PLEX_CLAIM: 'claim-zqNhitzYyPVRUQPWPp1y'
+        image: plexinc/pms-docker
+        restart: unless-stopped
+        volumes:
+            - /home/alex/shn/conf/6-docker/plex:/config:rw
+            - /tmp/plex:/transcode:rw
+            - /mnt/vd0/data/videos:/data:rw
 
