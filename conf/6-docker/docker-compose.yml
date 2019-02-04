@@ -12,6 +12,10 @@ services:
             TZ: Europe/Amsterdam
             PLEX_CLAIM: claim-oJB1JLGUFJsBDqYfJ1HA
         image: plexinc/pms-docker
+        ports:
+            - protocol: udp
+              published: 32400
+              target: 32400
         restart: unless-stopped
         volumes:
             - /home/alex/shn/conf/6-docker/plex:/config:rw
