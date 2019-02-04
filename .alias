@@ -118,3 +118,6 @@ alias iidd='inputdetach'
 alias pm2o='PM2_HOME=$HOME/.pm2o pm2'
 alias pm2p='PM2_HOME=$HOME/.pm2p pm2'
 
+# docker
+alias dok='sudo docker'
+
