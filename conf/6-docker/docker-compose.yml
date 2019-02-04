@@ -1,8 +1,10 @@
 # This is my docker compose file.
 version: '3.4'
 
-# Plex
+# Services
 services:
+
+    # Plex
     plex:
         container_name: plex
         environment:
@@ -13,7 +15,7 @@ services:
             PLEX_CLAIM: claim-oJB1JLGUFJsBDqYfJ1HA
         image: plexinc/pms-docker
         ports:
-            - protocol: udp
+            - protocol: tcp
               published: 32400
               target: 32400
         restart: unless-stopped
@@ -21,4 +23,21 @@ services:
             - /home/alex/shn/conf/6-docker/plex:/config:rw
             - /tmp/plex:/transcode:rw
             - /mnt/vd0/data/videos:/data:rw
+    
+    # Portainer
+    portainer:
+        command: -H unix:///var/run/docker.sock
+        container_name: portainer
+        environment:
+            TZ: Europe/Amsterdam
+        image: portainer/portainer
+        ports:
+            - published: 9000
+              target: 9000
+        restart: unless-stopped
+        volumes:
+            - /home/alex/shn/conf/6-docker/portainer:/data:rw
+            - /etc/localtime:/etc/localtime:ro
+            - /home/alex/shn/conf/6-docker/shared:/shared:rw
+            - /var/run/docker.sock:/var/run/docker.sock:rw
 
