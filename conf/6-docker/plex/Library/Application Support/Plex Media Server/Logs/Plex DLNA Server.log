@@ -1,0 +1,14 @@
+Feb 04, 2019 22:32:14.394 [0x7fa3363ff700] INFO - Plex DLNA Server v1.14.1.5488-cc260c476 - Docker Docker Container x86_64 - build: linux-ubuntu-x86_64 - GMT 01:00
+Feb 04, 2019 22:32:14.394 [0x7fa3363ff700] INFO - Linux version: 4.20.6-arch1-1-ARCH, language: C
+Feb 04, 2019 22:32:14.394 [0x7fa3363ff700] INFO - Processor Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz
+Feb 04, 2019 22:32:14.391 [0x7fa33ddc17c0] DEBUG - Unique device name = 7b56cc76-1f87-c077-a426-98383dc5aa6f
+Feb 04, 2019 22:32:14.391 [0x7fa33ddc17c0] DEBUG - DLNA server port: 32469
+Feb 04, 2019 22:32:14.391 [0x7fa33ddc17c0] DEBUG - PMS: http://127.0.0.1:32400/
+Feb 04, 2019 22:32:14.391 [0x7fa33ddc17c0] DEBUG - MyPlex: https://plex.tv/
+Feb 04, 2019 22:32:14.412 [0x7fa33ddc17c0] DEBUG - Loading com.plexapp.dlna is complete (success=1)
+Feb 04, 2019 22:32:14.423 [0x7fa33ddc17c0] ERROR - Couldn't rename file "/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.dlna-new.db-shm" to "/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.dlna.db-shm": No such file or directory
+Feb 04, 2019 22:32:14.423 [0x7fa33ddc17c0] ERROR - Couldn't rename file "/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.dlna-new.db-wal" to "/config/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.dlna.db-wal": No such file or directory
+Feb 04, 2019 22:32:14.427 [0x7fa33ddc17c0] DEBUG - Reading system DLNA client profiles
+Feb 04, 2019 22:32:14.445 [0x7fa33ddc17c0] DEBUG - Read 22 DLNA client profiles
+Feb 04, 2019 22:32:14.457 [0x7fa33ddc17c0] DEBUG - DLNA device discovery enabled every 60 seconds
+Feb 04, 2019 22:32:14.457 [0x7fa33ddc17c0] DEBUG - Initialization complete

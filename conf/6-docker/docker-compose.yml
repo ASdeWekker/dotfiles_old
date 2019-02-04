@@ -9,7 +9,7 @@ services:
             PGID: '1000'
             PUID: '1000'
             TZ: 'Europe/Amsterdam'
-            PLEX_CLAIM: 'claim-zqNhitzYyPVRUQPWPp1y'
+            PLEX_CLAIM: 'claim-7yqmYfuPieP5WSSqXvPL'
         image: plexinc/pms-docker
         restart: unless-stopped
         volumes:
