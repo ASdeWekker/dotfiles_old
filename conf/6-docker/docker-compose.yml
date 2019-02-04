@@ -20,7 +20,7 @@ services:
               target: 32400
         restart: unless-stopped
         volumes:
-            - /home/alex/shn/conf/6-docker/plex:/config:rw
+            - /home/alex/.docker/config/plex:/config:rw
             - /tmp/plex:/transcode:rw
             - /mnt/vd0/data/videos:/data:rw
     
@@ -36,8 +36,8 @@ services:
               target: 9000
         restart: unless-stopped
         volumes:
-            - /home/alex/shn/conf/6-docker/portainer:/data:rw
+            - /home/alex/.docker/config/portainer:/data:rw
             - /etc/localtime:/etc/localtime:ro
-            - /home/alex/shn/conf/6-docker/shared:/shared:rw
+            - /home/alex/.docker/shared:/shared:rw
             - /var/run/docker.sock:/var/run/docker.sock:rw
 
