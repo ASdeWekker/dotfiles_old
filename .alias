@@ -121,4 +121,5 @@ alias pm2p='PM2_HOME=$HOME/.pm2p pm2'
 
 # docker
 alias dok='sudo docker'
+alias ctop='sudo ctop'
 
