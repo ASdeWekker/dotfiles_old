@@ -1,0 +1,8 @@
+Cache
+Logs
+Databases
+Caches
+.db
+.db-shm
+.db-wal
+
