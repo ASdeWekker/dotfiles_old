@@ -6,10 +6,11 @@ services:
     plex:
         container_name: plex
         environment:
-            PGID: '1000'
-            PUID: '1000'
-            TZ: 'Europe/Amsterdam'
-            PLEX_CLAIM: 'claim-7yqmYfuPieP5WSSqXvPL'
+            ADVERTISE_IP: http://192.168.1.111:32400/
+            PLEX_GID: 1000
+            PLEX_UID: 1000
+            TZ: Europe/Amsterdam
+            PLEX_CLAIM: claim-oJB1JLGUFJsBDqYfJ1HA
         image: plexinc/pms-docker
         restart: unless-stopped
         volumes:
