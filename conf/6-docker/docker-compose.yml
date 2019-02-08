@@ -10,9 +10,9 @@ services:
         environment:
             ADVERTISE_IP: http://192.168.1.111:32400/
             PLEX_GID: 1000
-            PLEX_UID: 1000
+            PLEX_UID: 998
             TZ: Europe/Amsterdam
-            PLEX_CLAIM: claim-oJB1JLGUFJsBDqYfJ1HA
+            PLEX_CLAIM: claim-qfFHm6zPGgts34ozYsq3
         image: plexinc/pms-docker
         ports:
             - protocol: tcp
@@ -40,4 +40,127 @@ services:
             - /etc/localtime:/etc/localtime:ro
             - /home/alex/.docker/shared:/shared:rw
             - /var/run/docker.sock:/var/run/docker.sock:rw
+
+    # Deluge
+    deluge:
+        container_name: deluge
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/deluge
+        ports:
+            - published: 8112
+              target: 8112
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/deluge:/config:rw
+            - /home/alex/downloads/deluge:/downloads:rw
+
+    # Sonarr
+    sonarr:
+        container_name: sonarr
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/sonarr
+        ports:
+            - published: 8989
+              target: 8989
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/sonarr:/config:rw
+            - /mnt/vd0/data/videos:/tv:rw
+            - /home/alex/downloads/deluge:/downloads:rw
+
+    # Radarr
+    radarr:
+        container_name: radarr
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/radarr
+        ports:
+            - published: 7878
+              target: 7878
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/radarr:/config:rw
+            - /mnt/vd0/data/videos:/movies:rw
+            - /home/alex/downloads/deluge:/downloads:rw
+
+    # Watchtower
+    watchtower:
+        command: --interval 30
+        container_name: watchtower
+        image: v2tec/watchtower
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /home/alex/.docker/config/watchtower/config.json:/config.json:rw
+
+    # Jackett
+    jackett:
+        container_name: jackett
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/jackett
+        ports:
+            - target: 9117
+              published: 9117
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/jackett:/config:rw
+            - /home/alex/downloads/jackett:/downloads:rw
+            - /etc/localtime:/etc/localtime:ro
+
+    # Organizr
+    organizr:
+        container_name: organizr
+        environment:
+            PUID: 1000
+            PGID: 998
+        image: organizrtools/organizr-v2
+        ports:
+            - published: 8080
+              target: 80
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/organizr:/config:rw
+
+    # Piwigo
+    piwigo:
+        container_name: piwigo
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/piwigo
+        ports:
+            - published: 8181
+              target: 80
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/piwigo:/config:rw
+            - /etc/localtime:/etc/localtime:ro
+
+    # Bazarr
+    bazarr:
+        container_name: bazarr
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/bazarr
+        ports:
+            - published: 6767
+              target: 6767
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/bazarr:/config:rw
+            - /mnt/vd0/data/videos:/tv:rw
+            - /mnt/vd0/data/videos:/movies:rw
 
