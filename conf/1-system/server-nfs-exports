@@ -13,5 +13,9 @@
 
 #/srv/nfs		192.168.1.0/24(rw,sync,crossmnt)
 #/srv/nfs/schijfje	192.168.1.0/24(rw,sync)
+/mnt/vd0/data		192.168.1.0/24(rw,sync)
+/mnt/vd0/data		10.8.0.0/24(rw,sync)
+/home/alex/downloads	192.168.1.0/24(rw,sync)
+/home/alex/downloads	10.8.0.0/24(rw,sync)
 
 
