@@ -21,7 +21,7 @@ services:
         restart: unless-stopped
         volumes:
             - /home/alex/.docker/config/plex:/config:rw
-            - /tmp/plex:/transcode:rw
+            - /home/alex/downloads/plex/transcode:/transcode:rw
             - /mnt/vd0/data/videos:/data:rw
     
     # Portainer
@@ -50,7 +50,17 @@ services:
             TZ: Europe/Amsterdam
         image: linuxserver/deluge
         ports:
-            - published: 8112
+            - protocol: tcp
+              published: 58846
+              target: 58846
+            - protocol: tcp
+              published: 58946
+              target: 58946
+            - protocol: udp
+              published: 58946
+              target: 58946
+            - protocol: tcp
+              published: 8112
               target: 8112
         restart: unless-stopped
         volumes:
@@ -72,7 +82,7 @@ services:
         volumes:
             - /home/alex/.docker/config/sonarr:/config:rw
             - /mnt/vd0/data/videos:/tv:rw
-            - /home/alex/downloads/deluge:/downloads:rw
+            - /home/alex/downloads/deluge/complete:/downloads:rw
 
     # Radarr
     radarr:
@@ -163,4 +173,29 @@ services:
             - /home/alex/.docker/config/bazarr:/config:rw
             - /mnt/vd0/data/videos:/tv:rw
             - /mnt/vd0/data/videos:/movies:rw
+
+    # ruTorrent
+    rutorrent:
+        container_name: rutorrent
+        environment:
+            PUID: 1000
+            PGID: 998
+        image: linuxserver/rutorrent
+        ports:
+            - protocol: tcp
+              published: 8113
+              target: 80
+            - protocol: tcp
+              published: 5000
+              target: 5000
+            - protocol: tcp
+              published: 51413
+              target: 51413
+            - protocol: udp
+              published: 6881
+              target: 6881
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/rutorrent:/config:rw
+            - /home/alex/downloads/rutorrent:/downloads:rw
 
