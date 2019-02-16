@@ -82,7 +82,7 @@ services:
         volumes:
             - /home/alex/.docker/config/sonarr:/config:rw
             - /mnt/vd0/data/videos:/tv:rw
-            - /home/alex/downloads/deluge/complete:/downloads:rw
+            - /home/alex/downloads/deluge:/downloads:rw
 
     # Radarr
     radarr:
