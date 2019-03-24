@@ -139,6 +139,7 @@ exec --no-startup-id thunderbird
 exec --no-startup-id discord
 exec --no-startup-id urxvt
 exec --no-startup-id spotify
+exec --no-startup-id solaar
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
