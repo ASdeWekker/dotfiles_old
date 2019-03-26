@@ -1,0 +1,10 @@
+[Unit]
+Description=This is for turning on the LEDs after boot
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/curl --data "led=aan" 192.168.1.71/led
+
+[Install]
+WantedBy=multi-user.target
