@@ -131,3 +131,9 @@ alias ctop='sudo ctop'
 # weertje
 alias weer='curl wttr.in'
 
+# LEDje
+alias ledon='curl --data "led=aan" 192.168.1.71/led'
+alias ledoff='curl --data "led=uit" 192.168.1.71/led'
+alias ledtog='curl --data "led=toggle" 192.168.1.71/led'
+alias ledtoggle='curl --data "led=toggle" 192.168.1.71/led'
+
