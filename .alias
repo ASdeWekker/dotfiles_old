@@ -67,12 +67,16 @@ alias slpd='slp;exit'
 
 # check the git repos
 alias check='cd;cd shn;gs;gp;bac;gs;gp;ard;gs;gp;dek;gs;gp'
+alias chexit='check;exit'
 
 # connect to mongo on the pi
 alias mongot='mongo 192.168.1.90 --port 27017 -u "alex" --authenticationDatabase "admin"'
 
-# use prettyping
+# replace commands:
+# prettyping
 alias ping='prettyping'
+# bat
+alias cat='bat'
 
 # libvirt and what not
 alias suvi='sudo virsh'
