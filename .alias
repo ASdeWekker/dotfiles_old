@@ -128,3 +128,6 @@ alias pm2p='PM2_HOME=$HOME/.pm2p pm2'
 alias dok='sudo docker'
 alias ctop='sudo ctop'
 
+# weertje
+alias weer='curl wttr.in'
+
