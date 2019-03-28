@@ -132,8 +132,8 @@ alias ctop='sudo ctop'
 alias weer='curl wttr.in'
 
 # LEDje
-alias ledon='curl --data "led=aan" 192.168.1.71/led'
-alias ledoff='curl --data "led=uit" 192.168.1.71/led'
-alias ledtog='curl --data "led=toggle" 192.168.1.71/led'
-alias ledtoggle='curl --data "led=toggle" 192.168.1.71/led'
+alias ledon='/bin/python /home/alex/shn/bash/ledstrip.py on'
+alias ledoff='/bin/python /home/alex/shn/bash/ledstrip.py off'
+alias ledtog='/bin/python /home/alex/shn/bash/ledstrip.py toggle'
+alias ledtoggle='/bin/python /home/alex/shn/bash/ledstrip.py toggle'
 
