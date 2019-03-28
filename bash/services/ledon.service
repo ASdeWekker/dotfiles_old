@@ -4,7 +4,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/curl --data "led=aan" 192.168.1.71/led
+ExecStart=/bin/python /home/alex/shn/bash/ledstrip.py on
 
 [Install]
 WantedBy=multi-user.target
