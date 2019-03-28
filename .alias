@@ -58,10 +58,6 @@ alias tat='tmux attach -t'
 # session check shortcut
 alias tls='tmux list-sessions'
 
-# suspend the system and then exit the ssh connection
-alias slp='systemctl suspend'
-alias slpd='slp;exit'
-
 # translating all tabs to spaces in every file
 #alias tabstospaces="find . -type f -exec sed -i.orig 's/\t/    /g' {} +"
 
@@ -89,11 +85,23 @@ alias suvip='sudo virsh poweroff'
 alias drivepull='cd;cd drive;drive pull'
 alias drivepush='cd;cd drive;drive push'
 
+# suspend the system and then exit the ssh connection.
 # doei and doeii
-alias doei='systemctl poweroff'
-alias sdoei='sudo systemctl poweroff'
-alias doeii='systemctl reboot'
-alias sdoeii='sudo systemctl reboot'
+if [ $HOSTNAME -eq "pcaats" ]; then
+	alias slp='ledstrip off;systemctl suspend'
+	alias slpd='slp;exit'
+	alias doei='ledstrip off;systemctl poweroff'
+	alias sdoei='ledstrip off;sudo systemctl poweroff'
+	alias doeii='ledstrip off;systemctl reboot'
+	alias sdoeii='ledstrip off;sudo systemctl reboot'
+else
+	alias slp='systemctl suspend'
+	alias slpd='slp;exit'
+	alias doei='systemctl poweroff'
+	alias sdoei='sudo systemctl poweroff'
+	alias doeii='systemctl reboot'
+	alias sdoeii='sudo systemctl reboot'
+fi
 
 # sqlite3
 alias sq='sqlite3'
