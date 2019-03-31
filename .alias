@@ -87,7 +87,7 @@ alias drivepush='cd;cd drive;drive push'
 
 # suspend the system and then exit the ssh connection.
 # doei and doeii
-if [ $HOSTNAME -eq "pcaats" ]; then
+if [ $HOSTNAME == 'pcaats' ]; then
 	alias slp='ledstrip off;systemctl suspend'
 	alias slpd='slp;exit'
 	alias doei='ledstrip off;systemctl poweroff'
