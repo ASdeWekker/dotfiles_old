@@ -199,3 +199,22 @@ services:
             - /home/alex/.docker/config/rutorrent:/config:rw
             - /home/alex/downloads/rutorrent:/downloads:rw
 
+    # emby
+    emby:
+        container_name: emby
+        environment:
+            PGID: 1000
+            PUID: 998
+        image: emby/embyserver
+        ports:
+            - protocol: tcp
+              published: 8096
+              target: 80
+            - protocol: tcp
+              published: 8920
+              target: 443
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/emby:/config:rw
+            - /mnt/vd0/data/videos:/mnt/share1:rw
+
