@@ -89,6 +89,7 @@ alias drivepush='cd;cd drive;drive push'
 # doei and doeii
 if [ $HOSTNAME == 'pcaats' ]; then
 	alias slp='ledstrip off;systemctl suspend'
+    
 	alias slpd='slp;exit'
 	alias doei='ledstrip off;systemctl poweroff'
 	alias sdoei='ledstrip off;sudo systemctl poweroff'
@@ -144,4 +145,7 @@ alias ledon='/bin/python /home/alex/shn/bash/ledstrip.py on'
 alias ledoff='/bin/python /home/alex/shn/bash/ledstrip.py off'
 alias ledtog='/bin/python /home/alex/shn/bash/ledstrip.py toggle'
 alias ledtoggle='/bin/python /home/alex/shn/bash/ledstrip.py toggle'
+
+# picocom
+alias pico='picocom /dev/ttyUSB0 -b115200'
 
