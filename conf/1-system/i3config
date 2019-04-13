@@ -66,11 +66,9 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
+# split in horizontal or vertical orientation
+bindsym $mod+h split h;exec notify-send "Splitting horizontally"
+bindsym $mod+v split v;exec notify-send "Splitting vertically"
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -116,6 +114,9 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+# switch to last used workspace
+workspace_auto_back_and_forth yes
+bindsym $mod+b workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -128,6 +129,8 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+# move focused container to last used workspace
+bindsym $mod+Shift+b move container to workspace back_and_forth;workspace back_and_forth
 
 # Assign programs to dedicated workspaces
 assign [class="Thunderbird"] $ws8
@@ -195,8 +198,8 @@ client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color     
 # finds out, if available)
 #status_command /home/alex/shn/conf/1-system/conky-i3bar.sh
 bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        position top
+        status_command /home/alex/shn/conf/1-system/conky-i3bar.sh #status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        position bottom
         colors {
             background $bg-color
             separator #757575
@@ -208,13 +211,17 @@ bar {
 }
 
 # Lock the screen
-bindsym $mod+shift+x exec /home/alex/shn/bash/i3lock.sh #i3lock --color "$bg-color"
+bindsym $mod+shift+x exec /home/alex/shn/bash/i3lock.sh
 
 # Add support for volume support
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% # raise
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% # lower
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute
 exec_always --no-startup-id pactl set-sink-volume 0 35%
+# Automatically start pulseaudio and the applet
+exec --no-startup-id pulseaudio
+exec --no-startup-id pasystray
+#exec --no-startup-id volumeicon
 
 # Media controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -241,6 +248,11 @@ bindsym $mod+Ctrl+less move workspace to output left
 
 # No title bars
 for_window [class="^.*"] border pixel 0
+# Border style
+default_border pixel 1
+default_floating_border normal
+# Hide borders
+hide_edge_borders none
 
 # Use Compton
 exec_always compton -f # --backend glx --vsync opengl-swc

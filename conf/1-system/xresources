@@ -22,22 +22,23 @@
 *color15: #E8E8E8
 
 ! Stuff from a dotfile
-URxvt.depth: 32
-URxvt*scrollBar: false
-URxvt*mouseWheelScrollPage: false
-URxvt*cursorBlink: true
-URxvt*saveLines: 5000
-URxvt*internalBorder: 5
-URxvt.transparent: true
-URxvt.shading: 20
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0200/c800
+urxvt*scrollBar: false
+urxvt*mouseWheelScrollPage: false
+urxvt*cursorBlink: true
+urxvt*saveLines: 5000
+urxvt*internalBorder: 5
+!urxvt*transparent: true
+!urxvt*shading: 30
 
 ! Disable something when print screen is pressed
-URxvt.print-pipe: "cat > /dev/null"
+urxvt*print-pipe: "cat > /dev/null"
 
 ! Font
-URxvt.font: xft:hack:size=10
-URxvt.letterspace: 10
+urxvt*font: xft:hack:size=10
+urxvt*letterspace: 10
 
 ! Fullscreen toggle
-URxvt.perl-ext-common: fullscreen
-URxvt.keysym.F11: perl:fullscreen:switch
+urxvt*perl-ext-common: fullscreen
+urxvt*keysym.F11: perl:fullscreen:switch
