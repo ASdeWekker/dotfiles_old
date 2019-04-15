@@ -30,6 +30,9 @@ ln -sf $homed/1-system/imwheelrc $home/.imwheelrc
 # urxvt
 ln -sf $homed/1-system/xresources $home/.Xresources
 
+# termite
+ln -sf $homed/1-system/termiteconfig $home/.config/termite/config
+
 # i3
 mkdir -p $home/.config/i3
 ln -sf $homed/1-system/i3config $home/.config/i3/config
