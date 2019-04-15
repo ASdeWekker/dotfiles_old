@@ -23,14 +23,13 @@
 
 ! Stuff from a dotfile
 urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
 urxvt*scrollBar: false
 urxvt*mouseWheelScrollPage: false
 urxvt*cursorBlink: true
 urxvt*saveLines: 5000
 urxvt*internalBorder: 5
-!urxvt*transparent: true
-!urxvt*shading: 30
+urxvt*transparent: true
+urxvt*shading: 30
 
 ! Disable something when print screen is pressed
 urxvt*print-pipe: "cat > /dev/null"
@@ -42,3 +41,22 @@ urxvt*letterspace: 10
 ! Fullscreen toggle
 urxvt*perl-ext-common: fullscreen
 urxvt*keysym.F11: perl:fullscreen:switch
+
+! rofi meuk
+rofi.color-enabled: true
+rofi.color-window: argb:802f343f, argb:802f343f, argb:802f343f
+rofi.color-normal: #555d70, #dddddd, #2f343f, #1f273a, #ffffff
+rofi.color-active: #ff0000, #00ff00, #0000ff, #00ffff, #ff00ff
+rofi.color-urgent: #ff0000, #00ff00, #0000ff, #00ffff, #ff00ff
+
+rofi.separator-style: solid
+rofi.sidebar-mode: false
+rofi.lines: 7
+rofi.font: Source Code Pro Bold 30
+rofi.bw: 1
+rofi.columns: 1
+rofi.padding: 350
+rogi.width: 100
+rofi.fixed-num-lines: true
+rofi.hide-scrollbar: true
+rofi.fullscreen: true
