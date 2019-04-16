@@ -236,7 +236,7 @@ exec_always nitrogen --restore
 # Add gaps
 smart_gaps on
 gaps inner 10
-gaps outer -4
+gaps outer 2
 
 # Take screenshots with flameshot
 bindsym Print exec flameshot gui
@@ -249,9 +249,9 @@ bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
 
 # No title bars
-#for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 0
 # Border style
-default_border pixel 2
+#default_border pixel 2
 default_floating_border normal
 # Hide borders
 hide_edge_borders none
