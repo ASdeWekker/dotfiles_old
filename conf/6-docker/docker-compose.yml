@@ -203,8 +203,8 @@ services:
     emby:
         container_name: emby
         environment:
-            PGID: 1000
-            PUID: 998
+            PUID: 1000
+            PGID: 998
         image: emby/embyserver
         ports:
             - protocol: tcp
@@ -217,4 +217,23 @@ services:
         volumes:
             - /home/alex/.docker/config/emby:/config:rw
             - /mnt/vd0/data/videos:/mnt/share1:rw
+
+    # couchpotato
+    couchpotato:
+        container_name: couchpotato
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+            UMASK_SET: 022
+        image: linuxserver/couchpotato
+        ports:
+            - protocol: tcp
+              published: 5050
+              target: 5050
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/couchpotato:/config:rw
+            - /home/alex/downloads:/downloads:rw
+            - /mnt/vd0/data/videos:/movies:rw
 
