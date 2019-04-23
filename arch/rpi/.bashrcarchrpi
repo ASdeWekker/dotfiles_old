@@ -1,9 +1,7 @@
 
 #
-# Bashrc file for Arch Linux on the Raspberry Pi
+#  Bashrc file for Arch Linux on the Raspberry Pi
 #
-
-# NOT REALLY ANYTHING IN HERE
 
 # vcgencmd stuff
 alias vctemp='/opt/vc/bin/vcgencmd measure_temp'

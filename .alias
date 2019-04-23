@@ -1,8 +1,8 @@
 #
-# Alias file for, you guessed it, aliases.
+#  Alias file for, you guessed it, aliases.
 #
 
-# going into the project folders
+# going into the project folders.
 alias hmm='cd /var/www/html/backup/projects/urlname'
 alias hmma='cd /var/www/html/backup/alex/alexdewekker/2'
 alias hmmm='cd /var/www/html/backup/projects/darten'
@@ -13,119 +13,104 @@ alias dek='cd /var/www/html/de_kelder'
 alias ard='cd /home/alex/Arduino'
 alias cdd='cd /mnt/vd0/data'
 
-# Starting services: pug, npm & compass
+# Starting services: pug, npm & compass.
 alias ssn='npm start'
-#alias sss='compass watch'
 alias sss='sass --watch styles.sass:styles.css'
 alias ssp='pug -wP index.pug index.html'
 
-# reload .bashrc
+# reload .bashrc.
 alias reload-bash='source ~/.bashrc'
 
 # ssh aliases
 alias taart='ssh -C taaart'
 alias sspc='ssh -C pcaats'
 alias taart10='ssh -C 10.8.0.1'
-#alias sshuu='ssh -C ubunduuuu'
-#alias sshtp='ssh -C atpaats'
 alias sserv='ssh -CXY servertjih'
 alias sspc10='ssh -C 10.8.0.4'
 alias ssprint='ssh -C printpi'
 
-# shortcut for checking systemctl status
+# shortcut for checking systemctl status.
 alias syss='sudo systemctl'
 
-# how to git gud and other helpful git things
+# how to git gud and other helpful git things.
 alias git-gud='git push'
 alias gs='git status'
 alias ga='git add -A'
 alias gc='git commit -m'
 alias gp='git pull'
 
-# nmap shortcut for this network
+# nmap shortcut for this network.
 alias nmapp='nmap -sP 192.168.1.*'
 alias nmapp10='nmap -sP 10.8.0.*'
 
-# history shortcut
+# history shortcut.
 alias hh='history'
 
-# sensors and stuff
+# sensors and stuff.
 alias sens='sensors | grep Core*'
 
-# tmux aliases
-# attach shortcut
+# tmux aliases.
+# attach shortcut.
 alias tat='tmux attach -t'
-# session check shortcut
+# session check shortcut.
 alias tls='tmux list-sessions'
 
-# translating all tabs to spaces in every file
-#alias tabstospaces="find . -type f -exec sed -i.orig 's/\t/    /g' {} +"
-
-# check the git repos
+# check the git repos.
 alias check='cd;cd shn;gs;gp;bac;gs;gp;ard;gs;gp;dek;gs;gp'
 alias chexit='check;exit'
 
-# connect to mongo on the pi
+# connect to mongo on the pi.
 alias mongot='mongo 192.168.1.90 --port 27017 -u "alex" --authenticationDatabase "admin"'
 
 # replace commands:
-# prettyping
+# prettyping.
 alias ping='prettyping'
-# bat
+# bat.
 alias cat='bat'
+alias catt='/usr/bin/cat'
 
-# libvirt and what not
+# libvirt and what not.
 alias suvi='sudo virsh'
 alias suviw1='sudo virsh start win10'
 alias suvil='sudo virsh list'
 alias suvid='sudo virsh destroy'
 alias suvip='sudo virsh poweroff'
 
-# google drive push and pull
+# google drive push and pull.
 alias drivepull='cd;cd drive;drive pull'
 alias drivepush='cd;cd drive;drive push'
 
 # suspend the system and then exit the ssh connection.
-# doei and doeii
-if [ $HOSTNAME == 'pcaats' ]; then
-	alias slp='ledstrip off;systemctl suspend'
-    
-	alias slpd='slp;exit'
-	alias doei='ledstrip off;systemctl poweroff'
-	alias sdoei='ledstrip off;sudo systemctl poweroff'
-	alias doeii='ledstrip off;systemctl reboot'
-	alias sdoeii='ledstrip off;sudo systemctl reboot'
-else
-	alias slp='systemctl suspend'
-	alias slpd='slp;exit'
-	alias doei='systemctl poweroff'
-	alias sdoei='sudo systemctl poweroff'
-	alias doeii='systemctl reboot'
-	alias sdoeii='sudo systemctl reboot'
-fi
+# doei and doeii.
+alias slp='systemctl suspend'
+alias slpd='slp;exit'
+alias doei='systemctl poweroff'
+alias sdoei='sudo systemctl poweroff'
+alias doeii='systemctl reboot'
+alias sdoeii='sudo systemctl reboot'
 
-# sqlite3
+# sqlite3.
 alias sq='sqlite3'
 
-# to use sudo with an alias
+# to use sudo with an alias.
 alias sudo='sudo '
 
-# start pc
+# start pc.
 alias wolpc='wol 30:9c:23:04:60:2f'
 alias wolserv='wol 70:85:c2:81:9a:b7'
 
-# switch to the postgres user
+# switch to the postgres user.
 alias psqlu='sudo -u postgres -i'
 alias psqldek='psql -h 192.168.1.90 dekelder alex'
 
-# vim and nvim
+# vim and nvim.
 alias vim='nvim'
 alias vimm='/usr/bin/vim'
 
-# sublime text
+# sublime text.
 alias subl='subl3'
 
-# input attach and detach for mouse and keyboard to vm
+# input attach and detach for mouse and keyboard to vm.
 alias iiaa='inputattach'
 alias iidd='inputdetach'
 
@@ -133,19 +118,18 @@ alias iidd='inputdetach'
 alias pm2o='PM2_HOME=$HOME/.pm2o pm2'
 alias pm2p='PM2_HOME=$HOME/.pm2p pm2'
 
-# docker
+# docker.
 alias dok='sudo docker'
 alias ctop='sudo ctop'
 
-# weertje
+# weertje.
 alias weer='curl wttr.in'
 
-# LEDje
+# picocom.
+alias pico='picocom /dev/ttyUSB0 -b115200'
+
+# LEDje.
 alias ledon='/bin/python /home/alex/shn/bash/ledstrip.py on'
 alias ledoff='/bin/python /home/alex/shn/bash/ledstrip.py off'
 alias ledtog='/bin/python /home/alex/shn/bash/ledstrip.py toggle'
 alias ledtoggle='/bin/python /home/alex/shn/bash/ledstrip.py toggle'
-
-# picocom
-alias pico='picocom /dev/ttyUSB0 -b115200'
-

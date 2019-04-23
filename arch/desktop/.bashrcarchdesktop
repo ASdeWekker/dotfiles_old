@@ -1,11 +1,6 @@
 #
-# Bashrc for Arch Linux on the Desktop x86/64
+#  Bashrc for Arch Linux on the Desktop x86/64
 #
-
-#powerline-daemon -q 
-#POWERLINE_BASH_CONTINUATION=1 
-#POWERLINE_BASH_SELECT=1 
-#. /usr/share/powerline/bindings/bash/powerline.sh
 
 # customize the prompt
 green="\[$(tput setaf 2)\]"
