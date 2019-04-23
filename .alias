@@ -32,6 +32,7 @@ alias ssp='pug -wP index.pug index.html'
 
 # reload .bashrc.
 alias reload-bash='source ~/.bashrc'
+alias reload-zsh='source ~/.zshrc'
 
 # ssh aliases
 alias taart='ssh -C taaart'

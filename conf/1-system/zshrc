@@ -5,8 +5,20 @@ HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
 
-# source my alias file
+# source my alias and tmuxinator file
 source ~/shn/.alias
+# find one for zsh
+#source ~/.bin/tmuxinator.bash
+
+# some exports
+# export TERM to use via ssh in urxvt
+TERM=xterm-256color
+# export neovim
+EDITOR=nvim
+VISUAL=nvim
+# ampy
+AMPY_PORT=/dev/ttyUSB0
+AMPY_BAUD=115200
 
 # Set and unset things
 setopt appendhistory autocd extendedglob nomatch
@@ -21,19 +33,38 @@ compinit
 # prompt
 setprompt() {
 	setopt prompt_subst
-	#PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f %# '
-	if [[ $(hostname) -eq 'pcaats' ]]; then
+
+	# check the hostname
+	if [[ "$(hostname)" == "pcaats" ]]; then
 		p_host='%F{blue}'
-	elif [[ $(hostname) -eq 'taaart' ]]; then
-		p_host=' %F{orange}%M'
+	elif [[ "$(hostname)" == "taaart" ]]; then
+		p_host=' %F{yellow}%M'
+	elif [[ "$(hostname)" == "servertjih" ]]; then
+		p_host=' %F{green}%M'
+	else
+		p_host=' %M'
 	fi
-	if [[ $(id | cut -d '(' -f2 | cut -d ')' -f1) -eq 'alex' ]]; then
+	# check the username
+	if [[ "$(id | cut -d '(' -f2 | cut -d ')' -f1)" == "alex" ]]; then
 		p_name='$'
 	else
 		p_name='%F{red}#'
 	fi
+
 	PROMPT='${p_host} %~ ${p_name}%f '
 }
 setprompt
+
+gitt () {
+    git status
+    git add -A
+    git commit -m "$1"
+    if [[ "$2" == "y" ]]; then
+        git push
+        git status
+    else
+        git status
+    fi
+}
 
 # vim: set ts=4 sw=4 et:
