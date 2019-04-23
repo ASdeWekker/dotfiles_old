@@ -52,25 +52,47 @@ foreground_bold = #ffffff
 background = rgba(63, 63, 63, 0.6)
 
 # If unset, will reverse foreground and background
-highlight = #2f2f2f
+#highlight = #2f2f2f
 
-# Colors from color0 to color254 can be set
-color0 = #3f3f3f
-color1 = #705050
-color2 = #60b48a
-color3 = #dfaf8f
-color4 = #506070
-color5 = #dc8cc3
-color6 = #8cd0d3
-color7 = #dcdccc
-color8 = #709080
-color9 = #dca3a3
-color10 = #c3bf9f
-color11 = #f0dfaf
-color12 = #94bff3
-color13 = #ec93d3
-color14 = #93e0e3
-color15 = #ffffff
+# 16 color space
+
+# Black, Gray, Silver, White
+color0  = #1d2021
+color8  = #565b5e
+color7  = #d5d5d5
+color15 = #e5e5e5
+
+# Red
+color1  = #d72638
+color9  = #d72638
+
+# Green
+color2  = #88b92d
+color10 = #88b92d
+
+# Yellow
+color3  = #f19d1a
+color11 = #f19d1a
+
+# Blue
+color4  = #1e8bac
+color12 = #1e8bac
+
+# Purple
+color5  = #be4264
+color13 = #be4264
+
+# Teal
+color6  = #1ba595
+color14 = #1ba595
+
+# Extra colors
+color16 = #eb8413
+color17 = #c85e0d
+color18 = #303335
+color19 = #434749
+color20 = #cdcdcd
+color21 = #dddddd
 
 [hints]
 #font = Monospace 12
