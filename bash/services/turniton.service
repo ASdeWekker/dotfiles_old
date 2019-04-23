@@ -5,6 +5,7 @@ After=network-online.target
 
 [Service]
 ExecStart=/bin/python /home/alex/shn/bash/ledstrip.py on
+ExecStartPost=/bin/python /home/alex/shn/bash/amp.py on
 
 [Install]
 WantedBy=multi-user.target

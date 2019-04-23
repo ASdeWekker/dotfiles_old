@@ -1,0 +1,13 @@
+[Unit]
+Description=Turn off ledstrip and amp.
+Before=sleep.target
+
+[Service]
+User=
+Type=
+Environment=
+ExecStart=
+ExecStartPost=
+
+[Install]
+WantedBy=
