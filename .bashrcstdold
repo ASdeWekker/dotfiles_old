@@ -1,0 +1,24 @@
+#
+#  Standard added .bashrc file
+#
+
+# make tmuxinator work
+source ~/.bin/tmuxinator.bash
+
+# source the .alias file
+source ~/shn/.alias
+
+gitt () {
+    git status
+    git add -A
+    git commit -m "$1"
+
+    if [ $2 == "y" ]; then
+        git push
+        git status
+    else
+        git status
+    fi
+}
+
+export -f gitt

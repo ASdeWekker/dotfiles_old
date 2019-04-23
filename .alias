@@ -2,6 +2,18 @@
 #  Alias file for, you guessed it, aliases.
 #
 
+# alias for using pacman and yay
+alias i='yay -S'
+alias ui='sudo pacman -Rns'
+alias clean='sudo pacman -Sc;yay -Yc'
+alias updaats='yay'
+
+# some ls aliases
+alias ls='ls -hF --color=auto'
+alias l='ls -C'
+alias la='ls -A'
+alias ll='ls -al'
+
 # going into the project folders.
 alias hmm='cd /var/www/html/backup/projects/urlname'
 alias hmma='cd /var/www/html/backup/alex/alexdewekker/2'
@@ -133,3 +145,11 @@ alias ledon='/bin/python /home/alex/shn/bash/ledstrip.py on'
 alias ledoff='/bin/python /home/alex/shn/bash/ledstrip.py off'
 alias ledtog='/bin/python /home/alex/shn/bash/ledstrip.py toggle'
 alias ledtoggle='/bin/python /home/alex/shn/bash/ledstrip.py toggle'
+
+# echo the command for looking up service files
+alias qql='echo "sudo pacman -Qql package | grep -Fe .service -e .socket"'
+
+# vcgencmd stuff
+alias vctemp='/opt/vc/bin/vcgencmd measure_temp'
+alias wtemp='watch /opt/vc/bin/vcgencmd measure_temp'
+alias vccore='/opt/vc/bin/vcgencmd measure_clock'
