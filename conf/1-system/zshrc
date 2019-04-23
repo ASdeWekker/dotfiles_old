@@ -55,6 +55,21 @@ setprompt() {
 }
 setprompt
 
+# path for ruby in the home and root directory
+if [[ "$(id | cut -d '(' -f2 | cut -d ')' -f1)" == "alex" ]]; then
+	PATH="$PATH:/home/alex/.gem/ruby/2.6.0/bin"
+else
+	PATH="$PATH:/root/.gem/ruby/2.6.0/bin"
+fi
+
+# start ssh-agent everytime
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval "$(<~/.ssh-agent-thing)"
+fi
+
 gitt () {
     git status
     git add -A
