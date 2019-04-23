@@ -1,14 +1,39 @@
+### Zshrc
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
+
+# source my alias file
+source ~/shn/.alias
+
+# Set and unset things
 setopt appendhistory autocd extendedglob nomatch
 unsetopt beep notify
 bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
+
 zstyle :compinstall filename '/home/alex/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
+
+# prompt
+setprompt() {
+	setopt prompt_subst
+	#PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f %# '
+	if [[ $(hostname) -eq 'pcaats' ]]; then
+		p_host='%F{blue}'
+	elif [[ $(hostname) -eq 'taaart' ]]; then
+		p_host=' %F{orange}%M'
+	fi
+	if [[ $(id | cut -d '(' -f2 | cut -d ')' -f1) -eq 'alex' ]]; then
+		p_name='$'
+	else
+		p_name='%F{red}#'
+	fi
+	PROMPT='${p_host} %~ ${p_name}%f '
+}
+setprompt
+
+# vim: set ts=4 sw=4 et:
