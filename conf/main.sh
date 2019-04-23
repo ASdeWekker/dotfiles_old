@@ -27,6 +27,9 @@ sudo mkdir -p /etc/ufw
 sudo ln -f $homed/1-system/ufw /etc/default/
 sudo ln -f $homed/1-system/before.rules /etc/ufw/
 
+# zsh
+ln -sf $homed/1-system/zshrc $home/.zshrc
+
 ### 2 - Misc ###
 # htop
 mkdir -p $home/.config/htop

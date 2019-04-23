@@ -21,7 +21,7 @@ sudo ln -sf $homed/1-system/local.conf /etc/fonts/
 sudo ln -sf $homed/1-system/fonts.conf /etc/fonts/
 
 # i3lock service file
-sudo cp -f $homed/1-system/i3lock.service /etc/systemd/system/
+sudo cp -f $homed/../bash/services/i3lock.service /etc/systemd/system/
 sudo systemctl reenable i3lock.service
 
 # Mouse
