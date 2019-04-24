@@ -10,13 +10,10 @@ source ~/shn/.alias
 # find one for zsh
 #source ~/.bin/tmuxinator.bash
 
-# some exports
-# export TERM to use via ssh in urxvt
+# export TERM for urxvt, neovim and ampy
 TERM=xterm-256color
-# export neovim
 EDITOR=nvim
 VISUAL=nvim
-# ampy
 AMPY_PORT=/dev/ttyUSB0
 AMPY_BAUD=115200
 
@@ -25,6 +22,10 @@ setopt appendhistory autocd extendedglob nomatch
 unsetopt beep notify
 bindkey -v
 
+# plugins
+plugins=(colored-man-pages colorize command-not-found cp extract history sublime web-search)
+
+# some more stuff is happening down here
 zstyle :compinstall filename '/home/alex/.zshrc'
 
 autoload -Uz compinit
@@ -70,6 +71,7 @@ if [[ "$SSH_AGENT_PID" == "" ]]; then
     eval "$(<~/.ssh-agent-thing)"
 fi
 
+# my git function
 gitt () {
     git status
     git add -A
