@@ -1,10 +1,9 @@
 #!/bin/python
 
-import requests
 import sys
+import subprocess
 
-ip = '67'
-data = { 'led':sys.argv[1] }
+params = { "state":sys.argv[1] }
 
-response = requests.post('http://192.168.1.' + ip + '/led', data=data)
+subprocess.call(["curl", "-sS", "http://192.168.1.220/?state=" + params["state"]])
 
