@@ -1,11 +1,11 @@
 [Unit]
-Description=This is for turning on the LEDs after boot
+Description=This is for turning on the ledstrip and amp after boot and on resume
 Wants=network-online.target
-After=network-online.target
+After=network-online.target suspend.target
 
 [Service]
-ExecStart=/bin/python /home/alex/shn/bash/ledstrip.py on
-ExecStartPost=/bin/python /home/alex/shn/bash/amp.py on
+ExecStart=/bin/python3 /home/alex/shn/bash/ledstrip.py on
+ExecStartPost=/bin/python3 /home/alex/shn/bash/switch.py on
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.target suspend.target
