@@ -51,9 +51,11 @@ mkdir -p $home/.config/GIMP/2.10
 ln -sf $homed/2-misc/gimp/gtkrc $home/.config/GIMP/2.10/
 ln -sf $homed/2-misc/gimp/themerc $home/.config/GIMP/2.10/
 
-# LEDs
-sudo cp $homed/../bash/services/ledon.service /etc/systemd/system/
-sudo systemctl enable ledon
+# ledstrip and switch
+sudo cp -f $homed/../bash/services/turniton.service /etc/systemd/system/
+sudo cp -f $homed/../bash/services/turnitoff.service /etc/systemd/system/
+sudo systemctl reenable turniton.service
+sudo systemctl reenable turnitoff.service
 
 ### 4 - VFIO ###
 
