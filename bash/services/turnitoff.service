@@ -1,13 +1,12 @@
 [Unit]
-Description=Turn off ledstrip and amp.
-Before=sleep.target
+Description=Turn off ledstrip and amp when sleeping.
+Before=sleep.target poweroff.target reboot.target
 
 [Service]
-User=
-Type=
-Environment=
-ExecStart=
-ExecStartPost=
+User=alex
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/alex/shn/bash/ledstrip.py off
+ExecStartPost=/usr/bin/python3 /home/alex/shn/bash/switch.py off
 
 [Install]
-WantedBy=
+WantedBy=sleep.target poweroff.target reboot.target
