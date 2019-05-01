@@ -5,7 +5,7 @@ After=network-online.target suspend.target
 
 [Service]
 ExecStart=/bin/python3 /home/alex/shn/bash/ledstrip.py on
-ExecStartPost=/bin/python3 /home/alex/shn/bash/switch.py on
+ExecStartPost=/bin/python3 /home/alex/shn/bash/switch.py -a on
 
 [Install]
 WantedBy=multi-user.target suspend.target

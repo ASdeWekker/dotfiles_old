@@ -6,7 +6,7 @@ Before=sleep.target poweroff.target reboot.target
 User=alex
 Type=oneshot
 ExecStart=/usr/bin/python3 /home/alex/shn/bash/ledstrip.py off
-ExecStartPost=/usr/bin/python3 /home/alex/shn/bash/switch.py off
+ExecStartPost=/usr/bin/python3 /home/alex/shn/bash/switch.py -a off
 
 [Install]
 WantedBy=sleep.target poweroff.target reboot.target
