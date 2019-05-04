@@ -1,9 +1,18 @@
 #!/bin/python
 
-import sys
+import argparse
 import subprocess
 
-params = { "state":sys.argv[1] }
+parser = argparse.ArgumentParser(description="Control the ledstrip")
 
-subprocess.call(["curl", "-sS", "http://192.168.1.220/?state=" + params["state"]])
+parser.add_argument("-p", "--power", help="Turn on or off")
 
+args = parser.parse_args()
+
+
+def request(power):
+	subprocess.call(["curl", "-sS", "http://192.168.1.220/?power=" + str(power)])
+
+
+if args.power:
+	request(args.power)
