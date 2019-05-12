@@ -5,7 +5,7 @@ windows:
         layout: even-vertical
         panes:
             - dek;pm2 stop 0;ssn
-            - dek;cd pr*;sss
+            - dek;cd 1*/s*;sass --watch new.sass:new.css
             - dek;cd pr*;pug -wP recipe.pug
             - dek;cd pr*;pug -wP add-recipe.pug
     - git:
