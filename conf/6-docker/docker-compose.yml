@@ -13,7 +13,7 @@ services:
             PLEX_UID: 998
             TZ: Europe/Amsterdam
             PLEX_CLAIM: claim-qfFHm6zPGgts34ozYsq3
-        image: plexinc/pms-docker:latest
+        image: plexinc/pms-docker
         ports:
             - protocol: tcp
               published: 32400
@@ -30,7 +30,7 @@ services:
         container_name: portainer
         environment:
             TZ: Europe/Amsterdam
-        image: portainer/portainer:latest
+        image: portainer/portainer
         ports:
             - published: 9000
               target: 9000
@@ -48,7 +48,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/deluge:latest
+        image: linuxserver/deluge
         ports:
             - protocol: tcp
               published: 58846
@@ -74,7 +74,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/sonarr:latest
+        image: linuxserver/sonarr
         ports:
             - published: 8989
               target: 8989
@@ -91,7 +91,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/radarr:latest
+        image: linuxserver/radarr
         ports:
             - published: 7878
               target: 7878
@@ -117,7 +117,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/jackett:latest
+        image: linuxserver/jackett
         ports:
             - target: 9117
               published: 9117
@@ -133,7 +133,7 @@ services:
         environment:
             PUID: 1000
             PGID: 998
-        image: organizrtools/organizr-v2:latest
+        image: organizrtools/organizr-v2
         ports:
             - published: 8080
               target: 80
@@ -148,7 +148,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/piwigo:latest
+        image: linuxserver/piwigo
         ports:
             - published: 8181
               target: 80
@@ -164,7 +164,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/bazarr:latest
+        image: linuxserver/bazarr
         ports:
             - published: 6767
               target: 6767
@@ -180,7 +180,7 @@ services:
         environment:
             PUID: 1000
             PGID: 998
-        image: linuxserver/rutorrent:latest
+        image: linuxserver/rutorrent
         ports:
             - protocol: tcp
               published: 8113
@@ -205,7 +205,7 @@ services:
         environment:
             PUID: 1000
             PGID: 998
-        image: emby/embyserver:latest
+        image: emby/embyserver
         ports:
             - protocol: tcp
               published: 8096
@@ -226,7 +226,7 @@ services:
             PGID: 998
             TZ: Europe/Amsterdam
             UMASK_SET: 022
-        image: linuxserver/couchpotato:latest
+        image: linuxserver/couchpotato
         ports:
             - protocol: tcp
               published: 5050
