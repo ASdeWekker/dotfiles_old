@@ -103,11 +103,15 @@ services:
 
     # Watchtower
     watchtower:
-        command: --interval 30
+        command: --schedule "0 0 4 * * *" --cleanup
         container_name: watchtower
+        environment:
+            TZ: Europe/Amsterdam
         image: v2tec/watchtower
+        restart: unless-stopped
         volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
+            - /etc/localtime:/etc/localtime:ro
+            - /var/run/docker.sock:/var/run/docker.sock:rw
             - /home/alex/.docker/config/watchtower/config.json:/config.json:rw
 
     # Jackett
