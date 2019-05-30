@@ -6,8 +6,8 @@ windows:
         panes:
             - dek;pm2 stop 0;ssn
             - dek;cd 1*/s*;sass --watch new.sass:new.css
-            - dek;cd pr*;pug -wP recipe.pug
-            - dek;cd pr*;pug -wP add-recipe.pug
+            - dek
+            - dek
     - git:
         panes:
             - dek;gs
