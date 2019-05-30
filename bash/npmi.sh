@@ -25,3 +25,6 @@ cd $wpath/../de_kelder
 yarn install
 cd $wpath/oefenen/postgres
 yarn install
+cd $wpath/projects/weight
+yarn install
+

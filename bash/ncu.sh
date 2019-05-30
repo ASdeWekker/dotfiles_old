@@ -32,6 +32,10 @@ npm update
 cd $wpath/projects/speedtest
 ncu -a
 npm update
-cd $wpath/oefnenen/node/postgres
+cd $wpath/oefenen/node/postgres
 ncu -a
 npm update
+cd $wpath/projects/weight
+ncu -a
+npm update
+
