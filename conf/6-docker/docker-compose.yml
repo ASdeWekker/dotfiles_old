@@ -112,7 +112,7 @@ services:
         volumes:
             - /etc/localtime:/etc/localtime:ro
             - /var/run/docker.sock:/var/run/docker.sock:rw
-            - /home/alex/.docker/config/watchtower/config.json:/config.json:rw
+            - /home/alex/.docker/config/watchtower/config.json:/config/config.json:rw
 
     # Jackett
     jackett:
@@ -223,21 +223,21 @@ services:
             - /mnt/vd0/data/videos:/mnt/share1:rw
 
     # couchpotato
-    couchpotato:
-        container_name: couchpotato
-        environment:
-            PUID: 1000
-            PGID: 998
-            TZ: Europe/Amsterdam
-            UMASK_SET: 022
-        image: linuxserver/couchpotato
-        ports:
-            - protocol: tcp
-              published: 5050
-              target: 5050
-        restart: unless-stopped
-        volumes:
-            - /home/alex/.docker/config/couchpotato:/config:rw
-            - /home/alex/downloads:/downloads:rw
-            - /mnt/vd0/data/videos:/movies:rw
+    #    couchpotato:
+    #    container_name: couchpotato
+    #    environment:
+    #        PUID: 1000
+    #        PGID: 998
+    #        TZ: Europe/Amsterdam
+    #        UMASK_SET: 022
+    #    image: linuxserver/couchpotato
+    #    ports:
+    #        - protocol: tcp
+    #          published: 5050
+    #          target: 5050
+    #    restart: unless-stopped
+    #    volumes:
+    #        - /home/alex/.docker/config/couchpotato:/config:rw
+    #        - /home/alex/downloads:/downloads:rw
+    #        - /mnt/vd0/data/videos:/movies:rw
 
