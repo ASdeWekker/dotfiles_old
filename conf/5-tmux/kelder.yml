@@ -4,7 +4,7 @@ windows:
     - dev:
         layout: even-vertical
         panes:
-            - dek;pm2 stop 0;ssn
+            - dek;pm2p stop 0;ssn
             - dek;cd 1*/s*;sass --watch new.sass:new.css
             - dek
             - dek
