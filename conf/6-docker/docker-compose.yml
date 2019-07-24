@@ -222,22 +222,24 @@ services:
             - /home/alex/.docker/config/emby:/config:rw
             - /mnt/vd0/data/videos:/mnt/share1:rw
 
-    # couchpotato
-    #    couchpotato:
-    #    container_name: couchpotato
-    #    environment:
-    #        PUID: 1000
-    #        PGID: 998
-    #        TZ: Europe/Amsterdam
-    #        UMASK_SET: 022
-    #    image: linuxserver/couchpotato
-    #    ports:
-    #        - protocol: tcp
-    #          published: 5050
-    #          target: 5050
-    #    restart: unless-stopped
-    #    volumes:
-    #        - /home/alex/.docker/config/couchpotato:/config:rw
-    #        - /home/alex/downloads:/downloads:rw
-    #        - /mnt/vd0/data/videos:/movies:rw
+    # firefly
+    firefly:
+        container_name: firefly
+        environment:
+            FF_DB_HOST: 192.168.1.90:5432
+            FF_DB_NAME: firefly
+            FF_DB_USER: firefly
+            FF_DB_PASSWORD: firefly
+            FF_DB_KEY: EW$$T394$6P9iRR2VkJKeMtKkhHf$npp
+            FF_APP_ENV: local
+            FF_DB_CONNECTION: pgsql
+            TZ: Europe/Amsterdam
+            APP_LOG_LEVEL: debug
+        image: jc5x/firefly-iii
+        ports:
+            - "8888:80"
+        restart: unless-stopped
+        volumes:
+            - /firefly_iii_export:/var/www/firefly-iii/storage/export:rw
+            - /firefly_iii_upload:/var/www/firefly-iii/storage/upload:rw
 
