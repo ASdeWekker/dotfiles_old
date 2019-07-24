@@ -226,15 +226,15 @@ services:
     firefly:
         container_name: firefly
         environment:
-            FF_DB_HOST: 192.168.1.90:5432
-            FF_DB_NAME: firefly
-            FF_DB_USER: firefly
-            FF_DB_PASSWORD: firefly
-            FF_DB_KEY: EW$$T394$6P9iRR2VkJKeMtKkhHf$npp
-            FF_APP_ENV: local
-            FF_DB_CONNECTION: pgsql
-            TZ: Europe/Amsterdam
-            APP_LOG_LEVEL: debug
+            - FF_DB_HOST=192.168.1.90:5432
+            - FF_DB_NAME=firefly
+            - FF_DB_USER=firefly
+            - FF_DB_PASSWORD=firefly
+            - FF_DB_KEY=EW$$T394$6P9iRR2VkJKeMtKkhHf$npp
+            - FF_APP_ENV=local
+            - FF_DB_CONNECTION=pgsql
+            - TZ=Europe/Amsterdam
+            - APP_LOG_LEVEL=debug
         image: jc5x/firefly-iii
         ports:
             - "8888:80"
