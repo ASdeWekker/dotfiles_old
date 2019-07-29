@@ -230,7 +230,7 @@ services:
             - FF_DB_NAME=firefly
             - FF_DB_USER=firefly
             - FF_DB_PASSWORD=firefly
-            - FF_DB_KEY=EW$$T394$6P9iRR2VkJKeMtKkhHf$npp
+            - FF_DB_KEY=sjakebdnfjeiqkamdngheidnakebdoem
             - FF_APP_ENV=local
             - FF_DB_CONNECTION=pgsql
             - TZ=Europe/Amsterdam
@@ -242,4 +242,14 @@ services:
         volumes:
             - /firefly_iii_export:/var/www/firefly-iii/storage/export:rw
             - /firefly_iii_upload:/var/www/firefly-iii/storage/upload:rw
+
+    # httpd
+    httpd:
+        container_name: httpd
+        image: httpd
+        ports:
+            - "80:80"
+        restart: unless-stopped
+        volumes:
+            - /htdocs:/home/alex/delet:rw
 
