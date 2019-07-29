@@ -26,5 +26,10 @@ sudo ln -sf $homed/1-system/snapraid.conf /etc/
 # Samba
 sudo ln -sf $homed/2-misc/server-smb.conf /etc/samba/smb.conf
 
+### 3 - Web ###
+# DNS/BIND/NAMED
+sudo cp -f $homed/3-web/named.conf /etc/
+sudo ln -sf $homed/3-web/test.local.zone /var/named/
+
 # EOF 
 
