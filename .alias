@@ -150,3 +150,6 @@ alias qql='echo "sudo pacman -Qql package | grep -Fe .service -e .socket"'
 alias vctemp='/opt/vc/bin/vcgencmd measure_temp'
 alias wtemp='watch /opt/vc/bin/vcgencmd measure_temp'
 alias vccore='/opt/vc/bin/vcgencmd measure_clock'
+
+# make spotify bigger on my 4k monitor
+alias spotify='/usr/bin/spotify --force-device-scale-factor=1.5'
