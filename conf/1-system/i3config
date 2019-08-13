@@ -242,9 +242,8 @@ gaps outer 2
 bindsym Print exec flameshot gui
 
 # Add permanent screen settings
-#exec_always xrandr --output HDMI-0 --mode 2560x1080 --rate 75 --pos 1920x0 --rotate normal --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-I-0 --off --output DP-1 --off --output DP-0 --off
-exec_always xrandr --output DP-1 --scale 0.65x0.65 --mode 3840x2160 --pos 0x0 --rotate normal --output HDMI-0 --mode 2560x1080 --pos 3840x0 --rotate normal
-#exec_always xrandr --output DP-1 --mode 3840x2160 --pos 0x0 --rotate normal --output HDMI-0 --mode 2560x1080 --pos 3840x0 --rotate normal
+#exec_always xrandr --output DP-1 --scale 0.65x0.65 --mode 3840x2160 --pos 0x0 --rotate normal --output HDMI-0 --mode 2560x1080 --pos 3840x0 --rotate normal
+exec_always xrandr --output DP-1 --primary --mode 3840x2160 --pos 0x0 --rotate normale --output HDMI-0 --mode 3840x2160 --pos 3840x0 --rotate normal
 
 # Move workspaces to the left and right monitor
 bindsym $mod+Ctrl+greater move workspace to output right
