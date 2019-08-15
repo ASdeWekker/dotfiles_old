@@ -4,6 +4,19 @@ version: '3.4'
 # Services
 services:
 
+    # Duplicati
+    duplicati:
+        container_name: duplicati
+        environment:
+            PUID: 1000
+            PGID: 998
+        image: duplicati/duplicati
+        ports:
+            - "8200:8200"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/duplicati:/duplicati:rw
+            - /:/data:rw
     # Plex
     plex:
         container_name: plex
