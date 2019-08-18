@@ -27,6 +27,7 @@ sudo ln -sf $homed/1-system/snapraid.conf /etc/
 ### 2 - Misc ###
 # Samba
 sudo ln -sf $homed/2-misc/server-smb.conf /etc/samba/smb.conf
+mkdir -p /home/alex/public /home/alex/downloads
 sudo systemctl reenable smb nmb
 
 # EOF 

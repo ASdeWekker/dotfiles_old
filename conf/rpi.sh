@@ -19,6 +19,7 @@ sudo systemctl reenable systemd-networkd
 ### 2 - Misc ###
 # Samba
 sudo ln -sf $homed/2-misc/rpi-smb.conf /etc/samba/smb.conf
+mkdir -p /home/alex/downloads /home/alex/public
 sudo systemctl reenable smb nmb
 
 ### 3 - Web ###

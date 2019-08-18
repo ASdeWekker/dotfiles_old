@@ -48,6 +48,7 @@ sudo ln -sf $homed/1-system/fonts.conf /etc/fonts/
 ### 2 - Misc ###
 # Samba
 sudo ln -sf $homed/2-misc/desktop-smb.conf /etc/samba/smb.conf
+mkdir -p /home/alex/Downloads /home/alex/Public
 sudo systemctl reenable smb nmb
 
 # dunst
