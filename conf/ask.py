@@ -2,10 +2,10 @@
 
 import subprocess
 
+print("You're going to link some files aren't you?")
 print("0 - Desktop")
 print("1 - Raspberry Pi")
 print("2 - Server")
-print("Are you going to link some files?")
 answer = input("On which system? ")
 
 if answer == "0":

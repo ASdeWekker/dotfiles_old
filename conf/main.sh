@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#======================================================
-### This file is used to link every configuration file
-### in the system after a fresh install.
-#======================================================
+#========================================================#
+### This file is used to link every configuration file ###
+### in the system after a fresh install.               ###
+#========================================================#
 
 # Using some home variables.
 home="/home/alex"
@@ -20,12 +20,14 @@ sudo mkdir -p /etc/ssh
 mkdir -p $home/.ssh
 sudo ln -sf $homed/1-system/sshd_config /etc/ssh/
 ln -sf $homed/1-system/ssh_config $home/.ssh/config
+sudo systemctl reenable sshd
 
 # ufw
-sudo mkdir -p /etc/default
-sudo mkdir -p /etc/ufw
-sudo ln -f $homed/1-system/ufw /etc/default/
-sudo ln -f $homed/1-system/before.rules /etc/ufw/
+# not sure I want to use this right now
+# sudo mkdir -p /etc/default
+# sudo mkdir -p /etc/ufw
+# sudo ln -f $homed/1-system/ufw /etc/default/
+# sudo ln -f $homed/1-system/before.rules /etc/ufw/
 
 # zsh
 ln -sf $homed/1-system/zshrc $home/.zshrc
@@ -40,8 +42,8 @@ mkdir -p $home/.config/nvim/temp/undodir
 ln -sf $homed/2-misc/init.vim $home/.config/nvim
 
 # led and switch scripts
-sudo ln -sf $homed/../bash/switch.py /usr/local/bin/sw
-sudo ln -sf $homed/../bash/ledstrip.py /usr/local/bin/led
+sudo ln -sf $homed/../scripts/python/switch.py /usr/local/bin/sw
+sudo ln -sf $homed/../scripts/python/ledstrip.py /usr/local/bin/led
 
 ### 3 - Web ###
 # Apache
@@ -51,6 +53,7 @@ sudo ln -sf $homed/3-web/httpd.conf /etc/httpd/conf/
 # NGINX
 sudo mkdir -p /etc/nginx/
 sudo ln -sf $homed/3-web/nginx.conf /etc/nginx/
+sudo systemctl reenable nginx
 
 # PHPMyAdmin
 sudo ln -sf $homed/3-web/phpmyadmin.conf /etc/httpd/conf/extra/
@@ -63,6 +66,7 @@ sudo ln -sf $homed/3-web/php-fpm.conf /etc/httpd/conf/extra/
 
 # PostgreSQL admin
 sudo ln -sf $homed/3-web/phppgadmin.conf /etc/httpd/conf/extra/
+sudo systemctl reenable httpd
 
 ### 5 - Tmux ###
 # tmux configuration file

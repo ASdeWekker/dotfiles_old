@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#========================================================
-### This file is used to link configuration files in the
-### system after a fresh install on a server.
-#========================================================
+#==========================================================#
+### This file is used to link configuration files in the ###
+### system after a fresh install on a server.            ###
+#==========================================================#
 
 # using some home variables.
 home="/home/alex"
@@ -15,9 +15,11 @@ set -x
 ### 1 - System ###
 # network
 sudo cp $homed/1-system/server.network /etc/systemd/network/eno1.network
+sudo systemctl reenable systemd-networkd
 
 # NFS
-sudo ln -sf $homed/1-system/server-nfs-exports /etc/exports
+# not going to use nfs for a while
+# sudo ln -sf $homed/1-system/server-nfs-exports /etc/exports
 
 # snapRAID
 sudo ln -sf $homed/1-system/snapraid.conf /etc/
@@ -25,11 +27,6 @@ sudo ln -sf $homed/1-system/snapraid.conf /etc/
 ### 2 - Misc ###
 # Samba
 sudo ln -sf $homed/2-misc/server-smb.conf /etc/samba/smb.conf
-
-### 3 - Web ###
-# DNS/BIND/NAMED
-sudo cp -f $homed/3-web/named.conf /etc/
-sudo ln -sf $homed/3-web/test.local.zone /var/named/
+sudo systemctl reenable smb nmb
 
 # EOF 
-
