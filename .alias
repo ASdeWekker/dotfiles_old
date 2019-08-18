@@ -43,7 +43,7 @@ alias sspc10='ssh -C 10.8.0.4'
 alias ssprint='ssh -C printpi'
 
 # shortcut for checking systemctl status.
-#alias syss='sudo systemctl' turned off because of ohmyzsh
+alias syss='sudo systemctl' turned off because of ohmyzsh
 
 # how to git gud and other helpful git things.
 alias git-gud='git push'
