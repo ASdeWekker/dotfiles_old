@@ -1,0 +1,12 @@
+[Unit]
+Description=Turn off ledstrip and amp when sleeping.
+Before=sleep.target
+
+[Service]
+User=alex
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/alex/shn/scripts/python/switch.py -a off
+ExecStartPost=/usr/bin/python3 /home/alex/shn/scripts/python/ledstrip.py -p off
+
+[Install]
+WantedBy=sleep.target
