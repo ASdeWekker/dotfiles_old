@@ -140,10 +140,10 @@ alias weer='curl wttr.in'
 alias pico='picocom /dev/ttyUSB0 -b115200'
 
 # LEDje.
-alias ledon='/bin/python /home/alex/shn/bash/ledstrip.py -p on'
-alias ledoff='/bin/python /home/alex/shn/bash/ledstrip.py -p off'
-alias ledtog='/bin/python /home/alex/shn/bash/ledstrip.py -p toggle'
-alias ledtoggle='/bin/python /home/alex/shn/bash/ledstrip.py -p toggle'
+alias ledon='/bin/python /home/alex/shn/scripts/python/ledstrip.py -p on'
+alias ledoff='/bin/python /home/alex/shn/scripts/python/ledstrip.py -p off'
+alias ledtog='/bin/python /home/alex/shn/scripts/python/ledstrip.py -p toggle'
+alias ledtoggle='/bin/python /home/alex/shn/scripts/python/ledstrip.py -p toggle'
 
 # echo the command for looking up service files
 alias qql='echo "sudo pacman -Qql package | grep -Fe .service -e .socket"'
