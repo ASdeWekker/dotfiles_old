@@ -18,9 +18,10 @@ set -x
 #sudo systemctl reenable systemd-networkd
 
 # Fonts
-sudo mkdir -p /etc/fonts/
-sudo ln -sf $homed/1-system/local.conf /etc/fonts/
-sudo ln -sf $homed/1-system/fonts.conf /etc/fonts/
+# Not needed with KDE
+#sudo mkdir -p /etc/fonts/
+#sudo ln -sf $homed/1-system/local.conf /etc/fonts/
+#sudo ln -sf $homed/1-system/fonts.conf /etc/fonts/
 
 # i3lock service file
 # not using i3 at the moment
@@ -48,12 +49,14 @@ sudo ln -sf $homed/1-system/fonts.conf /etc/fonts/
 ### 2 - Misc ###
 # Samba
 sudo ln -sf $homed/2-misc/desktop-smb.conf /etc/samba/smb.conf
-mkdir -p /home/alex/Downloads /home/alex/Public
+mkdir -p /home/alex/Downloads
+mkdir -p /home/alex/Public
 sudo systemctl reenable smb nmb
 
 # dunst
-mkdir -p $home/.config/dunst
-ln -sf $homed/2-misc/dunstrc $home/.config/dunst/
+# Not needed with KDE
+#mkdir -p $home/.config/dunst
+#ln -sf $homed/2-misc/dunstrc $home/.config/dunst/
 
 # GIMP
 mkdir -p $home/.config/GIMP/2.10
