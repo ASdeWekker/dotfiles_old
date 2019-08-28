@@ -40,11 +40,11 @@ setprompt() {
 	setopt prompt_subst
 
 	# check the hostname
-	if [[ "$(hostname)" == "pcaats" ]]; then
+	if [[ "$(hostname)" == "aad" ]]; then
 		p_host='%F{blue}'
-	elif [[ "$(hostname)" == "taaart" ]]; then
+	elif [[ "$(hostname)" == "piet" ]]; then
 		p_host=' %F{yellow}%M'
-	elif [[ "$(hostname)" == "servertjih" ]]; then
+	elif [[ "$(hostname)" == "serge" ]]; then
 		p_host=' %F{green}%M'
 	else
 		p_host=' %M'
