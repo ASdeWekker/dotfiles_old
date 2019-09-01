@@ -16,7 +16,7 @@ set -x
 
 ### 1 - System ###
 # ssh
-sudo mkdir -p /etc/ssh
+#sudo mkdir -p /etc/ssh
 mkdir -p $home/.ssh
 sudo ln -sf $homed/1-system/sshd_config /etc/ssh/
 ln -sf $homed/1-system/ssh_config $home/.ssh/config
@@ -24,8 +24,8 @@ sudo systemctl reenable sshd
 
 # ufw
 # Probably want to use this.
-sudo -i -u root mkdir -p /etc/default
-sudo -i -u root mkdir -p /etc/ufw
+#sudo -i -u root mkdir -p /etc/default
+#sudo -i -u root mkdir -p /etc/ufw
 sudo -i -u root cp -f $homed/1-system/ufw /etc/default/
 sudo -i -u root cp -f $homed/1-system/before.rules /etc/ufw/
 sudo -i -u root chown root:root /etc/ufw/before.rules
@@ -56,7 +56,7 @@ sudo mkdir -p /etc/httpd/conf/extra
 sudo ln -sf $homed/3-web/httpd.conf /etc/httpd/conf/
 
 # NGINX
-sudo mkdir -p /etc/nginx/
+#sudo mkdir -p /etc/nginx/
 sudo ln -sf $homed/3-web/nginx.conf /etc/nginx/
 sudo systemctl reenable nginx
 
@@ -64,7 +64,7 @@ sudo systemctl reenable nginx
 sudo ln -sf $homed/3-web/phpmyadmin.conf /etc/httpd/conf/extra/
 
 # PHP
-sudo mkdir -p /etc/php
+#sudo mkdir -p /etc/php
 sudo ln -sf $homed/3-web/php.ini /etc/php/
 sudo ln -sf $homed/3-web/php7_module.conf /etc/httpd/conf/extra/
 sudo ln -sf $homed/3-web/php-fpm.conf /etc/httpd/conf/extra/
