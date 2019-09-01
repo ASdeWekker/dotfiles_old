@@ -26,12 +26,12 @@ sudo systemctl reenable sshd
 # Probably want to use this.
 #sudo -i -u root mkdir -p /etc/default
 #sudo -i -u root mkdir -p /etc/ufw
-sudo -i -u root cp -f $homed/1-system/ufw /etc/default/
-sudo -i -u root cp -f $homed/1-system/before.rules /etc/ufw/
-sudo -i -u root chown root:root /etc/ufw/before.rules
-sudo -i -u root chmod 644 /etc/ufw/before.rules
-sudo -i -u root chown root:root /etc/default/ufw
-sudo -i -u root chmod 644 /etc/default/ufw
+sudo cp -f $homed/1-system/ufw /etc/default/
+sudo cp -f $homed/1-system/before.rules /etc/ufw/
+sudo chown root:root /etc/ufw/before.rules
+sudo chmod 644 /etc/ufw/before.rules
+sudo chown root:root /etc/default/ufw
+sudo chmod 644 /etc/default/ufw
 sudo systemctl reenable ufw
 
 # zsh
