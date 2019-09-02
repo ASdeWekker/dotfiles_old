@@ -28,10 +28,13 @@ sudo systemctl reenable sshd
 #sudo -i -u root mkdir -p /etc/ufw
 sudo cp -f $homed/1-system/ufw /etc/default/
 sudo cp -f $homed/1-system/before.rules /etc/ufw/
+sudo cp -f $homed/1-system/user.rules /etc/ufw/
 sudo chown root:root /etc/ufw/before.rules
 sudo chmod 644 /etc/ufw/before.rules
 sudo chown root:root /etc/default/ufw
 sudo chmod 644 /etc/default/ufw
+sudo chown root:root /etc/ufw/user.rules
+sudo chmod 644 /etc/ufw/user.rules
 sudo systemctl reenable ufw
 
 # zsh
