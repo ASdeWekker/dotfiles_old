@@ -10,7 +10,7 @@ services:
         environment:
             PUID: 1000
             PGID: 998
-        image: duplicati/duplicati
+        image: duplicati/duplicati:latest
         ports:
             - "8200:8200"
         restart: unless-stopped
@@ -26,7 +26,7 @@ services:
             PLEX_UID: 998
             TZ: Europe/Amsterdam
             PLEX_CLAIM: claim-qfFHm6zPGgts34ozYsq3
-        image: plexinc/pms-docker
+        image: plexinc/pms-docker:latest
         ports:
             - protocol: tcp
               published: 32400
@@ -43,7 +43,7 @@ services:
         container_name: portainer
         environment:
             TZ: Europe/Amsterdam
-        image: portainer/portainer
+        image: portainer/portainer:latest
         ports:
             - published: 9000
               target: 9000
@@ -61,7 +61,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/deluge
+        image: linuxserver/deluge:latest
         ports:
             - protocol: tcp
               published: 58846
@@ -120,7 +120,7 @@ services:
         container_name: watchtower
         environment:
             TZ: Europe/Amsterdam
-        image: v2tec/watchtower
+        image: v2tec/watchtower:latest
         restart: unless-stopped
         volumes:
             - /etc/localtime:/etc/localtime:ro
@@ -134,7 +134,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/jackett
+        image: linuxserver/jackett:latest
         ports:
             - target: 9117
               published: 9117
@@ -150,7 +150,7 @@ services:
         environment:
             PUID: 1000
             PGID: 998
-        image: organizrtools/organizr-v2
+        image: organizrtools/organizr-v2:latest
         ports:
             - published: 8080
               target: 80
@@ -165,7 +165,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/piwigo
+        image: linuxserver/piwigo:latest
         ports:
             - published: 8181
               target: 80
@@ -181,7 +181,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/bazarr
+        image: linuxserver/bazarr:latest
         ports:
             - published: 6767
               target: 6767
@@ -197,7 +197,7 @@ services:
         environment:
             PUID: 1000
             PGID: 998
-        image: linuxserver/rutorrent
+        image: linuxserver/rutorrent:latest
         ports:
             - protocol: tcp
               published: 8113
@@ -222,7 +222,7 @@ services:
         environment:
             PUID: 1000
             PGID: 998
-        image: emby/embyserver
+        image: emby/embyserver:latest
         ports:
             - protocol: tcp
               published: 8096
@@ -248,7 +248,7 @@ services:
             - FF_DB_CONNECTION=pgsql
             - TZ=Europe/Amsterdam
             - APP_LOG_LEVEL=debug
-        image: jc5x/firefly-iii
+        image: jc5x/firefly-iii:latest
         ports:
             - "8888:80"
         restart: unless-stopped
@@ -259,7 +259,7 @@ services:
     # httpd
     httpd:
         container_name: httpd
-        image: httpd
+        image: httpd:latest
         ports:
             - "80:80"
         restart: unless-stopped
