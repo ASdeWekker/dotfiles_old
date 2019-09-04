@@ -87,7 +87,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/sonarr
+        image: linuxserver/sonarr:preview
         ports:
             - published: 8989
               target: 8989
@@ -104,7 +104,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/radarr
+        image: linuxserver/radarr:preview
         ports:
             - published: 7878
               target: 7878
