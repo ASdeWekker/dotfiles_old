@@ -4,6 +4,20 @@ version: '3.4'
 # Services
 services:
 
+    # Nginx proxy manager
+    nginx-proxy-manager:
+        container_name: nginx-proxy-manager
+        environment:
+            PUID: 1000
+            GUID: 998
+        image: jlesage/nginx-proxy-manager:latest
+        ports:
+            - "8181:8181"
+            - "8080:8080"
+            - "4443:4443"
+        volumes:
+            - /home/alex/.docker/config/nginx-proxy-manager:/config:rw
+
     # Duplicati
     duplicati:
         container_name: duplicati
@@ -152,7 +166,7 @@ services:
             PGID: 998
         image: organizrtools/organizr-v2:latest
         ports:
-            - published: 8080
+            - published: 8081
               target: 80
         restart: unless-stopped
         volumes:
@@ -167,7 +181,7 @@ services:
             TZ: Europe/Amsterdam
         image: linuxserver/piwigo:latest
         ports:
-            - published: 8181
+            - published: 8182
               target: 80
         restart: unless-stopped
         volumes:
