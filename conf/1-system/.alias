@@ -67,7 +67,7 @@ alias tat='tmux attach -t'
 # session check shortcut.
 alias tls='tmux list-sessions'
 # tmuxinator
-alias 'mux s'='tmuxinator start'
+alias mux='tmuxinator'
 
 # check the git repos.
 alias check='cd;cd shn;gs;gp;bac;gs;gp;ard;gs;gp;dek;gs;gp'
