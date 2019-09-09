@@ -278,5 +278,5 @@ services:
             - "80:80"
         restart: unless-stopped
         volumes:
-            - /htdocs:/home/alex/delet:rw
+            - /home/alex/delet:/htdocs:rw
 
