@@ -72,5 +72,19 @@ sudo systemctl reenable turnitoff.service
 sudo systemctl reenable gotosleep.service
 
 ### 4 - VFIO ###
+# mkinitcpio
+sudo ln -sf $homed/1-system/mkinitcpio.conf /etc/
+
+# libvirt/qemu conf
+sudo ln -sf $homed/4-vfio/vfio.conf /etc/modprobe.d/
+sudo ln -sf $homed/4-vfio/qemu.conf /etc/libvirt/
+
+# vm files
+sudo ln -sf $homed/4-vfio/win10.xml /etc/libvirt/qemu/
+sudo ln -sf $homed/4-vfio/default.xml /etc/libvirt/qemu/networks/
+
+# Input stuff
+sudo ln -sf $homed/4-vfio/vfioinput/input_attach.sh /usr/local/bin/iiaa
+sudo ln -sf $homed/4-vfio/vfioinput/input_detach.sh /usr/local/bin/iidd
 
 # EOF #
