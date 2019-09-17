@@ -1,3 +1,5 @@
+# Not needed anymore, able to place certain scripts somewhere now.
+
 [Unit]
 Description=Turn off ledstrip and amp when going to sleep.
 Before=suspend.target

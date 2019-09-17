@@ -63,13 +63,11 @@ mkdir -p $home/.config/GIMP/2.10
 ln -sf $homed/2-misc/gimp/gtkrc $home/.config/GIMP/2.10/
 ln -sf $homed/2-misc/gimp/themerc $home/.config/GIMP/2.10/
 
-# ledstrip and switch
+# ledstrip and switch automanagement
 sudo cp -f $homed/../scripts/services/turniton.service /etc/systemd/system/
 sudo cp -f $homed/../scripts/services/turnitoff.service /etc/systemd/system/
-sudo cp -f $homed/../scripts/services/gotosleep.service /etc/systemd/system/
 sudo systemctl reenable turniton.service
 sudo systemctl reenable turnitoff.service
-sudo systemctl reenable gotosleep.service
 
 ### 4 - VFIO ###
 # mkinitcpio
