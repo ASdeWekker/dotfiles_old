@@ -68,6 +68,7 @@ sudo cp -f $homed/../scripts/services/turniton.service /etc/systemd/system/
 sudo cp -f $homed/../scripts/services/turnitoff.service /etc/systemd/system/
 sudo systemctl reenable turniton.service
 sudo systemctl reenable turnitoff.service
+sudo ln -sf $homed/../scripts/bash/ledstrip-switch-suspend.sh /usr/lib/systemd/system-sleep/
 
 ### 4 - VFIO ###
 # mkinitcpio
