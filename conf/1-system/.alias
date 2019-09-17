@@ -74,7 +74,7 @@ alias check='cd;cd shn;gs;gp;bac;gs;gp;ard;gs;gp;dek;gs;gp'
 alias chexit='check;exit'
 
 # connect to mongo on the pi.
-alias mongot='mongo 192.168.1.90 --port 27017 -u "alex" --authenticationDatabase "admin"'
+#alias mongot='mongo 192.168.1.90 --port 27017 -u "alex" --authenticationDatabase "admin"'
 
 # replace commands:
 # prettyping.
