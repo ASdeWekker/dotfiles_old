@@ -1,15 +1,14 @@
 #!/bin/python
 
 import argparse
+#import requests
 import subprocess
 
 parser = argparse.ArgumentParser(description="Turn a switch on or off.")
-
 parser.add_argument("-A", "--all", help="All of them")
-parser.add_argument("-o", "--overhead", help="Overhead lamp")
-parser.add_argument("-s", "--standing", help="Standing lamp")
+#parser.add_argument("-o", "--overhead", help="Overhead lamp")
+#parser.add_argument("-s", "--standing", help="Standing lamp")
 parser.add_argument("-a", "--amp", help="Amplifier")
-
 args = parser.parse_args()
 
 
