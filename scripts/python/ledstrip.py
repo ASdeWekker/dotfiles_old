@@ -4,7 +4,7 @@ import argparse
 import requests
 
 
-# Argparse configuration
+# Argparse configuration.
 parser = argparse.ArgumentParser(description="control this ledstrip")
 parser.add_argument("-p", "--power", help="to turn on or off")
 args = parser.parse_args()
