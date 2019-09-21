@@ -17,14 +17,14 @@ def request(ip,power):
 
 
 if args.all:
-	request(221,args.all)
-	request(222,args.all)
+	#request(221,args.all)
+	#request(222,args.all)
 	request(223,args.all)
 else:
-	if args.overhead:
-		request(221,args.overhead)
-	if args.standing:
-		request(222,args.standing)
+	#if args.overhead:
+		#request(221,args.overhead)
+	#if args.standing:
+		#request(222,args.standing)
 	if args.amp:
 		request(223,args.amp)
 
