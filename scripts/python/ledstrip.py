@@ -19,20 +19,25 @@ args = parser.parse_args()
 
 # Check if the power argument was passed and execute the function.
 if args.power:
-	#data = {"power": str(args.power)}
 	response = requests.post(ip + "power", data={"power": str(args.power)})
+	print(response.text)
 
 if args.color:
 	response = requests.post(ip + "color", data={"color": str(args.color)})
+	print(response.text)
 
 if args.rgb:
 	response = requests.post(ip + "rgb", data={"rgb": str(args.rgb)})
+	print(response.text)
 
 if args.hsv:
 	response = requests.post(ip + "hsv", data={"hsv": str(args.hsv)})
+	print(response.text)
 
 if args.brightness:
 	response = requests.post(ip + "brightness", data={"brightness": str(args.brightness)})
+	print(response.text)
 
 if args.rainbow:
 	response = requests.post(ip + "rainbow", data={"speed": str(args.rainbow)})
+	print(response.text)
