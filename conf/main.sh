@@ -74,6 +74,7 @@ sudo ln -sf $homed/3-web/phpmyadmin.conf /etc/httpd/conf/extra/
 sudo ln -sf $homed/3-web/php.ini /etc/php/
 sudo ln -sf $homed/3-web/php7_module.conf /etc/httpd/conf/extra/
 sudo ln -sf $homed/3-web/php-fpm.conf /etc/httpd/conf/extra/
+sudo systemctl reenable php-fpm
 
 # PostgreSQL admin
 sudo ln -sf $homed/3-web/phppgadmin.conf /etc/httpd/conf/extra/
