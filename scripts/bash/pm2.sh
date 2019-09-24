@@ -1,22 +1,22 @@
 #!/bin/bash
 
 # declare folder var.
-bac=/var/www/html/backup
+bac=/var/www/html/penp
 
 # go to all the folders and start the project.
 cd $bac/../de_kelder
 PM2_HOME=$HOME/.pm2p pm2 start --update-env
-cd $bac/oefenen/node/expresstut
+cd $bac/practice/javascript/node/expresstut
 PM2_HOME=$HOME/.pm2o pm2 start --update-env
-cd $bac/oefenen/node/nodemongo
+cd $bac/practice/javascript/node/nodemongo
 PM2_HOME=$HOME/.pm2o pm2 start --update-env
-cd $bac/oefenen/node/meantut
+cd $bac/practice/javascript/node/meantut
 PM2_HOME=$HOME/.pm2o pm2 start --update-env
-cd $bac/oefenen/node/session
+cd $bac/practice/javascript/node/session
 PM2_HOME=$HOME/.pm2o pm2 start --update-env
-cd $bac/oefenen/node/addpage
+cd $bac/practice/javascript/node/addpage
 PM2_HOME=$HOME/.pm2o pm2 start --update-env
-cd $bac/oefenen/node/postgres
+cd $bac/practice/javascript/node/postgres
 PM2_HOME=$HOME/.pm2o pm2 start --update-env
 cd $bac/projects/darten
 PM2_HOME=$HOME/.pm2p pm2 start --update-env

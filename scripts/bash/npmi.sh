@@ -1,18 +1,18 @@
 #!/bin/bash
 
-wpath="/var/www/html/backup"
+wpath="/var/www/html/penp"
 
-cd $wpath/oefenen/node/addpage
+cd $wpath/practice/javascript/node/addpage
 yarn install
-cd $wpath/oefenen/node/expresstut
+cd $wpath/practice/javascript/node/expresstut
 yarn install
-cd $wpath/oefenen/node/meantut
+cd $wpath/practice/javascript/node/meantut
 yarn install
-cd $wpath/oefenen/node/nodemongo
+cd $wpath/practice/javascript/node/nodemongo
 yarn install
-cd $wpath/oefenen/node/nsession
+cd $wpath/practice/javascript/node/nsession
 yarn install
-cd $wpath/oefenen/node/session
+cd $wpath/practice/javascript/node/session
 yarn install
 cd $wpath/projects/urlname
 yarn install
@@ -22,7 +22,7 @@ cd $wpath/projects/speedtest
 yarn install
 cd $wpath/../de_kelder
 yarn install
-cd $wpath/oefenen/postgres
+cd $wpath/practice/javascript/node/postgres
 yarn install
 cd $wpath/projects/weight
 yarn install
