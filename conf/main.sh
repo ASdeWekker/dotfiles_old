@@ -7,7 +7,7 @@
 
 # Using some home variables.
 home="/home/alex"
-homed="/home/alex/shn/conf"
+homed="/home/alex/dotfiles/conf"
 # Display all the commands used
 set -x
 

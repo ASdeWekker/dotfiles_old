@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Location where the files are located
-filesloc="/home/alex/shn/conf/5-tmux"
+filesloc="/home/alex/dotfiles/conf/5-tmux"
 # Location where the files are needed
 linkloc="/home/alex/.config/tmuxinator/"
 

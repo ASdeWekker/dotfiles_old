@@ -70,7 +70,7 @@ alias tls='tmux list-sessions'
 alias mux='tmuxinator'
 
 # check the git repos.
-alias check='cd;cd shn;gs;gp;bac;gs;gp;ard;gs;gp;dek;gs;gp'
+alias check='cd;cd dotfiles;gs;gp;bac;gs;gp;ard;gs;gp;dek;gs;gp'
 alias chexit='check;exit'
 
 # connect to mongo on the pi.
@@ -139,10 +139,10 @@ alias weer='curl wttr.in'
 alias pico='picocom /dev/ttyUSB0 -b115200'
 
 # LEDje.
-alias ledon='/bin/python /home/alex/shn/scripts/python/ledstrip.py -p on'
-alias ledoff='/bin/python /home/alex/shn/scripts/python/ledstrip.py -p off'
-alias ledtog='/bin/python /home/alex/shn/scripts/python/ledstrip.py -p toggle'
-alias ledtoggle='/bin/python /home/alex/shn/scripts/python/ledstrip.py -p toggle'
+alias ledon='/bin/python /home/alex/dotfiles/scripts/python/ledstrip.py -p on'
+alias ledoff='/bin/python /home/alex/dotfiles/scripts/python/ledstrip.py -p off'
+alias ledtog='/bin/python /home/alex/dotfiles/scripts/python/ledstrip.py -p toggle'
+alias ledtoggle='/bin/python /home/alex/dotfiles/scripts/python/ledstrip.py -p toggle'
 
 # echo the command for looking up service files
 alias qql='echo "sudo pacman -Qql package | grep -Fe .service -e .socket"'
