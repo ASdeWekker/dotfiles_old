@@ -10,8 +10,6 @@ cd $wpath/practice/javascript/node/meantut
 yarn install
 cd $wpath/practice/javascript/node/nodemongo
 yarn install
-cd $wpath/practice/javascript/node/nsession
-yarn install
 cd $wpath/practice/javascript/node/session
 yarn install
 cd $wpath/projects/urlname
@@ -20,7 +18,7 @@ cd $wpath/projects/darten
 yarn install
 cd $wpath/projects/speedtest
 yarn install
-cd $wpath/../de_kelder
+cd $wpath/../kelder
 yarn install
 cd $wpath/practice/javascript/node/postgres
 yarn install
