@@ -3,6 +3,7 @@
 ### PATH ###
 #typeset -U path
 #path=(/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/alex/.gem/ruby/2.6.0/bin)
+source /home/alex/.config/.uenvs
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
