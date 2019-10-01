@@ -118,7 +118,7 @@ services:
             PUID: 1000
             PGID: 998
             TZ: Europe/Amsterdam
-        image: linuxserver/radarr:preview
+        image: linuxserver/radarr:latest
         ports:
             - published: 7878
               target: 7878
