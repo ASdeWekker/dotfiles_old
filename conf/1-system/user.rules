@@ -23,6 +23,9 @@
 ### tuple ### allow any any 0.0.0.0/0 any 10.8.0.0/24 in
 -A ufw-user-input -s 10.8.0.0/24 -j ACCEPT
 
+### tuple ### allow any any 0.0.0.0/0 any 172.19.0.0/16 in
+-A ufw-user-input -s 172.19.0.0/16 -j ACCEPT
+
 ### tuple ### allow tcp 6881:6891 0.0.0.0/0 any 0.0.0.0/0 Deluge - in
 -A ufw-user-input -p tcp -m multiport --dports 6881:6891 -j ACCEPT -m comment --comment 'dapp_Deluge'
 
