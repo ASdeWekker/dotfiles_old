@@ -14,7 +14,7 @@ parser.add_argument("-a", "--amp", help="Amplifier")
 args = parser.parse_args()
 
 
-# A function to enter the ip address
+# A function to enter the ip address.
 def ip(val):
 	return "http://192.168.1." + val + "/power"
 
