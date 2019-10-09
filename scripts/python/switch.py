@@ -30,5 +30,5 @@ else:
 	# if args.standing:
 	# 	response = requests.post(ip("222"), data={"power": str(args.standing)})
 	if args.amp:
-		response = request.post(ip("223"), data={"power": str(args.amp)})
+		response = requests.post(ip("223"), data={"power": str(args.amp)})
 
