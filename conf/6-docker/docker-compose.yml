@@ -73,9 +73,7 @@ services:
 			PLEX_CLAIM: claim-qfFHm6zPGgts34ozYsq3
 		image: plexinc/pms-docker:latest
 		ports:
-			- protocol: tcp
-			  published: 32400
-			  target: 32400
+			- "32400:32400"
 		restart: unless-stopped
 		volumes:
 			- /home/alex/.docker/config/plex:/config:rw
@@ -90,8 +88,7 @@ services:
 			TZ: Europe/Amsterdam
 		image: portainer/portainer:latest
 		ports:
-			- published: 9000
-			  target: 9000
+			- "9000:9000"
 		restart: unless-stopped
 		volumes:
 			- /home/alex/.docker/config/portainer:/data:rw
@@ -108,18 +105,9 @@ services:
 			TZ: Europe/Amsterdam
 		image: linuxserver/deluge:latest
 		ports:
-			- protocol: tcp
-			  published: 58846
-			  target: 58846
-			- protocol: tcp
-			  published: 58946
-			  target: 58946
-			- protocol: udp
-			  published: 58946
-			  target: 58946
-			- protocol: tcp
-			  published: 8112
-			  target: 8112
+			- "58846:58846"
+			- "58946:58946"
+			- "8112:8112"
 		restart: unless-stopped
 		volumes:
 			- /home/alex/.docker/config/deluge:/config:rw
@@ -134,8 +122,7 @@ services:
 			TZ: Europe/Amsterdam
 		image: linuxserver/sonarr:preview
 		ports:
-			- published: 8989
-			  target: 8989
+			- "8989:8989"
 		restart: unless-stopped
 		volumes:
 			- /home/alex/.docker/config/sonarr:/config:rw
@@ -151,8 +138,7 @@ services:
 			TZ: Europe/Amsterdam
 		image: linuxserver/radarr:latest
 		ports:
-			- published: 7878
-			  target: 7878
+			- "7878:7878"
 		restart: unless-stopped
 		volumes:
 			- /home/alex/.docker/config/radarr:/config:rw
@@ -181,8 +167,7 @@ services:
 			TZ: Europe/Amsterdam
 		image: linuxserver/jackett:latest
 		ports:
-			- target: 9117
-			  published: 9117
+			- "9117:9117"
 		restart: unless-stopped
 		volumes:
 			- /home/alex/.docker/config/jackett:/config:rw
@@ -197,8 +182,7 @@ services:
 			PGID: 998
 		image: organizrtools/organizr-v2:latest
 		ports:
-			- published: 8081
-			  target: 80
+			- "8081:80"
 		restart: unless-stopped
 		volumes:
 			- /home/alex/.docker/config/organizr:/config:rw
@@ -212,8 +196,7 @@ services:
 			TZ: Europe/Amsterdam
 		image: linuxserver/piwigo:latest
 		ports:
-			- published: 8182
-			  target: 80
+			- "8182:80"
 		restart: unless-stopped
 		volumes:
 			- /home/alex/.docker/config/piwigo:/config:rw
@@ -228,8 +211,7 @@ services:
 			TZ: Europe/Amsterdam
 		image: linuxserver/bazarr:latest
 		ports:
-			- published: 6767
-			  target: 6767
+			- "6767:6767"
 		restart: unless-stopped
 		volumes:
 			- /home/alex/.docker/config/bazarr:/config:rw
@@ -244,12 +226,8 @@ services:
 			PGID: 998
 		image: emby/embyserver:latest
 		ports:
-			- protocol: tcp
-			  published: 8096
-			  target: 8096
-			- protocol: tcp
-			  published: 8920
-			  target: 8920
+			- "8096:8096"
+			- "8920:8920"
 		restart: unless-stopped
 		volumes:
 			- /home/alex/.docker/config/emby:/config:rw
