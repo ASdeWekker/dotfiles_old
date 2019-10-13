@@ -59,8 +59,8 @@ services:
             - "8888:80"
         restart: unless-stopped
         volumes:
-            - /firefly_iii_export:/var/www/firefly-iii/storage/export:rw
-            - /firefly_iii_upload:/var/www/firefly-iii/storage/upload:rw
+            - /var/www/firefly-iii/storage/export:/firefly_iii_export:rw
+            - /var/www/firefly-iii/storage/upload:/firefly_iii_upload:rw
             - /:/data:rw
     # Plex
     plex:
