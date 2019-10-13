@@ -30,6 +30,37 @@ services:
         restart: unless-stopped
         volumes:
             - /home/alex/.docker/config/duplicati:/duplicati:rw
+
+    # httpd
+    httpd:
+        container_name: httpd
+        image: httpd:latest
+        ports:
+            - "80:80"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/delet:/htdocs:rw
+
+    # firefly
+    firefly:
+        container_name: firefly
+        environment:
+            - FF_DB_HOST=192.168.1.90:5432
+            - FF_DB_NAME=firefly
+            - FF_DB_USER=firefly
+            - FF_DB_PASSWORD=firefly
+            - FF_DB_KEY=sjakebdnfjeiqkamdngheidnakebdoem
+            - FF_APP_ENV=local
+            - FF_DB_CONNECTION=pgsql
+            - TZ=Europe/Amsterdam
+            - APP_LOG_LEVEL=debug
+        image: jc5x/firefly-iii:latest
+        ports:
+            - "8888:80"
+        restart: unless-stopped
+        volumes:
+            - /firefly_iii_export:/var/www/firefly-iii/storage/export:rw
+            - /firefly_iii_upload:/var/www/firefly-iii/storage/upload:rw
             - /:/data:rw
     # Plex
     plex:
@@ -248,35 +279,3 @@ services:
         volumes:
             - /home/alex/.docker/config/emby:/config:rw
             - /mnt/vd0/data/videos:/mnt/share1:rw
-
-    # firefly
-    firefly:
-        container_name: firefly
-        environment:
-            - FF_DB_HOST=192.168.1.90:5432
-            - FF_DB_NAME=firefly
-            - FF_DB_USER=firefly
-            - FF_DB_PASSWORD=firefly
-            - FF_DB_KEY=sjakebdnfjeiqkamdngheidnakebdoem
-            - FF_APP_ENV=local
-            - FF_DB_CONNECTION=pgsql
-            - TZ=Europe/Amsterdam
-            - APP_LOG_LEVEL=debug
-        image: jc5x/firefly-iii:latest
-        ports:
-            - "8888:80"
-        restart: unless-stopped
-        volumes:
-            - /firefly_iii_export:/var/www/firefly-iii/storage/export:rw
-            - /firefly_iii_upload:/var/www/firefly-iii/storage/upload:rw
-
-    # httpd
-    httpd:
-        container_name: httpd
-        image: httpd:latest
-        ports:
-            - "80:80"
-        restart: unless-stopped
-        volumes:
-            - /home/alex/delet:/htdocs:rw
-
