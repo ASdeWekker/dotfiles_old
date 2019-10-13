@@ -4,231 +4,231 @@ version: '3.4'
 # Services
 services:
 
-	# Nginx proxy manager
-	nginx-proxy-manager:
-		container_name: nginx-proxy-manager
-		environment:
-			PUID: 1000
-			GUID: 998
-		image: jlesage/nginx-proxy-manager:latest
-		ports:
-			- "8181:8181"
-			- "8080:8080"
-			- "4443:4443"
-		volumes:
-			- /home/alex/.docker/config/nginx-proxy-manager:/config:rw
+    # Nginx proxy manager
+    nginx-proxy-manager:
+        container_name: nginx-proxy-manager
+        environment:
+            PUID: 1000
+            GUID: 998
+        image: jlesage/nginx-proxy-manager:latest
+        ports:
+            - "8181:8181"
+            - "8080:8080"
+            - "4443:4443"
+        volumes:
+            - /home/alex/.docker/config/nginx-proxy-manager:/config:rw
 
-	# Duplicati
-	duplicati:
-		container_name: duplicati
-		environment:
-			PUID: 1000
-			PGID: 998
-		image: duplicati/duplicati:latest
-		ports:
-			- "8200:8200"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/.docker/config/duplicati:/duplicati:rw
+    # Duplicati
+    duplicati:
+        container_name: duplicati
+        environment:
+            PUID: 1000
+            PGID: 998
+        image: duplicati/duplicati:latest
+        ports:
+            - "8200:8200"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/duplicati:/duplicati:rw
 
-	# httpd
-	httpd:
-		container_name: httpd
-		image: httpd:latest
-		ports:
-			- "80:80"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/delet:/htdocs:rw
+    # httpd
+    httpd:
+        container_name: httpd
+        image: httpd:latest
+        ports:
+            - "80:80"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/delet:/htdocs:rw
 
-	# firefly
-	firefly:
-		container_name: firefly
-		environment:
-			- FF_DB_HOST=192.168.1.90:5432
-			- FF_DB_NAME=firefly
-			- FF_DB_USER=firefly
-			- FF_DB_PASSWORD=firefly
-			- FF_DB_KEY=sjakebdnfjeiqkamdngheidnakebdoem
-			- FF_APP_ENV=local
-			- FF_DB_CONNECTION=pgsql
-			- TZ=Europe/Amsterdam
-			- APP_LOG_LEVEL=debug
-		image: jc5x/firefly-iii:latest
-		ports:
-			- "8888:80"
-		restart: unless-stopped
-		volumes:
-			- /firefly_iii_export:/var/www/firefly-iii/storage/export:rw
-			- /firefly_iii_upload:/var/www/firefly-iii/storage/upload:rw
-			- /:/data:rw
-	# Plex
-	plex:
-		container_name: plex
-		environment:
-			ADVERTISE_IP: http://192.168.1.111:32400/
-			PLEX_GID: 1000
-			PLEX_UID: 998
-			TZ: Europe/Amsterdam
-			PLEX_CLAIM: claim-qfFHm6zPGgts34ozYsq3
-		image: plexinc/pms-docker:latest
-		ports:
-			- "32400:32400"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/.docker/config/plex:/config:rw
-			- /home/alex/downloads/plex/transcode:/transcode:rw
-			- /mnt/vd0/data/videos:/data:rw
-	
-	# Portainer
-	portainer:
-		command: -H unix:///var/run/docker.sock
-		container_name: portainer
-		environment:
-			TZ: Europe/Amsterdam
-		image: portainer/portainer:latest
-		ports:
-			- "9000:9000"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/.docker/config/portainer:/data:rw
-			- /etc/localtime:/etc/localtime:ro
-			- /home/alex/.docker/shared:/shared:rw
-			- /var/run/docker.sock:/var/run/docker.sock:rw
+    # firefly
+    firefly:
+        container_name: firefly
+        environment:
+            - FF_DB_HOST=192.168.1.90:5432
+            - FF_DB_NAME=firefly
+            - FF_DB_USER=firefly
+            - FF_DB_PASSWORD=firefly
+            - FF_DB_KEY=sjakebdnfjeiqkamdngheidnakebdoem
+            - FF_APP_ENV=local
+            - FF_DB_CONNECTION=pgsql
+            - TZ=Europe/Amsterdam
+            - APP_LOG_LEVEL=debug
+        image: jc5x/firefly-iii:latest
+        ports:
+            - "8888:80"
+        restart: unless-stopped
+        volumes:
+            - /firefly_iii_export:/var/www/firefly-iii/storage/export:rw
+            - /firefly_iii_upload:/var/www/firefly-iii/storage/upload:rw
+            - /:/data:rw
+    # Plex
+    plex:
+        container_name: plex
+        environment:
+            ADVERTISE_IP: http://192.168.1.111:32400/
+            PLEX_GID: 1000
+            PLEX_UID: 998
+            TZ: Europe/Amsterdam
+            PLEX_CLAIM: claim-qfFHm6zPGgts34ozYsq3
+        image: plexinc/pms-docker:latest
+        ports:
+            - "32400:32400"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/plex:/config:rw
+            - /home/alex/downloads/plex/transcode:/transcode:rw
+            - /mnt/vd0/data/videos:/data:rw
+    
+    # Portainer
+    portainer:
+        command: -H unix:///var/run/docker.sock
+        container_name: portainer
+        environment:
+            TZ: Europe/Amsterdam
+        image: portainer/portainer:latest
+        ports:
+            - "9000:9000"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/portainer:/data:rw
+            - /etc/localtime:/etc/localtime:ro
+            - /home/alex/.docker/shared:/shared:rw
+            - /var/run/docker.sock:/var/run/docker.sock:rw
 
-	# Deluge
-	deluge:
-		container_name: deluge
-		environment:
-			PUID: 1000
-			PGID: 998
-			TZ: Europe/Amsterdam
-		image: linuxserver/deluge:latest
-		ports:
-			- "58846:58846"
-			- "58946:58946"
-			- "8112:8112"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/.docker/config/deluge:/config:rw
-			- /home/alex/downloads/deluge:/downloads:rw
+    # Deluge
+    deluge:
+        container_name: deluge
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/deluge:latest
+        ports:
+            - "58846:58846"
+            - "58946:58946"
+            - "8112:8112"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/deluge:/config:rw
+            - /home/alex/downloads/deluge:/downloads:rw
 
-	# Sonarr
-	sonarr:
-		container_name: sonarr
-		environment:
-			PUID: 1000
-			PGID: 998
-			TZ: Europe/Amsterdam
-		image: linuxserver/sonarr:preview
-		ports:
-			- "8989:8989"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/.docker/config/sonarr:/config:rw
-			- /mnt/vd0/data/videos:/tv:rw
-			- /home/alex/downloads/deluge:/downloads:rw
+    # Sonarr
+    sonarr:
+        container_name: sonarr
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/sonarr:preview
+        ports:
+            - "8989:8989"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/sonarr:/config:rw
+            - /mnt/vd0/data/videos:/tv:rw
+            - /home/alex/downloads/deluge:/downloads:rw
 
-	# Radarr
-	radarr:
-		container_name: radarr
-		environment:
-			PUID: 1000
-			PGID: 998
-			TZ: Europe/Amsterdam
-		image: linuxserver/radarr:latest
-		ports:
-			- "7878:7878"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/.docker/config/radarr:/config:rw
-			- /mnt/vd0/data/videos:/movies:rw
-			- /home/alex/downloads/deluge:/downloads:rw
+    # Radarr
+    radarr:
+        container_name: radarr
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/radarr:latest
+        ports:
+            - "7878:7878"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/radarr:/config:rw
+            - /mnt/vd0/data/videos:/movies:rw
+            - /home/alex/downloads/deluge:/downloads:rw
 
-	# Watchtower
-	watchtower:
-		command: --schedule "0 0 4 * * *" --cleanup
-		container_name: watchtower
-		environment:
-			TZ: Europe/Amsterdam
-		image: v2tec/watchtower:latest
-		restart: unless-stopped
-		volumes:
-			- /etc/localtime:/etc/localtime:ro
-			- /var/run/docker.sock:/var/run/docker.sock:rw
-			- /home/alex/.docker/config/watchtower/config.json:/config/config.json:rw
+    # Watchtower
+    watchtower:
+        command: --schedule "0 0 4 * * *" --cleanup
+        container_name: watchtower
+        environment:
+            TZ: Europe/Amsterdam
+        image: v2tec/watchtower:latest
+        restart: unless-stopped
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - /var/run/docker.sock:/var/run/docker.sock:rw
+            - /home/alex/.docker/config/watchtower/config.json:/config/config.json:rw
 
-	# Jackett
-	jackett:
-		container_name: jackett
-		environment:
-			PUID: 1000
-			PGID: 998
-			TZ: Europe/Amsterdam
-		image: linuxserver/jackett:latest
-		ports:
-			- "9117:9117"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/.docker/config/jackett:/config:rw
-			- /home/alex/downloads/jackett:/downloads:rw
-			- /etc/localtime:/etc/localtime:ro
+    # Jackett
+    jackett:
+        container_name: jackett
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/jackett:latest
+        ports:
+            - "9117:9117"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/jackett:/config:rw
+            - /home/alex/downloads/jackett:/downloads:rw
+            - /etc/localtime:/etc/localtime:ro
 
-	# Organizr
-	organizr:
-		container_name: organizr
-		environment:
-			PUID: 1000
-			PGID: 998
-		image: organizrtools/organizr-v2:latest
-		ports:
-			- "8081:80"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/.docker/config/organizr:/config:rw
+    # Organizr
+    organizr:
+        container_name: organizr
+        environment:
+            PUID: 1000
+            PGID: 998
+        image: organizrtools/organizr-v2:latest
+        ports:
+            - "8081:80"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/organizr:/config:rw
 
-	# Piwigo
-	piwigo:
-		container_name: piwigo
-		environment:
-			PUID: 1000
-			PGID: 998
-			TZ: Europe/Amsterdam
-		image: linuxserver/piwigo:latest
-		ports:
-			- "8182:80"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/.docker/config/piwigo:/config:rw
-			- /etc/localtime:/etc/localtime:ro
+    # Piwigo
+    piwigo:
+        container_name: piwigo
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/piwigo:latest
+        ports:
+            - "8182:80"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/piwigo:/config:rw
+            - /etc/localtime:/etc/localtime:ro
 
-	# Bazarr
-	bazarr:
-		container_name: bazarr
-		environment:
-			PUID: 1000
-			PGID: 998
-			TZ: Europe/Amsterdam
-		image: linuxserver/bazarr:latest
-		ports:
-			- "6767:6767"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/.docker/config/bazarr:/config:rw
-			- /mnt/vd0/data/videos:/tv:rw
-			- /mnt/vd0/data/videos:/movies:rw
+    # Bazarr
+    bazarr:
+        container_name: bazarr
+        environment:
+            PUID: 1000
+            PGID: 998
+            TZ: Europe/Amsterdam
+        image: linuxserver/bazarr:latest
+        ports:
+            - "6767:6767"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/bazarr:/config:rw
+            - /mnt/vd0/data/videos:/tv:rw
+            - /mnt/vd0/data/videos:/movies:rw
 
-	# emby
-	emby:
-		container_name: emby
-		environment:
-			PUID: 1000
-			PGID: 998
-		image: emby/embyserver:latest
-		ports:
-			- "8096:8096"
-			- "8920:8920"
-		restart: unless-stopped
-		volumes:
-			- /home/alex/.docker/config/emby:/config:rw
-			- /mnt/vd0/data/videos:/mnt/share1:rw
+    # emby
+    emby:
+        container_name: emby
+        environment:
+            PUID: 1000
+            PGID: 998
+        image: emby/embyserver:latest
+        ports:
+            - "8096:8096"
+            - "8920:8920"
+        restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/emby:/config:rw
+            - /mnt/vd0/data/videos:/mnt/share1:rw
