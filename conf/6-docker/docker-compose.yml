@@ -30,6 +30,7 @@ services:
         restart: unless-stopped
         volumes:
             - /home/alex/.docker/config/duplicati:/duplicati:rw
+            - /:/serge-root:rw
 
     # httpd
     httpd:
