@@ -34,16 +34,6 @@ services:
             - /home/alex/.docker/config/duplicati:/duplicati:rw
             - /:/serge-root:rw
 
-    # httpd
-    httpd:
-        container_name: httpd
-        image: httpd:latest
-        ports:
-            - "80:80"
-        restart: unless-stopped
-        volumes:
-            - /home/alex/delet:/htdocs:rw
-
     # firefly
     firefly:
         container_name: firefly
