@@ -12,9 +12,9 @@ services:
             GUID: 998
         image: jlesage/nginx-proxy-manager:latest
         ports:
-            - "8181:81"
-            - "8080:80"
-            - "4443:443"
+            - "8181:8181"
+            - "8080:8080"
+            - "4443:4443"
         volumes:
             - /home/alex/.docker/config/nginx-proxy-manager:/config:rw
             - /home/alex/.docker/data/nginx-proxy-manager:/data:rw
