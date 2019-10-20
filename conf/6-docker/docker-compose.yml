@@ -4,6 +4,17 @@ version: '3.4'
 # Services
 services:
 
+    # Maria DB
+    mariadb:
+        container_name: mariadb
+        environment:
+            PUID: 1000
+            GUID: 998
+            TZ: Europe/Amsterdam
+            MYSQL_ROOT_PASSWORD: mariadbdocker
+        image: mariadb
+        restart: unless-stopped
+
     # Nginx proxy manager
     nginx-proxy-manager:
         container_name: nginx-proxy-manager
@@ -15,6 +26,7 @@ services:
             - "8181:81"
             - "8080:80"
             - "4443:443"
+        restart: unless-stopped
         volumes:
             - /home/alex/.config/npm-config.json:/app/config/production.json:rw
             - /home/alex/.docker/data/nginx-proxy-manager:/data:rw
