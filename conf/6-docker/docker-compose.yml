@@ -41,7 +41,7 @@ services:
             - "4443:443"
         restart: unless-stopped
         volumes:
-            - /home/alex/.docker/config/nginx-proxy-manager/config:/app/config/production.json:rw
+            - /home/alex/.docker/config/nginx-proxy-manager/config:/app/config:rw
             - /home/alex/.docker/config/nginx-proxy-manager/data:/data:rw
             - /home/alex/.docker/config/nginx-proxy-manager/letsencrypt:/etc/letsencrypt:rw
 
