@@ -29,7 +29,8 @@ services:
     # Nginx proxy manager
     nginx-proxy-manager:
         container_name: nginx-proxy-manager
-        depends_on: mariadb
+        depends_on: 
+            - mariadb
         environment:
             PUID: 1000
             GUID: 998
