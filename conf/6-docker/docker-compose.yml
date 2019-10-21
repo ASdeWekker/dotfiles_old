@@ -1,8 +1,14 @@
-# This is my docker compose file.
-version: '3.4'
+#                                 #
+# This is my docker compose file. #
+#                                 #
 
-# Services
+
+version: "3.4"
+
+
+# Services.
 services:
+
 
     # Maria DB
     mariadb:
@@ -10,7 +16,6 @@ services:
         environment:
             PUID: 1000
             GUID: 998
-            TZ: Europe/Amsterdam
             MYSQL_ROOT_PASSWORD: mysqlrootuser
             MYSQL_DATABASE: nginxproxymanager
             MYSQL_USER: nginxproxymanager
@@ -20,9 +25,11 @@ services:
         volumes:
             - /home/alex/.docker/config/mariadb:/var/lib/mysql:rw
 
+
     # Nginx proxy manager
     nginx-proxy-manager:
         container_name: nginx-proxy-manager
+        depends_on: mariadb
         environment:
             PUID: 1000
             GUID: 998
@@ -33,9 +40,10 @@ services:
             - "4443:443"
         restart: unless-stopped
         volumes:
-            - /home/alex/.config/npm-config.json:/app/config/production.json:rw
-            - /home/alex/.docker/data/nginx-proxy-manager:/data:rw
-            - /home/alex/.docker/letsencrypt:/etc/letsencrypt:rw
+            - /home/alex/.docker/nginx-proxy-mnager/npm-config.json:/app/config/production.json:rw
+            - /home/alex/.docker//nginx-proxy-manager/data:/data:rw
+            - /home/alex/.docker/nginx-proxy-manager/letsencrypt:/etc/letsencrypt:rw
+
 
     # Duplicati
     duplicati:
@@ -58,19 +66,20 @@ services:
             - /usr:/data-usr:rw
             - /var:/data-var:rw
 
+
     # firefly
     firefly:
         container_name: firefly
         environment:
-            - FF_DB_HOST=192.168.1.90:5432
-            - FF_DB_NAME=firefly
-            - FF_DB_USER=firefly
-            - FF_DB_PASSWORD=firefly
-            - FF_DB_KEY=sjakebdnfjeiqkamdngheidnakebdoem
-            - FF_APP_ENV=local
-            - FF_DB_CONNECTION=pgsql
-            - TZ=Europe/Amsterdam
-            - APP_LOG_LEVEL=debug
+            FF_DB_HOST: 192.168.1.90:5432
+            FF_DB_NAME: firefly
+            FF_DB_USER: firefly
+            FF_DB_PASSWORD: firefly
+            FF_DB_KEY: sjakebdnfjeiqkamdngheidnakebdoem
+            FF_APP_ENV: local
+            FF_DB_CONNECTION: pgsql
+            TZ: Europe/Amsterdam
+            APP_LOG_LEVEL: debug
         image: jc5x/firefly-iii:latest
         ports:
             - "8888:80"
@@ -78,6 +87,8 @@ services:
         volumes:
             - /var/www/firefly-iii/storage/export:/firefly_iii_export:rw
             - /var/www/firefly-iii/storage/upload:/firefly_iii_upload:rw
+
+
     # Plex
     plex:
         container_name: plex
@@ -96,6 +107,7 @@ services:
             - /home/alex/downloads/plex/transcode:/transcode:rw
             - /mnt/vd0/data/videos:/data:rw
     
+
     # Portainer
     portainer:
         command: -H unix:///var/run/docker.sock
@@ -111,6 +123,7 @@ services:
             - /etc/localtime:/etc/localtime:ro
             - /home/alex/.docker/shared:/shared:rw
             - /var/run/docker.sock:/var/run/docker.sock:rw
+
 
     # Deluge
     deluge:
@@ -129,6 +142,7 @@ services:
             - /home/alex/.docker/config/deluge:/config:rw
             - /home/alex/downloads/deluge:/downloads:rw
 
+
     # Sonarr
     sonarr:
         container_name: sonarr
@@ -144,6 +158,7 @@ services:
             - /home/alex/.docker/config/sonarr:/config:rw
             - /mnt/vd0/data/videos:/tv:rw
             - /home/alex/downloads/deluge:/downloads:rw
+
 
     # Radarr
     radarr:
@@ -161,6 +176,7 @@ services:
             - /mnt/vd0/data/videos:/movies:rw
             - /home/alex/downloads/deluge:/downloads:rw
 
+
     # Watchtower
     watchtower:
         command: --schedule "0 0 4 * * *" --cleanup
@@ -173,6 +189,7 @@ services:
             - /etc/localtime:/etc/localtime:ro
             - /var/run/docker.sock:/var/run/docker.sock:rw
             - /home/alex/.docker/config/watchtower/config.json:/config/config.json:rw
+
 
     # Jackett
     jackett:
@@ -190,6 +207,7 @@ services:
             - /home/alex/downloads/jackett:/downloads:rw
             - /etc/localtime:/etc/localtime:ro
 
+
     # Organizr
     organizr:
         container_name: organizr
@@ -202,6 +220,7 @@ services:
         restart: unless-stopped
         volumes:
             - /home/alex/.docker/config/organizr:/config:rw
+
 
     # Piwigo
     piwigo:
@@ -217,6 +236,7 @@ services:
         volumes:
             - /home/alex/.docker/config/piwigo:/config:rw
             - /etc/localtime:/etc/localtime:ro
+
 
     # Bazarr
     bazarr:
@@ -234,6 +254,7 @@ services:
             - /mnt/vd0/data/videos:/tv:rw
             - /mnt/vd0/data/videos:/movies:rw
 
+
     # emby
     emby:
         container_name: emby
@@ -248,3 +269,4 @@ services:
         volumes:
             - /home/alex/.docker/config/emby:/config:rw
             - /mnt/vd0/data/videos:/mnt/share1:rw
+
