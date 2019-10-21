@@ -96,10 +96,11 @@ services:
             PLEX_UID: 1000
             PLEX_GID: 998
             TZ: Europe/Amsterdam
-            PLEX_CLAIM: claim-qfFHm6zPGgts34ozYsq3
+            PLEX_CLAIM: claim-8_2xiVmTJ2t3JaK_Jqd8
         image: plexinc/pms-docker:latest
         ports:
             - "32400:32400"
+
         restart: unless-stopped
         volumes:
             - /home/alex/.docker/config/plex:/config:rw
