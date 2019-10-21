@@ -11,9 +11,14 @@ services:
             PUID: 1000
             GUID: 998
             TZ: Europe/Amsterdam
-            MYSQL_ROOT_PASSWORD: mariadbdocker
+            MYSQL_ROOT_PASSWORD: mysqlrootuser
+            MYSQL_DATABASE: nginxproxymanager
+            MYSQL_USER: nginxproxymanager
+            MYSQL_PASSWORD: nginxproxymanager
         image: mariadb
         restart: unless-stopped
+        volumes:
+            - /home/alex/.docker/config/mariadb:/var/lib/mysql:rw
 
     # Nginx proxy manager
     nginx-proxy-manager:
@@ -44,7 +49,7 @@ services:
         restart: unless-stopped
         volumes:
             - /home/alex/.docker/config/duplicati:/duplicati:rw
-            - /:/serge-root:rw
+            - /:/data:rw
 
     # firefly
     firefly:
@@ -66,7 +71,6 @@ services:
         volumes:
             - /var/www/firefly-iii/storage/export:/firefly_iii_export:rw
             - /var/www/firefly-iii/storage/upload:/firefly_iii_upload:rw
-            - /:/data:rw
     # Plex
     plex:
         container_name: plex
