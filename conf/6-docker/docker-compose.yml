@@ -14,9 +14,7 @@ services:
     mariadb:
         container_name: mariadb
         environment:
-            PUID: 1000
-            GUID: 998
-            MYSQL_ROOT_PASSWORD: mysqlrootuser
+            MYSQL_ROOT_PASSWORD: nginxproxymanager
             MYSQL_DATABASE: nginxproxymanager
             MYSQL_USER: nginxproxymanager
             MYSQL_PASSWORD: nginxproxymanager
