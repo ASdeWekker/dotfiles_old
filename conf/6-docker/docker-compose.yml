@@ -21,7 +21,7 @@ services:
         image: mariadb
         restart: unless-stopped
         volumes:
-            - /home/alex/.docker/config/mariadb:/var/lib/mysql:rw
+            - /home/alex/.docker/config/mariadb/data/mysql:/var/lib/mysql:rw
 
 
     # Nginx proxy manager
