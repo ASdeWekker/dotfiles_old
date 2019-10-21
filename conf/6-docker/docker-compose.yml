@@ -49,7 +49,14 @@ services:
         restart: unless-stopped
         volumes:
             - /home/alex/.docker/config/duplicati:/duplicati:rw
-            - /:/data:rw
+            - /boot:/data-boot:rw
+            - /etc:/data-etc:rw
+            - /home:/data-home:rw
+            - /opt:/data-opt:rw
+            - /root:/data-root:rw
+            - /srv:/data-srv:rw
+            - /usr:/data-usr:rw
+            - /var:/data-var:rw
 
     # firefly
     firefly:
