@@ -95,8 +95,8 @@ services:
         container_name: plex
         environment:
             ADVERTISE_IP: http://192.168.1.111:32400/
-            PLEX_GID: 1000
-            PLEX_UID: 998
+            PLEX_UID: 1000
+            PLEX_GID: 998
             TZ: Europe/Amsterdam
             PLEX_CLAIM: claim-qfFHm6zPGgts34ozYsq3
         image: plexinc/pms-docker:latest
