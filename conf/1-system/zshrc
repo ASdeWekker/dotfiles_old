@@ -28,7 +28,16 @@ unsetopt beep notify
 bindkey -v
 
 # plugins
-plugins=(colored-man-pages colorize command-not-found cp extract history sublime web-search)
+plugins=(
+    colored-man-pages
+    colorize
+    command-not-found
+    cp
+    extract
+    history
+    sublime
+    web-search
+)
 
 # some more stuff is happening down here
 zstyle :compinstall filename '/home/alex/.zshrc'
